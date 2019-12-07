@@ -1,0 +1,538 @@
+<html><head><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /></head><body><script src="/js/jquery-3.4.1.min.js"></script><script src="/js/moment.min.js"></script><div class="container"><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a fast wizard avatar.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar #:sprite wizard-sprite
+                        #:speed  20))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a fast, strong pirate avatar.</div><div><pre><code class="lang-scheme">(define (my-avatar)
+ (basic-avatar #:sprite pirate-sprite
+               #:speed  20
+               #:health 200
+               #:max-health 200))
+
+(adventure-game
+ #:avatar (my-avatar))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a fast avatar and an intro cutscene. Customize the cutscene to have a sprite and some text.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar #:sprite pirategirl-sprite
+                        #:speed  20)
+ #:intro-cutscene (basic-cutscene (page pirategirl-sprite
+                                        &quot;This is the story of&quot;
+                                        &quot;Jordan the Pirate.&quot;)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an avatar and an intro cutscene. Customize the cutscene with 2 pages, include sprites and text.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar
+            #:sprite madscientist-sprite)
+ #:intro-cutscene (basic-cutscene
+                    (page &quot;A long time ago,&quot;
+                          &quot;In a place far, far, away...&quot;)
+                    (page (set-sprite-scale 2 madscientist-sprite)
+                          &quot;There was a mad scientist&quot;
+                          &quot;named Dr. Horrible.&quot;)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a background.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar)
+ #:bg (basic-bg))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a desert background.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar)
+ #:bg (basic-bg #:image DESERT-BG))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a lava background that has 2 rows and 2 columns.</div><div><pre><code class="lang-scheme">(define (my-bg)
+ (basic-bg
+   #:image LAVA-BG
+   #:rows 2
+   #:columns 2))
+
+(adventure-game
+ #:avatar (basic-avatar)
+ #:bg (my-bg))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a high-definition lava background that has 2 rows, 2 columns, and starts on tile 3.</div><div><pre><code class="lang-scheme">(define (my-bg)
+ (basic-bg #:image LAVA-BG
+           #:rows 2
+           #:columns 2
+           #:start-tile 3
+           #:hd? #t))
+
+(adventure-game #:bg (my-bg))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 20 vaulable gold coins that do not respawn.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:coin-list  (list (basic-coin #:sprite goldcoin-sprite
+                                #:value 100
+                                #:amount-in-world 20
+                                #:respawn? #f)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with cheap copper coins, more valuable silver coins, and very valuable gold coins.</div><div><pre><code class="lang-scheme">(define (copper-coin)
+ (basic-coin #:sprite coppercoin-sprite
+             #:name   &quot;Copper Coin&quot;
+             #:value  1))
+
+(define (silver-coin)
+ (basic-coin #:sprite silvercoin-sprite
+             #:name   &quot;Silver Coin&quot;
+             #:value  25))
+
+(define (gold-coin)
+ (basic-coin #:sprite goldcoin-sprite
+             #:name  &quot;Gold Coin&quot;
+             #:value  50))
+
+(adventure-game
+ #:coin-list  (list (copper-coin)
+                    (silver-coin)
+                    (gold-coin)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a very rare, trick gold coin. Make the coin worth -1000 and spawn an enemy when picked up.</div><div><pre><code class="lang-scheme">(define (my-trick-coin)
+ (basic-coin #:name &quot;Gold Coin&quot;
+             #:sprite goldcoin-sprite
+             #:value -1000
+             #:amount-in-world 1
+             #:respawn? #f
+             #:on-pickup (spawn-on-current-tile (basic-enemy #:position (posn 0 0)
+                                                             #:tile 0))))
+
+(adventure-game
+ #:coin-list (list (my-trick-coin)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an extremely rare and valuable gold coin. When the coin is picked up, spawn a cutscene with a gold coin and some text.</div><div><pre><code class="lang-scheme">(define (my-special-coin)
+ (basic-coin #:name &quot;Gold Coin&quot;
+             #:sprite goldcoin-sprite
+             #:value 1000
+             #:amount-in-world 1
+             #:respawn? #f
+             #:on-pickup (spawn (page goldcoin-sprite
+                                      &quot;This looks valuable.&quot;))))
+
+(adventure-game
+ #:coin-list (list (my-special-coin)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 15 coins that do not respawn and an NPC. Give a collect quest where you have to collect 100 points for a reward.</div><div><pre><code class="lang-scheme">(define (my-coin)
+ (basic-coin  #:amount-in-world 15
+              #:respawn? #f))
+
+(define (npc-with-coin-quest)
+ (basic-npc #:dialog     (list &quot;I've lost my coins...&quot;
+                               &quot;...100 points worth!&quot;
+                               &quot;Can you find them for me?&quot;)
+            #:quest-list (list (collect-quest #:collect-amount 100
+                                              #:reward-amount 50))))
+
+(adventure-game
+ #:npc-list  (list (npc-with-coin-quest))
+ #:coin-list (list (my-coin)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an avatar and a crafter.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar       (basic-avatar)
+ #:crafter-list (list (basic-crafter)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 10 carrots and a crafter that produces carrot stew.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar       (basic-avatar)
+ #:food-list    (list (carrot #:amount-in-world 10))
+ #:crafter-list (list (basic-crafter
+                        #:recipe-list (list carrot-stew-recipe))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a 10 fish, and a fish stew recipe, and a cauldron that produces fish stew.</div><div><pre><code class="lang-scheme">(define (fish-stew)
+ (basic-food #:name &quot;Fish Stew&quot;
+             #:sprite fishstew-sprite
+             #:respawn? #f
+             #:heals-by 50))
+
+(define fish-stew-recipe
+ (recipe #:product (fish-stew)
+         #:build-time 40
+         #:ingredients (list &quot;Fish&quot;)))
+
+(adventure-game
+ #:avatar       (basic-avatar)
+ #:food-list    (list (fish #:amount-in-world 10))
+ #:crafter-list (list (basic-crafter #:sprite cauldron-sprite
+                                     #:recipe-list (list fish-stew-recipe))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 10 fish,10 carrots, a fish stew recipe, and a cauldron that produces fish stew and carrot stew. Customize the tile and position of the cauldron.</div><div><pre><code class="lang-scheme">(define (fish-stew)
+ (basic-food #:name &quot;Fish Stew&quot;
+             #:sprite fishstew-sprite
+             #:respawn? #f
+             #:heals-by 50))
+
+(define fish-stew-recipe
+ (recipe #:product (fish-stew)
+         #:build-time 40
+         #:ingredients (list &quot;Fish&quot;)))
+
+(define (my-cauldron)
+ (basic-crafter #:sprite      cauldron-sprite
+                #:position    (posn 200 200)
+                #:tile        2
+                #:recipe-list (list carrot-stew-recipe
+                                    fish-stew-recipe)))
+
+(adventure-game
+ #:avatar       (basic-avatar)
+ #:food-list    (list (carrot #:amount-in-world 10)
+                      (fish   #:amount-in-world 10))
+ #:crafter-list (list (my-cauldron)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 10 strong, nocturnal enemies with moderate intelligence and each with a random sprite.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:enemy-list (list (curry basic-enemy
+                           #:ai              'medium
+                           #:amount-in-world 10
+                           #:night-only? #t
+                           #:health 200)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with several enemies: 4 low intelligence slime, 2 moderately intelligent bats, and a highly intelligent, nocturnal snake.</div><div><pre><code class="lang-scheme">(define (easy-enemy)
+ (basic-enemy #:ai           'easy
+              #:sprite       slime-sprite
+              #:amount-in-world 4))
+
+(define (medium-enemy)
+ (basic-enemy #:ai              'medium
+              #:sprite          bat-sprite
+              #:amount-in-world 2))
+
+(define (hard-enemy)
+ (basic-enemy #:ai              'hard
+              #:sprite          snake-sprite
+              #:night-only? #t))
+
+(adventure-game
+ #:enemy-list (list (easy-enemy)
+                    (medium-enemy)
+                    (hard-enemy)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a spear and 3 highly intelligent enemies that drop valuable gold coins.</div><div><pre><code class="lang-scheme">(define (my-gold-coin)
+ (basic-coin #:sprite goldcoin-sprite
+             #:value 20))
+
+(define (hard-enemy)
+ (basic-enemy #:amount-in-world 3
+              #:ai 'hard
+              #:loot-list (list (my-gold-coin)
+                                (my-gold-coin))))
+
+(adventure-game
+ #:weapon-list (list (spear))
+ #:enemy-list  (list (hard-enemy)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an avatar, a spear, and 3 highly intelligent enemies that shoot fireballs. Include a creative game over cutscene.</div><div><pre><code class="lang-scheme">(define (hard-enemy)
+ (basic-enemy #:amount-in-world 3
+              #:ai 'hard
+              #:weapon (fireball)))
+
+(adventure-game
+ #:avatar         (basic-avatar #:sprite steampunkboy-sprite)
+ #:death-cutscene (basic-cutscene (page (set-sprite-angle 90 (render steampunkboy-sprite))
+                                        &quot;You died!&quot;)
+                                  (page &quot;Try harder!&quot;))
+ #:weapon-list (list (spear))
+ #:enemy-list  (list (hard-enemy)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an NPC who has a quest to slay several enemies; the quest has a point and item reward. Include 10 random enemies, a fireball power, and a game over cutscene.</div><div><pre><code class="lang-scheme">(define my-hunt-quest
+ (hunt-quest #:hunt-amount 5
+             #:reward-amount 50
+             #:reward-item (sword)))
+
+(adventure-game
+ #:death-cutscene (basic-cutscene (page &quot;You died!&quot;
+                                        &quot;Try harder!&quot;))
+ #:npc-list (list (basic-npc #:dialog (list &quot;These monsters are annoying.&quot;
+                                            &quot;Can you get rid of 5?&quot;)
+                             #:quest-list (list my-hunt-quest)))
+ #:weapon-list (list (fireball))
+ #:enemy-list  (list (curry basic-enemy #:amount-in-world 10)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an NPC who has a fetch quest to find their lost cat.</div><div><pre><code class="lang-scheme">(define lost-cat
+ (basic-item #:name &quot;Mylo&quot;
+             #:sprite cat-sprite))
+
+(adventure-game
+ #:npc-list (list (basic-npc #:dialog (list &quot;Can you help me find my cat?&quot;
+                                            &quot;I've looked everywhere!&quot;)
+                             #:quest-list (list (fetch-quest #:item lost-cat)))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an NPC who has a quest to find their lost sword. Give the quest an ending cutscene including the NPC sprite and some text.</div><div><pre><code class="lang-scheme">(define my-cutscene
+ (basic-cutscene (page (set-sprite-scale 2 darkknight-sprite)
+                       &quot;Thank you! I should probably stop losing this...&quot;)))
+
+(adventure-game
+ #:npc-list (list (basic-npc #:sprite darkknight-sprite
+                             #:dialog (list &quot;Can you help me find my sword?&quot;)
+                             #:quest-list (list (fetch-quest #:item (sword)
+                                                             #:cutscene my-cutscene)))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an NPC who has 2 quests to return 2 different pets. Add a reward to both of the quests.</div><div><pre><code class="lang-scheme">(define fetch-quest-1
+ (fetch-quest #:item (basic-item #:name &quot;Mylo&quot;
+                                 #:sprite cat-sprite)
+              #:reward-amount 200))
+
+(define fetch-quest-2
+ (fetch-quest #:item (basic-item #:name &quot;Buttons&quot;
+                                 #:sprite whitecat-sprite)
+              #:reward-amount 200))
+
+(adventure-game
+ #:npc-list (list (basic-npc #:name &quot;Erin&quot;
+                             #:sprite lightelf-sprite
+                             #:dialog (list &quot;Can you help me find my cats?&quot;
+                                            &quot;I'll give you a reward for each cat.&quot;)
+                             #:quest-list (list fetch-quest-1
+                                                fetch-quest-2))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an NPC who has a rewarded quest to find their antique bowl. The NPC's dialog changes once the quest is complete.</div><div><pre><code class="lang-scheme">(define my-fetch-quest
+ (fetch-quest #:item (basic-item #:sprite bowl-sprite)
+              #:quest-complete-dialog (list &quot;Phew! This is a family herloom!!&quot;)
+              #:new-response-dialog   (list &quot;Thanks again! My mom was so mad...&quot;)
+              #:reward-amount 400))
+
+(adventure-game
+ #:npc-list (list (basic-npc #:name &quot;Erin&quot;
+                             #:sprite lightelf-sprite
+                             #:dialog (list &quot;Can you find my antique bowl?&quot;)
+                             #:quest-list (list my-fetch-quest))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an NPC who has a high-reward quest to find their lost cat. Give the cat pickup and drop cutscenes (the drop cutscene only happens if dropped away from the NPC).</div><div><pre><code class="lang-scheme">(define my-quest-item
+ (basic-item #:name &quot;Mylo&quot;
+             #:sprite  cat-sprite
+             #:on-store (spawn (page (set-sprite-scale 2 cat-sprite)
+                                     &quot;This must be Erin's lost cat&quot;))
+             #:on-drop  (spawn (page &quot;Maybe I shouldn't leave him&quot;
+                                     &quot;alone like this.&quot;)
+                               #:rule (not/r (entity-in-game? &quot;Erin&quot;)))))
+
+(adventure-game
+ #:npc-list (list (basic-npc #:name &quot;Erin&quot;
+                             #:sprite     lightelf-sprite
+                             #:dialog     (list &quot;Can you help my find my cat?&quot;)
+                             #:quest-list (fetch-quest #:item my-quest-item
+                                                       #:reward-amount 500))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with several hearty foods.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:food-list  (list (basic-food #:sprite          apples-sprite
+                                #:name            &quot;Apples&quot;
+                                #:amount-in-world 10
+                                #:heals-by        20)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 2 types of food: a common apple; and a very rare, hearty cherry.</div><div><pre><code class="lang-scheme">(define my-food
+ (basic-food #:sprite          apples-sprite
+             #:name            &quot;Apples&quot;
+             #:amount-in-world 10))
+
+(define special-food
+ (basic-food #:sprite          cherry-sprite
+             #:name            &quot;Cherry&quot;
+             #:heals-by        50
+             #:respawn?        #f))
+
+(adventure-game
+ #:food-list  (list my-food
+                    special-food))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an avatar who starts at half-health. Add a hearty steak that spawns a cutscene on pickup. The cutscene includes the steak sprite and text.</div><div><pre><code class="lang-scheme">(define special-food
+ (basic-food #:sprite          steak-sprite
+             #:name            &quot;Rare Steak&quot;
+             #:heals-by        100
+             #:on-pickup (spawn (page (set-sprite-scale 2 steak-sprite)
+                                      &quot;This tastes raw ...&quot;
+                                      &quot;maybe I should have cooked it.&quot;))))
+
+(adventure-game
+ #:avatar (basic-avatar #:health 100
+                        #:max-health 200)
+ #:food-list  (list special-food))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with several fish and a crafter that produces a hearty fish stew.</div><div><pre><code class="lang-scheme">(define fish-stew
+ (basic-food #:name &quot;Fish Stew&quot;
+             #:sprite fishstew-sprite
+             #:respawn? #f
+             #:heals-by 50))
+
+(define fish-stew-recipe
+ (recipe #:product fish-stew
+         #:build-time 40
+         #:ingredients (list &quot;Fish&quot;)))
+
+(adventure-game
+ #:food-list    (list (fish #:amount-in-world 10))
+ #:crafter-list (list (basic-crafter #:recipe-list (list fish-stew-recipe))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an NPC and a crafter that produces a carrot stew. Give the NPC dialog and a quest to make the carrot stew.</div><div><pre><code class="lang-scheme">(define carrot-stew
+ (basic-food #:name &quot;Carrot Stew&quot;
+             #:sprite carrotstew-sprite))
+
+(define my-carrot-stew-recipe
+ (recipe #:product carrot-stew
+         #:ingredients (list &quot;Carrot&quot;)))
+
+(adventure-game
+ #:npc-list     (list (basic-npc #:dialog (list &quot;Can you make me some carrot stew?&quot;)
+                                 #:quest-list (list (craft-quest #:item carrot-stew))))
+ #:food-list    (list (carrot))
+ #:crafter-list (list (basic-crafter #:recipe-list (list my-carrot-stew-recipe))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a basic adventure game.</div><div><pre><code class="lang-scheme">(adventure-game)</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a forest level that has world objects.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:bg (basic-bg #:image FOREST-BG)
+ #:enable-world-objects? #t)</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a candy level and 2 types of randomly-colored, high-definition trees.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:bg             (basic-bg #:image PINK-BG)
+ #:other-entities (make-world-objects candy-cane-tree
+                                      snow-pine-tree
+                                      #:hd? #t
+                                      #:random-color? #t))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a desert level filled with random brown rocks. Make everything high-definition.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:bg             (basic-bg #:image DESERT-BG
+                            #:hd? #t)
+ #:other-entities (make-world-objects random-brown-rock
+                                      random-brown-rock
+                                      #:hd? #t))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a lava level filled with high-definition gray rocks. Add an intro cutscene with three pages.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:bg             (basic-bg #:image LAVA-BG
+                            #:hd? #t)
+ #:intro-cutscene (basic-cutscene (page &quot;Once upon a time&quot;
+                                        &quot;on a volcanic moon&quot;
+                                        &quot;of a distance world...&quot;)
+                                  (page &quot;There was a lone soldier&quot;
+                                        &quot;who was banished from his&quot;
+                                        &quot;homeworld.&quot;)
+                                  (page (set-sprite-scale 2 basic-sprite)
+                                        &quot;This is his story.&quot;))
+ #:other-entities (make-world-objects random-gray-rock
+                                      random-gray-rock
+                                      #:hd? #t))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a big gray rock, a randomly-colored brick house, and low-quality barrels. Manually set positions and tiles of all these entities.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:bg             (basic-bg)
+ #:avatar         (basic-avatar)
+ #:other-entities (reduce-quality-by 2 (barrels (posn 100 200) #:tile 0))
+ (large-gray-rock  (posn 100 200) #:tile 1 #:size 2)
+ (brick-house      (posn 200 200) #:tile 2 #:hue (random 360)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define stolen-chest (basic-item))
+
+(adventure-game
+ #:enemy-list  (list (basic-enemy #:loot-list (list stolen-chest)))
+ #:npc-list    (list (basic-npc #:dialog (list &quot;Someone stole my chest!&quot;)
+                                #:quest-list (list (loot-quest #:item stolen-chest))))
+ #:weapon-list (list (spear)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define stolen-cat
+ (make-storable
+   (basic-npc #:sprite cat-sprite
+              #:dialog (list &quot;Help me!&quot;))))
+
+(adventure-game
+ #:enemy-list  (list (basic-enemy #:loot-list (list stolen-cat)))
+ #:npc-list    (list (basic-npc #:dialog (list &quot;Someone took my cat!&quot;)
+                                #:quest-list (list (loot-quest #:item stolen-cat))))
+ #:weapon-list (list (fireball #:damage 50)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define stolen-food
+ (basic-food #:name &quot;Apples&quot;
+             #:sprite apples-sprite))
+
+(define my-cutscene
+ (basic-cutscene (page (set-sprite-scale 2 apples-sprite)
+                       &quot;Now I can make Grandma's apple pie!&quot;)))
+
+(adventure-game
+ #:enemy-list  (list (basic-enemy #:loot-list (list stolen-food)))
+ #:npc-list    (list (basic-npc #:dialog (list &quot;Help! Someone stole my apples!&quot;)
+                                #:quest-list (list (loot-quest #:item stolen-food
+                                                               #:cutscene my-cutscene))))
+ #:weapon-list (list (repeater #:damage 50)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define stolen-cat
+ (make-storable (basic-npc #:sprite cat-sprite
+                           #:dialog (list &quot;Meow!&quot;))))
+
+(define my-loot-quest
+ (loot-quest #:item stolen-cat
+             #:quest-complete-dialog (list &quot;Thank you for finding my cat!&quot;)
+             #:new-response-dialog   (list &quot;Thanks again for your help.&quot;)
+             #:reward-amount 400))
+
+(adventure-game
+ #:enemy-list (list (basic-enemy #:loot-list (list stolen-cat)))
+ #:npc-list   (list (basic-npc #:dialog (list &quot;Help! Someone stole my cat!&quot;)
+                               #:quest-list (list my-loot-quest)))
+ #:weapon-list (list (ice-magic)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define stolen-item
+ (basic-item #:name &quot;Empty Bowl&quot;
+             #:sprite  bowl-sprite
+             #:on-store (spawn (page (set-sprite-scale 2 bowl-sprite)
+                                     &quot;This must be JOrdan's stolen bowl.&quot;))
+             #:on-drop  (spawn (page &quot;Maybe I shouldn't leave it here.&quot;)
+                               #:rule (not/r (entity-in-game? &quot;Jordan&quot;)))))
+
+(adventure-game
+ #:enemy-list  (list (basic-enemy #:loot-list (list stolen-item)))
+ #:npc-list    (list (basic-npc #:name &quot;Jordan&quot;
+                                #:dialog     (list &quot;That thief took my only bowl!&quot;
+                                                   &quot;Please get it back!&quot;)
+                                #:quest-list (loot-quest #:item stolen-item)))
+
+ #:weapon-list (list (fireball #:damage 50)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a witch NPC who follows you. Give her a name and a start location.</div><div><pre><code class="lang-scheme">(adventure-game
+#:npc-list (list (basic-npc
+                  #:sprite   witch-sprite
+                  #:name     &quot;Witch&quot;
+                  #:mode     'follow
+                  #:position (posn 200 200)
+                  #:tile     3)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 2 NPCs. Give both NPCs names and multiple lines of dialog.</div><div><pre><code class="lang-scheme">(define (polite-npc)
+ (basic-npc
+   #:name &quot;Riley&quot;
+   #:dialog (list &quot;Oh hello there! I'm Riley.&quot;
+                  &quot;Beautiful day today!&quot;)))
+
+(define (rude-npc)
+ (basic-npc
+   #:name &quot;...&quot;
+   #:dialog (list &quot;Woah, who are you??&quot;
+                  &quot;Nevermind -- I'm too busy.&quot;
+                  &quot;Move along, now!&quot;)))
+
+(adventure-game
+ #:npc-list (list (polite-npc) (rude-npc)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an avatar and a named NPC. Give the avatar 3 questions and the NPC 3 responses.</div><div><pre><code class="lang-scheme">(define player-dialog
+ (player-dialog-with &quot;Jordan&quot;
+                     #:dialog-list (list &quot;Hello. What's your name?&quot;
+                                         &quot;Are you lost?&quot;
+                                         &quot;What's the meaning of life?&quot;)))
+
+(define npc-response
+ (list (list &quot;I'm Jordan,&quot;
+             &quot;but you can call me J.&quot;)
+       (list &quot;Nope. Just exploring!&quot;)
+       (list &quot;That's a strange question...&quot;)))
+
+(adventure-game
+ #:avatar (basic-avatar #:components player-dialog)
+ #:npc-list (list (basic-npc #:name &quot;Jordan&quot;
+                             #:dialog npc-response)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an avatar who has random dialog and 2 NPCs with random responses.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar #:components (random-player-dialog-with &quot;Dakota&quot;)
+                        (random-player-dialog-with &quot;Alex&quot;))
+ #:npc-list (list (basic-npc #:name &quot;Dakota&quot;
+                             #:dialog (random-npc-response))
+                  (basic-npc #:name &quot;Alex&quot;
+                             #:dialog (random-npc-response))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with an NPC who has a quest to fetch their lost spear. Give the NPC new dialog after the quest is complete.</div><div><pre><code class="lang-scheme">(define spear-quest
+ (fetch-quest #:item (spear)
+              #:quest-complete-dialog (list &quot;YAY! MY SPEAR!&quot;)
+              #:new-response-dialog (list &quot;Thanks again!&quot;)))
+
+(adventure-game
+ #:npc-list (list (basic-npc  #:name &quot;Charlie&quot;
+                              #:dialog (list &quot;Can you find my spear?&quot;)
+                              #:quest-list (list spear-quest))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a sky that has a long day.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar)
+ #:sky    (basic-sky #:length-of-day 5000))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a sky that has a short day and an extremely dark night.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar)
+ #:sky    (basic-sky #:length-of-day 500
+                     #:max-darkness  255))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a sky that has a light night with a magenta night sky.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar (basic-avatar)
+ #:sky (basic-sky #:night-sky-color  'darkmagenta
+                  #:max-darkness     150))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 20 nocturnal enemies and a sky. Make the sky have a short night.</div><div><pre><code class="lang-scheme">(adventure-game
+ #:avatar       (basic-avatar)
+ #:enemy-list   (list (basic-enemy #:amount-in-world 20
+                                   #:night-only? #t))
+ #:sky          (basic-sky #:length-of-day    2400
+                           #:start-of-daytime 200
+                           #:end-of-daytime   2200))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(adventure-game
+ #:weapon-list (list (spear #:name &quot;Needle&quot;
+                            #:speed 15
+                            #:damage 20
+                            #:rarity 'rare)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define (my-sword)
+ (sword #:damage 50
+        #:rarity 'legendary))
+
+(define (my-repater)
+ (repeater #:color 'red
+           #:fire-mode 'spread))
+
+(adventure-game
+ #:weapon-list (list (my-sword)
+                     (my-repater))
+ #:enemy-list (list (basic-enemy #:amount-in-world 5)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define (my-weapon)
+ (repeater #:name &quot;Hologram Shooter&quot;
+           #:icon (make-icon &quot;?&quot; 'red)
+           #:sprite (random-character-sprite)
+           #:speed 5
+           #:damage 25
+           #:range 50))
+
+(adventure-game
+ #:enemy-list (list (basic-enemy #:amount-in-world 5))
+ #:weapon-list (list (my-weapon)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define (my-fire-magic)
+ (fire-magic #:on-store (spawn (page &quot;Ouch, this is hot!&quot;))))
+
+(define (my-ice-magic)
+ (ice-magic #:on-store (spawn (page &quot;Woah, this is cold!&quot;))))
+
+(adventure-game
+ #:enemy-list (list (basic-enemy #:amount-in-world 10))
+ #:weapon-list (list (my-fire-magic)
+                     (my-ice-magic)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>????</div><div><pre><code class="lang-scheme">(define (my-sword)
+ (sword #:damage 50
+        #:on-store (spawn (page (set-sprite-angle 45 swinging-sword-sprite)
+                                &quot;I found a Sword!&quot;))
+        #:on-drop (spawn (page &quot;Oh no! Better put it back in my backpack.&quot;))))
+
+(define (my-enemy)
+ (basic-enemy #:sprite pirateboy-sprite
+              #:on-death (spawn (page (set-sprite-angle 90 (render pirateboy-sprite))
+                                      &quot;You won!&quot;))))
+
+(adventure-game
+ #:enemy-list (list (my-enemy))
+ #:weapon-list (list (my-sword)))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a sword recipe that has a short build time, and a wooden table that produces swords.</div><div><pre><code class="lang-scheme">(define my-sword-recipe
+ (recipe #:product (sword)
+         #:build-time 20))
+
+(adventure-game
+ #:avatar       (basic-avatar)
+ #:crafter-list (list (basic-crafter
+                        #:sprite      woodtable-sprite
+                        #:recipe-list (list my-sword-recipe))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with a sword recipe that has a moderately long build time, and a wooden table that produces strong swords.</div><div><pre><code class="lang-scheme">(define my-sword-recipe
+ (recipe #:product (sword #:name &quot;Heavy Sword&quot;
+                          #:damage 100)
+         #:build-time 40))
+
+(adventure-game
+ #:avatar       (basic-avatar)
+ #:crafter-list (list (basic-crafter
+                        #:sprite      woodtable-sprite
+                        #:recipe-list (list my-sword-recipe))))</code></pre></div></p></div></div><div class="card"><div class="card-body"><p class="card-text"><div>Code a game with 10 valuable coins, an expensive fire magic recipe that has a long build time, and a wooden table that produces fast fire magic.</div><div><pre><code class="lang-scheme">(define my-fire-magic-recipe
+ (recipe #:product (fire-magic  #:name &quot;Fire Magic&quot;
+                                #:speed 5)
+         #:build-time 60
+         #:cost       100))
+
+(adventure-game
+ #:avatar       (basic-avatar)
+ #:coin-list    (list (basic-coin #:value 20
+                                  #:amount-in-world 10))
+ #:crafter-list (list (basic-crafter
+                        #:sprite woodtable-sprite
+                        #:recipe-list (list my-fire-magic-recipe))))</code></pre></div></p></div></div></div><script src="/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script><script src="/js/font-awesome.js"></script></body></html>
