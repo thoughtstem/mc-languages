@@ -14,7 +14,8 @@
                     (include-js "https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js")
                     (include-js "https://cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"))
           (container 
-            
+            (h2 "Translation challenges")
+            (h3 "#lang adventure")
             (map kata->html (kata-collection-katas katas))))))
 
 (module+ main
