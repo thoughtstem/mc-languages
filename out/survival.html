@@ -1,0 +1,4087 @@
+<html><head><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /></head><body><script src="/js/jquery-3.4.1.min.js"></script><script src="/js/moment.min.js"></script><div class="container"><h2>#lang survival</h2><ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#translations">Translations</a></li><li class="nav-item"><a class="nav-link" data-toggle="tab" href="#documentation">Documentation</a></li></ul><div class="tab-content"><div class="tab-pane fade show active p-3" id="translations" class="p-3"><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Avatar 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns952_toggledSpecification()" data-toggle="collapse" data-target="#ns952_specification"><i id="ns952_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns952_specification" class="collapse show" data-parent="#ns952_accordion"><div class="card-body"><p class="card-text">Code a game with a basic avatar.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns952_toggledImplementation()" data-toggle="collapse" data-target="#ns952_implementation"><i id="ns952_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns952_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns952_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:avatar (basic-avatar))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns952_hackPrism = function(){
+if( window.ns952_prismHacked ) return; 
+ window.ns952_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns952_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns952_toggledSpecification = function(){
+window.ns952_specificationShown  = ! window.ns952_specificationShown;
+ window.ns952_render();
+
+}
+
+window.ns952_toggledImplementation = function(){
+window.ns952_implementationShown  = ! window.ns952_implementationShown;
+ window.ns952_render();
+
+}
+
+window.ns952_implementationNextState = function(){
+return  window.ns952_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns952_specificationNextState = function(){
+return  window.ns952_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns952_disintegrate = function(){
+window.ns952_hackPrism (); 
+ var ns = document.querySelector(" #ns952_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns952_render = function(){
+document.getElementById( window.ns952_specificationIconId ) .className  =  window.ns952_specificationNextState ();
+ document.getElementById( window.ns952_implementationIconId ) .className =  window.ns952_implementationNextState ();
+
+}
+
+window.ns952_specificationShown=true;
+window.ns952_implementationShown=false;
+window.ns952_specificationIconId="ns952_specification-next-state";
+window.ns952_implementationIconId="ns952_implementation-next-state";
+window.ns952_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Avatar 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns953_toggledSpecification()" data-toggle="collapse" data-target="#ns953_specification"><i id="ns953_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns953_specification" class="collapse show" data-parent="#ns953_accordion"><div class="card-body"><p class="card-text">Code a game with an avatar with a sprite picked from the assets library.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns953_toggledImplementation()" data-toggle="collapse" data-target="#ns953_implementation"><i id="ns953_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns953_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns953_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:avatar (basic-avatar #:sprite wizard-sprite))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns953_hackPrism = function(){
+if( window.ns953_prismHacked ) return; 
+ window.ns953_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns953_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns953_toggledSpecification = function(){
+window.ns953_specificationShown  = ! window.ns953_specificationShown;
+ window.ns953_render();
+
+}
+
+window.ns953_toggledImplementation = function(){
+window.ns953_implementationShown  = ! window.ns953_implementationShown;
+ window.ns953_render();
+
+}
+
+window.ns953_implementationNextState = function(){
+return  window.ns953_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns953_specificationNextState = function(){
+return  window.ns953_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns953_disintegrate = function(){
+window.ns953_hackPrism (); 
+ var ns = document.querySelector(" #ns953_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns953_render = function(){
+document.getElementById( window.ns953_specificationIconId ) .className  =  window.ns953_specificationNextState ();
+ document.getElementById( window.ns953_implementationIconId ) .className =  window.ns953_implementationNextState ();
+
+}
+
+window.ns953_specificationShown=true;
+window.ns953_implementationShown=false;
+window.ns953_specificationIconId="ns953_specification-next-state";
+window.ns953_implementationIconId="ns953_implementation-next-state";
+window.ns953_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Avatar 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns954_toggledSpecification()" data-toggle="collapse" data-target="#ns954_specification"><i id="ns954_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns954_specification" class="collapse show" data-parent="#ns954_accordion"><div class="card-body"><p class="card-text">Code a game with an avatar with a custom sprite and speed of 20.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns954_toggledImplementation()" data-toggle="collapse" data-target="#ns954_implementation"><i id="ns954_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns954_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns954_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-avatar)
+ (basic-avatar #:sprite pirate-sprite
+               #:speed  20))
+
+(survival-game
+ #:avatar (my-avatar))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns954_hackPrism = function(){
+if( window.ns954_prismHacked ) return; 
+ window.ns954_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns954_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns954_toggledSpecification = function(){
+window.ns954_specificationShown  = ! window.ns954_specificationShown;
+ window.ns954_render();
+
+}
+
+window.ns954_toggledImplementation = function(){
+window.ns954_implementationShown  = ! window.ns954_implementationShown;
+ window.ns954_render();
+
+}
+
+window.ns954_implementationNextState = function(){
+return  window.ns954_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns954_specificationNextState = function(){
+return  window.ns954_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns954_disintegrate = function(){
+window.ns954_hackPrism (); 
+ var ns = document.querySelector(" #ns954_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns954_render = function(){
+document.getElementById( window.ns954_specificationIconId ) .className  =  window.ns954_specificationNextState ();
+ document.getElementById( window.ns954_implementationIconId ) .className =  window.ns954_implementationNextState ();
+
+}
+
+window.ns954_specificationShown=true;
+window.ns954_implementationShown=false;
+window.ns954_specificationIconId="ns954_specification-next-state";
+window.ns954_implementationIconId="ns954_implementation-next-state";
+window.ns954_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Avatar 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns955_toggledSpecification()" data-toggle="collapse" data-target="#ns955_specification"><i id="ns955_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns955_specification" class="collapse show" data-parent="#ns955_accordion"><div class="card-body"><p class="card-text">Code a game with an avatar with a custom sprite, speed and WASD key-mode.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns955_toggledImplementation()" data-toggle="collapse" data-target="#ns955_implementation"><i id="ns955_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns955_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns955_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-avatar)
+ (basic-avatar #:sprite monk-sprite
+               #:speed  20
+               #:key-mode 'wasd))
+
+(survival-game
+ #:avatar (my-avatar))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns955_hackPrism = function(){
+if( window.ns955_prismHacked ) return; 
+ window.ns955_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns955_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns955_toggledSpecification = function(){
+window.ns955_specificationShown  = ! window.ns955_specificationShown;
+ window.ns955_render();
+
+}
+
+window.ns955_toggledImplementation = function(){
+window.ns955_implementationShown  = ! window.ns955_implementationShown;
+ window.ns955_render();
+
+}
+
+window.ns955_implementationNextState = function(){
+return  window.ns955_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns955_specificationNextState = function(){
+return  window.ns955_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns955_disintegrate = function(){
+window.ns955_hackPrism (); 
+ var ns = document.querySelector(" #ns955_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns955_render = function(){
+document.getElementById( window.ns955_specificationIconId ) .className  =  window.ns955_specificationNextState ();
+ document.getElementById( window.ns955_implementationIconId ) .className =  window.ns955_implementationNextState ();
+
+}
+
+window.ns955_specificationShown=true;
+window.ns955_implementationShown=false;
+window.ns955_specificationIconId="ns955_specification-next-state";
+window.ns955_implementationIconId="ns955_implementation-next-state";
+window.ns955_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Avatar 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns956_toggledSpecification()" data-toggle="collapse" data-target="#ns956_specification"><i id="ns956_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns956_specification" class="collapse show" data-parent="#ns956_accordion"><div class="card-body"><p class="card-text">Code a game with an avatar with a custom sprite, speed, WASD key-mode, and 200 health and max-health.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns956_toggledImplementation()" data-toggle="collapse" data-target="#ns956_implementation"><i id="ns956_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns956_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns956_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-avatar)
+ (basic-avatar #:sprite wizard-sprite
+               #:speed  20
+               #:key-mode 'wasd
+               #:health     200
+               #:max-health 200))
+
+(survival-game
+ #:avatar (my-avatar))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns956_hackPrism = function(){
+if( window.ns956_prismHacked ) return; 
+ window.ns956_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns956_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns956_toggledSpecification = function(){
+window.ns956_specificationShown  = ! window.ns956_specificationShown;
+ window.ns956_render();
+
+}
+
+window.ns956_toggledImplementation = function(){
+window.ns956_implementationShown  = ! window.ns956_implementationShown;
+ window.ns956_render();
+
+}
+
+window.ns956_implementationNextState = function(){
+return  window.ns956_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns956_specificationNextState = function(){
+return  window.ns956_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns956_disintegrate = function(){
+window.ns956_hackPrism (); 
+ var ns = document.querySelector(" #ns956_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns956_render = function(){
+document.getElementById( window.ns956_specificationIconId ) .className  =  window.ns956_specificationNextState ();
+ document.getElementById( window.ns956_implementationIconId ) .className =  window.ns956_implementationNextState ();
+
+}
+
+window.ns956_specificationShown=true;
+window.ns956_implementationShown=false;
+window.ns956_specificationIconId="ns956_specification-next-state";
+window.ns956_implementationIconId="ns956_implementation-next-state";
+window.ns956_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Bg 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns957_toggledSpecification()" data-toggle="collapse" data-target="#ns957_specification"><i id="ns957_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns957_specification" class="collapse show" data-parent="#ns957_accordion"><div class="card-body"><p class="card-text">Code a game with a custom background.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns957_toggledImplementation()" data-toggle="collapse" data-target="#ns957_implementation"><i id="ns957_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns957_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns957_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:bg (basic-bg))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns957_hackPrism = function(){
+if( window.ns957_prismHacked ) return; 
+ window.ns957_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns957_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns957_toggledSpecification = function(){
+window.ns957_specificationShown  = ! window.ns957_specificationShown;
+ window.ns957_render();
+
+}
+
+window.ns957_toggledImplementation = function(){
+window.ns957_implementationShown  = ! window.ns957_implementationShown;
+ window.ns957_render();
+
+}
+
+window.ns957_implementationNextState = function(){
+return  window.ns957_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns957_specificationNextState = function(){
+return  window.ns957_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns957_disintegrate = function(){
+window.ns957_hackPrism (); 
+ var ns = document.querySelector(" #ns957_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns957_render = function(){
+document.getElementById( window.ns957_specificationIconId ) .className  =  window.ns957_specificationNextState ();
+ document.getElementById( window.ns957_implementationIconId ) .className =  window.ns957_implementationNextState ();
+
+}
+
+window.ns957_specificationShown=true;
+window.ns957_implementationShown=false;
+window.ns957_specificationIconId="ns957_specification-next-state";
+window.ns957_implementationIconId="ns957_implementation-next-state";
+window.ns957_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Bg 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns958_toggledSpecification()" data-toggle="collapse" data-target="#ns958_specification"><i id="ns958_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns958_specification" class="collapse show" data-parent="#ns958_accordion"><div class="card-body"><p class="card-text">Code a game with a desert background.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns958_toggledImplementation()" data-toggle="collapse" data-target="#ns958_implementation"><i id="ns958_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns958_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns958_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:bg (basic-bg #:image DESERT-BG))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns958_hackPrism = function(){
+if( window.ns958_prismHacked ) return; 
+ window.ns958_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns958_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns958_toggledSpecification = function(){
+window.ns958_specificationShown  = ! window.ns958_specificationShown;
+ window.ns958_render();
+
+}
+
+window.ns958_toggledImplementation = function(){
+window.ns958_implementationShown  = ! window.ns958_implementationShown;
+ window.ns958_render();
+
+}
+
+window.ns958_implementationNextState = function(){
+return  window.ns958_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns958_specificationNextState = function(){
+return  window.ns958_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns958_disintegrate = function(){
+window.ns958_hackPrism (); 
+ var ns = document.querySelector(" #ns958_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns958_render = function(){
+document.getElementById( window.ns958_specificationIconId ) .className  =  window.ns958_specificationNextState ();
+ document.getElementById( window.ns958_implementationIconId ) .className =  window.ns958_implementationNextState ();
+
+}
+
+window.ns958_specificationShown=true;
+window.ns958_implementationShown=false;
+window.ns958_specificationIconId="ns958_specification-next-state";
+window.ns958_implementationIconId="ns958_implementation-next-state";
+window.ns958_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Bg 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns959_toggledSpecification()" data-toggle="collapse" data-target="#ns959_specification"><i id="ns959_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns959_specification" class="collapse show" data-parent="#ns959_accordion"><div class="card-body"><p class="card-text">Code a game with a lava background with a 2 by 2 grid.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns959_toggledImplementation()" data-toggle="collapse" data-target="#ns959_implementation"><i id="ns959_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns959_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns959_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-bg)
+ (basic-bg
+   #:image LAVA-BG
+   #:rows 2
+   #:columns 2))
+
+(survival-game
+ #:bg (my-bg))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns959_hackPrism = function(){
+if( window.ns959_prismHacked ) return; 
+ window.ns959_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns959_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns959_toggledSpecification = function(){
+window.ns959_specificationShown  = ! window.ns959_specificationShown;
+ window.ns959_render();
+
+}
+
+window.ns959_toggledImplementation = function(){
+window.ns959_implementationShown  = ! window.ns959_implementationShown;
+ window.ns959_render();
+
+}
+
+window.ns959_implementationNextState = function(){
+return  window.ns959_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns959_specificationNextState = function(){
+return  window.ns959_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns959_disintegrate = function(){
+window.ns959_hackPrism (); 
+ var ns = document.querySelector(" #ns959_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns959_render = function(){
+document.getElementById( window.ns959_specificationIconId ) .className  =  window.ns959_specificationNextState ();
+ document.getElementById( window.ns959_implementationIconId ) .className =  window.ns959_implementationNextState ();
+
+}
+
+window.ns959_specificationShown=true;
+window.ns959_implementationShown=false;
+window.ns959_specificationIconId="ns959_specification-next-state";
+window.ns959_implementationIconId="ns959_implementation-next-state";
+window.ns959_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Bg 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns960_toggledSpecification()" data-toggle="collapse" data-target="#ns960_specification"><i id="ns960_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns960_specification" class="collapse show" data-parent="#ns960_accordion"><div class="card-body"><p class="card-text">Code a game with a lava background with a 2 by 2 grid that starts on tile 3.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns960_toggledImplementation()" data-toggle="collapse" data-target="#ns960_implementation"><i id="ns960_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns960_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns960_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-bg)
+ (basic-bg #:image LAVA-BG
+           #:rows 2
+           #:columns 2
+           #:start-tile 3
+           #:hd? #t))
+
+(survival-game #:bg (my-bg))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns960_hackPrism = function(){
+if( window.ns960_prismHacked ) return; 
+ window.ns960_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns960_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns960_toggledSpecification = function(){
+window.ns960_specificationShown  = ! window.ns960_specificationShown;
+ window.ns960_render();
+
+}
+
+window.ns960_toggledImplementation = function(){
+window.ns960_implementationShown  = ! window.ns960_implementationShown;
+ window.ns960_render();
+
+}
+
+window.ns960_implementationNextState = function(){
+return  window.ns960_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns960_specificationNextState = function(){
+return  window.ns960_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns960_disintegrate = function(){
+window.ns960_hackPrism (); 
+ var ns = document.querySelector(" #ns960_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns960_render = function(){
+document.getElementById( window.ns960_specificationIconId ) .className  =  window.ns960_specificationNextState ();
+ document.getElementById( window.ns960_implementationIconId ) .className =  window.ns960_implementationNextState ();
+
+}
+
+window.ns960_specificationShown=true;
+window.ns960_implementationShown=false;
+window.ns960_specificationIconId="ns960_specification-next-state";
+window.ns960_implementationIconId="ns960_implementation-next-state";
+window.ns960_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Coin 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns961_toggledSpecification()" data-toggle="collapse" data-target="#ns961_specification"><i id="ns961_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns961_specification" class="collapse show" data-parent="#ns961_accordion"><div class="card-body"><p class="card-text">Code a game with collectible coins.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns961_toggledImplementation()" data-toggle="collapse" data-target="#ns961_implementation"><i id="ns961_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns961_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns961_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:coin-list  (list (basic-coin)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns961_hackPrism = function(){
+if( window.ns961_prismHacked ) return; 
+ window.ns961_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns961_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns961_toggledSpecification = function(){
+window.ns961_specificationShown  = ! window.ns961_specificationShown;
+ window.ns961_render();
+
+}
+
+window.ns961_toggledImplementation = function(){
+window.ns961_implementationShown  = ! window.ns961_implementationShown;
+ window.ns961_render();
+
+}
+
+window.ns961_implementationNextState = function(){
+return  window.ns961_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns961_specificationNextState = function(){
+return  window.ns961_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns961_disintegrate = function(){
+window.ns961_hackPrism (); 
+ var ns = document.querySelector(" #ns961_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns961_render = function(){
+document.getElementById( window.ns961_specificationIconId ) .className  =  window.ns961_specificationNextState ();
+ document.getElementById( window.ns961_implementationIconId ) .className =  window.ns961_implementationNextState ();
+
+}
+
+window.ns961_specificationShown=true;
+window.ns961_implementationShown=false;
+window.ns961_specificationIconId="ns961_specification-next-state";
+window.ns961_implementationIconId="ns961_implementation-next-state";
+window.ns961_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Coin 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns962_toggledSpecification()" data-toggle="collapse" data-target="#ns962_specification"><i id="ns962_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns962_specification" class="collapse show" data-parent="#ns962_accordion"><div class="card-body"><p class="card-text">Code a game with very valuable collectible coins.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns962_toggledImplementation()" data-toggle="collapse" data-target="#ns962_implementation"><i id="ns962_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns962_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns962_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-coin)
+ (basic-coin #:value 500))
+
+(survival-game
+ #:coin-list  (list (my-coin)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns962_hackPrism = function(){
+if( window.ns962_prismHacked ) return; 
+ window.ns962_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns962_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns962_toggledSpecification = function(){
+window.ns962_specificationShown  = ! window.ns962_specificationShown;
+ window.ns962_render();
+
+}
+
+window.ns962_toggledImplementation = function(){
+window.ns962_implementationShown  = ! window.ns962_implementationShown;
+ window.ns962_render();
+
+}
+
+window.ns962_implementationNextState = function(){
+return  window.ns962_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns962_specificationNextState = function(){
+return  window.ns962_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns962_disintegrate = function(){
+window.ns962_hackPrism (); 
+ var ns = document.querySelector(" #ns962_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns962_render = function(){
+document.getElementById( window.ns962_specificationIconId ) .className  =  window.ns962_specificationNextState ();
+ document.getElementById( window.ns962_implementationIconId ) .className =  window.ns962_implementationNextState ();
+
+}
+
+window.ns962_specificationShown=true;
+window.ns962_implementationShown=false;
+window.ns962_specificationIconId="ns962_specification-next-state";
+window.ns962_implementationIconId="ns962_implementation-next-state";
+window.ns962_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Coin 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns963_toggledSpecification()" data-toggle="collapse" data-target="#ns963_specification"><i id="ns963_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns963_specification" class="collapse show" data-parent="#ns963_accordion"><div class="card-body"><p class="card-text">Code a game with many valuable silver coins.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns963_toggledImplementation()" data-toggle="collapse" data-target="#ns963_implementation"><i id="ns963_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns963_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns963_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-coin)
+ (basic-coin #:sprite          silvercoin-sprite
+             #:name            &quot;Silver Coin&quot;
+             #:value           100
+             #:amount-in-world 20))
+
+(survival-game
+ #:coin-list  (list (my-coin)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns963_hackPrism = function(){
+if( window.ns963_prismHacked ) return; 
+ window.ns963_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns963_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns963_toggledSpecification = function(){
+window.ns963_specificationShown  = ! window.ns963_specificationShown;
+ window.ns963_render();
+
+}
+
+window.ns963_toggledImplementation = function(){
+window.ns963_implementationShown  = ! window.ns963_implementationShown;
+ window.ns963_render();
+
+}
+
+window.ns963_implementationNextState = function(){
+return  window.ns963_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns963_specificationNextState = function(){
+return  window.ns963_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns963_disintegrate = function(){
+window.ns963_hackPrism (); 
+ var ns = document.querySelector(" #ns963_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns963_render = function(){
+document.getElementById( window.ns963_specificationIconId ) .className  =  window.ns963_specificationNextState ();
+ document.getElementById( window.ns963_implementationIconId ) .className =  window.ns963_implementationNextState ();
+
+}
+
+window.ns963_specificationShown=true;
+window.ns963_implementationShown=false;
+window.ns963_specificationIconId="ns963_specification-next-state";
+window.ns963_implementationIconId="ns963_implementation-next-state";
+window.ns963_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Coin 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns964_toggledSpecification()" data-toggle="collapse" data-target="#ns964_specification"><i id="ns964_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns964_specification" class="collapse show" data-parent="#ns964_accordion"><div class="card-body"><p class="card-text">Code a game with a silver coin, and a single, extremely valuable gold coin that only appears once.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns964_toggledImplementation()" data-toggle="collapse" data-target="#ns964_implementation"><i id="ns964_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns964_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns964_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-coin)
+ (basic-coin #:sprite silvercoin-sprite
+             #:name   &quot;Silver Coin&quot;))
+
+(define (my-special-coin)
+ (basic-coin #:sprite          goldcoin-sprite
+             #:name            &quot;Gold Coin&quot;
+             #:value           1000
+             #:amount-in-world 1
+             #:respawn?        #f))
+
+(survival-game
+ #:coin-list  (list (my-coin)
+                    (my-special-coin)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns964_hackPrism = function(){
+if( window.ns964_prismHacked ) return; 
+ window.ns964_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns964_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns964_toggledSpecification = function(){
+window.ns964_specificationShown  = ! window.ns964_specificationShown;
+ window.ns964_render();
+
+}
+
+window.ns964_toggledImplementation = function(){
+window.ns964_implementationShown  = ! window.ns964_implementationShown;
+ window.ns964_render();
+
+}
+
+window.ns964_implementationNextState = function(){
+return  window.ns964_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns964_specificationNextState = function(){
+return  window.ns964_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns964_disintegrate = function(){
+window.ns964_hackPrism (); 
+ var ns = document.querySelector(" #ns964_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns964_render = function(){
+document.getElementById( window.ns964_specificationIconId ) .className  =  window.ns964_specificationNextState ();
+ document.getElementById( window.ns964_implementationIconId ) .className =  window.ns964_implementationNextState ();
+
+}
+
+window.ns964_specificationShown=true;
+window.ns964_implementationShown=false;
+window.ns964_specificationIconId="ns964_specification-next-state";
+window.ns964_implementationIconId="ns964_implementation-next-state";
+window.ns964_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Coin 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns965_toggledSpecification()" data-toggle="collapse" data-target="#ns965_specification"><i id="ns965_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns965_specification" class="collapse show" data-parent="#ns965_accordion"><div class="card-body"><p class="card-text">Code a game with 3 collectible coins: a basic coin; a rarer, more valuable silver coin; and an extremely rare and valuable gold coin.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns965_toggledImplementation()" data-toggle="collapse" data-target="#ns965_implementation"><i id="ns965_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns965_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns965_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (silver-coin)
+ (basic-coin #:sprite silvercoin-sprite
+             #:name   &quot;Silver Coin&quot;
+             #:value  500
+             #:amount-in-world 5))
+
+(define (gold-coin)
+ (basic-coin #:sprite          goldcoin-sprite
+             #:name            &quot;Gold Coin&quot;
+             #:value           1000
+             #:amount-in-world 1
+             #:respawn?        #f))
+
+(survival-game
+ #:coin-list  (list (basic-coin)
+                    (silver-coin)
+                    (gold-coin)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns965_hackPrism = function(){
+if( window.ns965_prismHacked ) return; 
+ window.ns965_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns965_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns965_toggledSpecification = function(){
+window.ns965_specificationShown  = ! window.ns965_specificationShown;
+ window.ns965_render();
+
+}
+
+window.ns965_toggledImplementation = function(){
+window.ns965_implementationShown  = ! window.ns965_implementationShown;
+ window.ns965_render();
+
+}
+
+window.ns965_implementationNextState = function(){
+return  window.ns965_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns965_specificationNextState = function(){
+return  window.ns965_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns965_disintegrate = function(){
+window.ns965_hackPrism (); 
+ var ns = document.querySelector(" #ns965_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns965_render = function(){
+document.getElementById( window.ns965_specificationIconId ) .className  =  window.ns965_specificationNextState ();
+ document.getElementById( window.ns965_implementationIconId ) .className =  window.ns965_implementationNextState ();
+
+}
+
+window.ns965_specificationShown=true;
+window.ns965_implementationShown=false;
+window.ns965_specificationIconId="ns965_specification-next-state";
+window.ns965_implementationIconId="ns965_implementation-next-state";
+window.ns965_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Crafter 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns966_toggledSpecification()" data-toggle="collapse" data-target="#ns966_specification"><i id="ns966_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns966_specification" class="collapse show" data-parent="#ns966_accordion"><div class="card-body"><p class="card-text">Code a game with a basic crafter.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns966_toggledImplementation()" data-toggle="collapse" data-target="#ns966_implementation"><i id="ns966_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns966_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns966_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:crafter-list (list (basic-crafter #:sprite cauldron-sprite
+                                     #:position    (posn 200 200)
+                                     #:tile        2)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns966_hackPrism = function(){
+if( window.ns966_prismHacked ) return; 
+ window.ns966_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns966_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns966_toggledSpecification = function(){
+window.ns966_specificationShown  = ! window.ns966_specificationShown;
+ window.ns966_render();
+
+}
+
+window.ns966_toggledImplementation = function(){
+window.ns966_implementationShown  = ! window.ns966_implementationShown;
+ window.ns966_render();
+
+}
+
+window.ns966_implementationNextState = function(){
+return  window.ns966_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns966_specificationNextState = function(){
+return  window.ns966_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns966_disintegrate = function(){
+window.ns966_hackPrism (); 
+ var ns = document.querySelector(" #ns966_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns966_render = function(){
+document.getElementById( window.ns966_specificationIconId ) .className  =  window.ns966_specificationNextState ();
+ document.getElementById( window.ns966_implementationIconId ) .className =  window.ns966_implementationNextState ();
+
+}
+
+window.ns966_specificationShown=true;
+window.ns966_implementationShown=false;
+window.ns966_specificationIconId="ns966_specification-next-state";
+window.ns966_implementationIconId="ns966_implementation-next-state";
+window.ns966_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Crafter 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns967_toggledSpecification()" data-toggle="collapse" data-target="#ns967_specification"><i id="ns967_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns967_specification" class="collapse show" data-parent="#ns967_accordion"><div class="card-body"><p class="card-text">Code a game with carrots, and a crafter that makes carrot stew from carrots.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns967_toggledImplementation()" data-toggle="collapse" data-target="#ns967_implementation"><i id="ns967_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns967_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns967_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:food-list    (list (carrot #:name &quot;Carrot&quot;
+                              #:amount-in-world 10))
+ #:crafter-list (list (basic-crafter
+                        #:recipe-list (list carrot-stew-recipe))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns967_hackPrism = function(){
+if( window.ns967_prismHacked ) return; 
+ window.ns967_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns967_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns967_toggledSpecification = function(){
+window.ns967_specificationShown  = ! window.ns967_specificationShown;
+ window.ns967_render();
+
+}
+
+window.ns967_toggledImplementation = function(){
+window.ns967_implementationShown  = ! window.ns967_implementationShown;
+ window.ns967_render();
+
+}
+
+window.ns967_implementationNextState = function(){
+return  window.ns967_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns967_specificationNextState = function(){
+return  window.ns967_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns967_disintegrate = function(){
+window.ns967_hackPrism (); 
+ var ns = document.querySelector(" #ns967_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns967_render = function(){
+document.getElementById( window.ns967_specificationIconId ) .className  =  window.ns967_specificationNextState ();
+ document.getElementById( window.ns967_implementationIconId ) .className =  window.ns967_implementationNextState ();
+
+}
+
+window.ns967_specificationShown=true;
+window.ns967_implementationShown=false;
+window.ns967_specificationIconId="ns967_specification-next-state";
+window.ns967_implementationIconId="ns967_implementation-next-state";
+window.ns967_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Crafter 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns968_toggledSpecification()" data-toggle="collapse" data-target="#ns968_specification"><i id="ns968_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns968_specification" class="collapse show" data-parent="#ns968_accordion"><div class="card-body"><p class="card-text">Code a game with fish, and a crafter that makes fish stew with high-healing power.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns968_toggledImplementation()" data-toggle="collapse" data-target="#ns968_implementation"><i id="ns968_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns968_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns968_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (fish-stew)
+ (basic-product #:name &quot;Fish Stew&quot;
+                #:sprite fishstew-sprite
+                #:heals-by 50))
+
+(define fish-stew-recipe
+ (recipe #:product (fish-stew)
+         #:ingredients (list &quot;Fish&quot;)))
+
+(survival-game
+ #:food-list    (list (fish))
+ #:crafter-list (list (basic-crafter #:recipe-list (list fish-stew-recipe))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns968_hackPrism = function(){
+if( window.ns968_prismHacked ) return; 
+ window.ns968_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns968_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns968_toggledSpecification = function(){
+window.ns968_specificationShown  = ! window.ns968_specificationShown;
+ window.ns968_render();
+
+}
+
+window.ns968_toggledImplementation = function(){
+window.ns968_implementationShown  = ! window.ns968_implementationShown;
+ window.ns968_render();
+
+}
+
+window.ns968_implementationNextState = function(){
+return  window.ns968_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns968_specificationNextState = function(){
+return  window.ns968_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns968_disintegrate = function(){
+window.ns968_hackPrism (); 
+ var ns = document.querySelector(" #ns968_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns968_render = function(){
+document.getElementById( window.ns968_specificationIconId ) .className  =  window.ns968_specificationNextState ();
+ document.getElementById( window.ns968_implementationIconId ) .className =  window.ns968_implementationNextState ();
+
+}
+
+window.ns968_specificationShown=true;
+window.ns968_implementationShown=false;
+window.ns968_specificationIconId="ns968_specification-next-state";
+window.ns968_implementationIconId="ns968_implementation-next-state";
+window.ns968_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Crafter 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns969_toggledSpecification()" data-toggle="collapse" data-target="#ns969_specification"><i id="ns969_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns969_specification" class="collapse show" data-parent="#ns969_accordion"><div class="card-body"><p class="card-text">Code a game with carrots, fish, and a crafter on tile 2 (posn 200 200) that makes both carrot-stew and fish-stew.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns969_toggledImplementation()" data-toggle="collapse" data-target="#ns969_implementation"><i id="ns969_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns969_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns969_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (fish-stew)
+ (basic-product #:name &quot;Fish Stew&quot;
+                #:sprite fishstew-sprite
+                #:heals-by 50))
+
+(define fish-stew-recipe
+ (recipe #:product (fish-stew)
+         #:ingredients (list &quot;Fish&quot;)))
+
+(define (my-cauldron)
+ (basic-crafter #:recipe-list (list carrot-stew-recipe
+                                    fish-stew-recipe)))
+
+(survival-game
+ #:food-list    (list (carrot #:amount-in-world 10)
+                      (fish #:amount-in-world 10))
+ #:crafter-list (list (my-cauldron)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns969_hackPrism = function(){
+if( window.ns969_prismHacked ) return; 
+ window.ns969_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns969_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns969_toggledSpecification = function(){
+window.ns969_specificationShown  = ! window.ns969_specificationShown;
+ window.ns969_render();
+
+}
+
+window.ns969_toggledImplementation = function(){
+window.ns969_implementationShown  = ! window.ns969_implementationShown;
+ window.ns969_render();
+
+}
+
+window.ns969_implementationNextState = function(){
+return  window.ns969_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns969_specificationNextState = function(){
+return  window.ns969_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns969_disintegrate = function(){
+window.ns969_hackPrism (); 
+ var ns = document.querySelector(" #ns969_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns969_render = function(){
+document.getElementById( window.ns969_specificationIconId ) .className  =  window.ns969_specificationNextState ();
+ document.getElementById( window.ns969_implementationIconId ) .className =  window.ns969_implementationNextState ();
+
+}
+
+window.ns969_specificationShown=true;
+window.ns969_implementationShown=false;
+window.ns969_specificationIconId="ns969_specification-next-state";
+window.ns969_implementationIconId="ns969_implementation-next-state";
+window.ns969_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Enemy 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns970_toggledSpecification()" data-toggle="collapse" data-target="#ns970_specification"><i id="ns970_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns970_specification" class="collapse show" data-parent="#ns970_accordion"><div class="card-body"><p class="card-text">Code a game with an enemy.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns970_toggledImplementation()" data-toggle="collapse" data-target="#ns970_implementation"><i id="ns970_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns970_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns970_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:enemy-list (list (basic-enemy)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns970_hackPrism = function(){
+if( window.ns970_prismHacked ) return; 
+ window.ns970_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns970_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns970_toggledSpecification = function(){
+window.ns970_specificationShown  = ! window.ns970_specificationShown;
+ window.ns970_render();
+
+}
+
+window.ns970_toggledImplementation = function(){
+window.ns970_implementationShown  = ! window.ns970_implementationShown;
+ window.ns970_render();
+
+}
+
+window.ns970_implementationNextState = function(){
+return  window.ns970_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns970_specificationNextState = function(){
+return  window.ns970_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns970_disintegrate = function(){
+window.ns970_hackPrism (); 
+ var ns = document.querySelector(" #ns970_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns970_render = function(){
+document.getElementById( window.ns970_specificationIconId ) .className  =  window.ns970_specificationNextState ();
+ document.getElementById( window.ns970_implementationIconId ) .className =  window.ns970_implementationNextState ();
+
+}
+
+window.ns970_specificationShown=true;
+window.ns970_implementationShown=false;
+window.ns970_specificationIconId="ns970_specification-next-state";
+window.ns970_implementationIconId="ns970_implementation-next-state";
+window.ns970_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Enemy 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns971_toggledSpecification()" data-toggle="collapse" data-target="#ns971_specification"><i id="ns971_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns971_specification" class="collapse show" data-parent="#ns971_accordion"><div class="card-body"><p class="card-text">Code a game with 10 random enemies.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns971_toggledImplementation()" data-toggle="collapse" data-target="#ns971_implementation"><i id="ns971_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns971_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns971_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:enemy-list (list (basic-enemy #:amount-in-world 10)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns971_hackPrism = function(){
+if( window.ns971_prismHacked ) return; 
+ window.ns971_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns971_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns971_toggledSpecification = function(){
+window.ns971_specificationShown  = ! window.ns971_specificationShown;
+ window.ns971_render();
+
+}
+
+window.ns971_toggledImplementation = function(){
+window.ns971_implementationShown  = ! window.ns971_implementationShown;
+ window.ns971_render();
+
+}
+
+window.ns971_implementationNextState = function(){
+return  window.ns971_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns971_specificationNextState = function(){
+return  window.ns971_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns971_disintegrate = function(){
+window.ns971_hackPrism (); 
+ var ns = document.querySelector(" #ns971_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns971_render = function(){
+document.getElementById( window.ns971_specificationIconId ) .className  =  window.ns971_specificationNextState ();
+ document.getElementById( window.ns971_implementationIconId ) .className =  window.ns971_implementationNextState ();
+
+}
+
+window.ns971_specificationShown=true;
+window.ns971_implementationShown=false;
+window.ns971_specificationIconId="ns971_specification-next-state";
+window.ns971_implementationIconId="ns971_implementation-next-state";
+window.ns971_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Enemy 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns972_toggledSpecification()" data-toggle="collapse" data-target="#ns972_specification"><i id="ns972_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns972_specification" class="collapse show" data-parent="#ns972_accordion"><div class="card-body"><p class="card-text">Code a game with 5 bat enemies with medium AI.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns972_toggledImplementation()" data-toggle="collapse" data-target="#ns972_implementation"><i id="ns972_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns972_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns972_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-enemy)
+ (basic-enemy #:ai              'medium
+              #:sprite          bat-sprite
+              #:amount-in-world 5))
+
+(survival-game
+ #:enemy-list (list (my-enemy)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns972_hackPrism = function(){
+if( window.ns972_prismHacked ) return; 
+ window.ns972_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns972_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns972_toggledSpecification = function(){
+window.ns972_specificationShown  = ! window.ns972_specificationShown;
+ window.ns972_render();
+
+}
+
+window.ns972_toggledImplementation = function(){
+window.ns972_implementationShown  = ! window.ns972_implementationShown;
+ window.ns972_render();
+
+}
+
+window.ns972_implementationNextState = function(){
+return  window.ns972_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns972_specificationNextState = function(){
+return  window.ns972_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns972_disintegrate = function(){
+window.ns972_hackPrism (); 
+ var ns = document.querySelector(" #ns972_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns972_render = function(){
+document.getElementById( window.ns972_specificationIconId ) .className  =  window.ns972_specificationNextState ();
+ document.getElementById( window.ns972_implementationIconId ) .className =  window.ns972_implementationNextState ();
+
+}
+
+window.ns972_specificationShown=true;
+window.ns972_implementationShown=false;
+window.ns972_specificationIconId="ns972_specification-next-state";
+window.ns972_implementationIconId="ns972_implementation-next-state";
+window.ns972_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Enemy 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns973_toggledSpecification()" data-toggle="collapse" data-target="#ns973_specification"><i id="ns973_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns973_specification" class="collapse show" data-parent="#ns973_accordion"><div class="card-body"><p class="card-text">Code a game with 10 total mobs: half are not-smart slime, and half are smarter bats who only appear at night.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns973_toggledImplementation()" data-toggle="collapse" data-target="#ns973_implementation"><i id="ns973_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns973_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns973_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (easy-enemy)
+ (basic-enemy #:ai           'easy
+              #:sprite       slime-sprite
+              #:amount-in-world 5))
+
+(define (medium-enemy)
+ (basic-enemy #:ai              'medium
+              #:sprite          bat-sprite
+              #:amount-in-world 5
+              #:night-only? #t))
+
+(survival-game
+ #:enemy-list (list (easy-enemy)
+                    (medium-enemy)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns973_hackPrism = function(){
+if( window.ns973_prismHacked ) return; 
+ window.ns973_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns973_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns973_toggledSpecification = function(){
+window.ns973_specificationShown  = ! window.ns973_specificationShown;
+ window.ns973_render();
+
+}
+
+window.ns973_toggledImplementation = function(){
+window.ns973_implementationShown  = ! window.ns973_implementationShown;
+ window.ns973_render();
+
+}
+
+window.ns973_implementationNextState = function(){
+return  window.ns973_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns973_specificationNextState = function(){
+return  window.ns973_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns973_disintegrate = function(){
+window.ns973_hackPrism (); 
+ var ns = document.querySelector(" #ns973_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns973_render = function(){
+document.getElementById( window.ns973_specificationIconId ) .className  =  window.ns973_specificationNextState ();
+ document.getElementById( window.ns973_implementationIconId ) .className =  window.ns973_implementationNextState ();
+
+}
+
+window.ns973_specificationShown=true;
+window.ns973_implementationShown=false;
+window.ns973_specificationIconId="ns973_specification-next-state";
+window.ns973_implementationIconId="ns973_implementation-next-state";
+window.ns973_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Enemy 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns974_toggledSpecification()" data-toggle="collapse" data-target="#ns974_specification"><i id="ns974_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns974_specification" class="collapse show" data-parent="#ns974_accordion"><div class="card-body"><p class="card-text">Code a game with 5 hard bat enemies that spit acid with 50 damage.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns974_toggledImplementation()" data-toggle="collapse" data-target="#ns974_implementation"><i id="ns974_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns974_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns974_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (hard-enemy)
+ (basic-enemy #:ai              'hard
+              #:sprite          snake-sprite
+              #:amount-in-world 5
+              #:weapon          (acid-spitter #:damage 50)))
+
+(survival-game
+ #:enemy-list   (list (hard-enemy)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns974_hackPrism = function(){
+if( window.ns974_prismHacked ) return; 
+ window.ns974_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns974_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns974_toggledSpecification = function(){
+window.ns974_specificationShown  = ! window.ns974_specificationShown;
+ window.ns974_render();
+
+}
+
+window.ns974_toggledImplementation = function(){
+window.ns974_implementationShown  = ! window.ns974_implementationShown;
+ window.ns974_render();
+
+}
+
+window.ns974_implementationNextState = function(){
+return  window.ns974_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns974_specificationNextState = function(){
+return  window.ns974_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns974_disintegrate = function(){
+window.ns974_hackPrism (); 
+ var ns = document.querySelector(" #ns974_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns974_render = function(){
+document.getElementById( window.ns974_specificationIconId ) .className  =  window.ns974_specificationNextState ();
+ document.getElementById( window.ns974_implementationIconId ) .className =  window.ns974_implementationNextState ();
+
+}
+
+window.ns974_specificationShown=true;
+window.ns974_implementationShown=false;
+window.ns974_specificationIconId="ns974_specification-next-state";
+window.ns974_implementationIconId="ns974_implementation-next-state";
+window.ns974_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Enemy 6</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns975_toggledSpecification()" data-toggle="collapse" data-target="#ns975_specification"><i id="ns975_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns975_specification" class="collapse show" data-parent="#ns975_accordion"><div class="card-body"><p class="card-text">Code a game with 5 slimes with 'easy ai, 3 snakes with 'medium ai, and 1 bat with 'hard ai that only shows up at night and does 50 damage.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns975_toggledImplementation()" data-toggle="collapse" data-target="#ns975_implementation"><i id="ns975_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns975_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns975_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (easy-enemy)
+ (basic-enemy #:ai             'easy
+              #:sprite          slime-sprite
+              #:amount-in-world 5))
+
+(define (medium-enemy)
+ (basic-enemy #:ai              'medium
+              #:sprite          snake-sprite
+              #:amount-in-world 3))
+
+(define (hard-enemy)
+ (basic-enemy #:ai              'hard
+              #:sprite          bat-sprite
+              #:amount-in-world 1
+              #:night-only?     #t
+              #:weapon          (acid-spitter #:damage 50)))
+
+(survival-game
+ #:enemy-list   (list (easy-enemy)
+                      (medium-enemy)
+                      (hard-enemy)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns975_hackPrism = function(){
+if( window.ns975_prismHacked ) return; 
+ window.ns975_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns975_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns975_toggledSpecification = function(){
+window.ns975_specificationShown  = ! window.ns975_specificationShown;
+ window.ns975_render();
+
+}
+
+window.ns975_toggledImplementation = function(){
+window.ns975_implementationShown  = ! window.ns975_implementationShown;
+ window.ns975_render();
+
+}
+
+window.ns975_implementationNextState = function(){
+return  window.ns975_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns975_specificationNextState = function(){
+return  window.ns975_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns975_disintegrate = function(){
+window.ns975_hackPrism (); 
+ var ns = document.querySelector(" #ns975_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns975_render = function(){
+document.getElementById( window.ns975_specificationIconId ) .className  =  window.ns975_specificationNextState ();
+ document.getElementById( window.ns975_implementationIconId ) .className =  window.ns975_implementationNextState ();
+
+}
+
+window.ns975_specificationShown=true;
+window.ns975_implementationShown=false;
+window.ns975_specificationIconId="ns975_specification-next-state";
+window.ns975_implementationIconId="ns975_implementation-next-state";
+window.ns975_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Food 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns976_toggledSpecification()" data-toggle="collapse" data-target="#ns976_specification"><i id="ns976_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns976_specification" class="collapse show" data-parent="#ns976_accordion"><div class="card-body"><p class="card-text">Code a game with food.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns976_toggledImplementation()" data-toggle="collapse" data-target="#ns976_implementation"><i id="ns976_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns976_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns976_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:food-list  (list (basic-food #:amount-in-world 10)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns976_hackPrism = function(){
+if( window.ns976_prismHacked ) return; 
+ window.ns976_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns976_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns976_toggledSpecification = function(){
+window.ns976_specificationShown  = ! window.ns976_specificationShown;
+ window.ns976_render();
+
+}
+
+window.ns976_toggledImplementation = function(){
+window.ns976_implementationShown  = ! window.ns976_implementationShown;
+ window.ns976_render();
+
+}
+
+window.ns976_implementationNextState = function(){
+return  window.ns976_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns976_specificationNextState = function(){
+return  window.ns976_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns976_disintegrate = function(){
+window.ns976_hackPrism (); 
+ var ns = document.querySelector(" #ns976_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns976_render = function(){
+document.getElementById( window.ns976_specificationIconId ) .className  =  window.ns976_specificationNextState ();
+ document.getElementById( window.ns976_implementationIconId ) .className =  window.ns976_implementationNextState ();
+
+}
+
+window.ns976_specificationShown=true;
+window.ns976_implementationShown=false;
+window.ns976_specificationIconId="ns976_specification-next-state";
+window.ns976_implementationIconId="ns976_implementation-next-state";
+window.ns976_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Food 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns977_toggledSpecification()" data-toggle="collapse" data-target="#ns977_specification"><i id="ns977_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns977_specification" class="collapse show" data-parent="#ns977_accordion"><div class="card-body"><p class="card-text">Code a game with exactly two custom foods that heal you by 20.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns977_toggledImplementation()" data-toggle="collapse" data-target="#ns977_implementation"><i id="ns977_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns977_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns977_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-food)
+ (basic-food #:amount-in-world 2
+             #:heals-by        20))
+
+(survival-game
+ #:food-list  (list (my-food)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns977_hackPrism = function(){
+if( window.ns977_prismHacked ) return; 
+ window.ns977_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns977_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns977_toggledSpecification = function(){
+window.ns977_specificationShown  = ! window.ns977_specificationShown;
+ window.ns977_render();
+
+}
+
+window.ns977_toggledImplementation = function(){
+window.ns977_implementationShown  = ! window.ns977_implementationShown;
+ window.ns977_render();
+
+}
+
+window.ns977_implementationNextState = function(){
+return  window.ns977_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns977_specificationNextState = function(){
+return  window.ns977_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns977_disintegrate = function(){
+window.ns977_hackPrism (); 
+ var ns = document.querySelector(" #ns977_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns977_render = function(){
+document.getElementById( window.ns977_specificationIconId ) .className  =  window.ns977_specificationNextState ();
+ document.getElementById( window.ns977_implementationIconId ) .className =  window.ns977_implementationNextState ();
+
+}
+
+window.ns977_specificationShown=true;
+window.ns977_implementationShown=false;
+window.ns977_specificationIconId="ns977_specification-next-state";
+window.ns977_implementationIconId="ns977_implementation-next-state";
+window.ns977_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Food 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns978_toggledSpecification()" data-toggle="collapse" data-target="#ns978_specification"><i id="ns978_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns978_specification" class="collapse show" data-parent="#ns978_accordion"><div class="card-body"><p class="card-text">Code a game with a couple of apples with extra healing power.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns978_toggledImplementation()" data-toggle="collapse" data-target="#ns978_implementation"><i id="ns978_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns978_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns978_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-food)
+ (basic-food #:sprite          apples-sprite
+             #:name            &quot;Apples&quot;
+             #:amount-in-world 2
+             #:heals-by        20))
+
+(survival-game
+ #:food-list  (list (my-food)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns978_hackPrism = function(){
+if( window.ns978_prismHacked ) return; 
+ window.ns978_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns978_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns978_toggledSpecification = function(){
+window.ns978_specificationShown  = ! window.ns978_specificationShown;
+ window.ns978_render();
+
+}
+
+window.ns978_toggledImplementation = function(){
+window.ns978_implementationShown  = ! window.ns978_implementationShown;
+ window.ns978_render();
+
+}
+
+window.ns978_implementationNextState = function(){
+return  window.ns978_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns978_specificationNextState = function(){
+return  window.ns978_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns978_disintegrate = function(){
+window.ns978_hackPrism (); 
+ var ns = document.querySelector(" #ns978_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns978_render = function(){
+document.getElementById( window.ns978_specificationIconId ) .className  =  window.ns978_specificationNextState ();
+ document.getElementById( window.ns978_implementationIconId ) .className =  window.ns978_implementationNextState ();
+
+}
+
+window.ns978_specificationShown=true;
+window.ns978_implementationShown=false;
+window.ns978_specificationIconId="ns978_specification-next-state";
+window.ns978_implementationIconId="ns978_implementation-next-state";
+window.ns978_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Food 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns979_toggledSpecification()" data-toggle="collapse" data-target="#ns979_specification"><i id="ns979_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns979_specification" class="collapse show" data-parent="#ns979_accordion"><div class="card-body"><p class="card-text">Code a game with 2 different food types: common apples with low-healing power and one very rare cherry with high-healing power.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns979_toggledImplementation()" data-toggle="collapse" data-target="#ns979_implementation"><i id="ns979_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns979_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns979_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-food)
+ (basic-food #:sprite          apples-sprite
+             #:name            &quot;Apples&quot;
+             #:amount-in-world 15
+             #:heals-by        5))
+
+(define (special-food)
+ (basic-food #:sprite          cherry-sprite
+             #:name            &quot;Cherry&quot;
+             #:amount-in-world 1
+             #:heals-by        50
+             #:respawn?        #f))
+
+(survival-game
+ #:food-list  (list (my-food)
+                    (special-food)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns979_hackPrism = function(){
+if( window.ns979_prismHacked ) return; 
+ window.ns979_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns979_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns979_toggledSpecification = function(){
+window.ns979_specificationShown  = ! window.ns979_specificationShown;
+ window.ns979_render();
+
+}
+
+window.ns979_toggledImplementation = function(){
+window.ns979_implementationShown  = ! window.ns979_implementationShown;
+ window.ns979_render();
+
+}
+
+window.ns979_implementationNextState = function(){
+return  window.ns979_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns979_specificationNextState = function(){
+return  window.ns979_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns979_disintegrate = function(){
+window.ns979_hackPrism (); 
+ var ns = document.querySelector(" #ns979_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns979_render = function(){
+document.getElementById( window.ns979_specificationIconId ) .className  =  window.ns979_specificationNextState ();
+ document.getElementById( window.ns979_implementationIconId ) .className =  window.ns979_implementationNextState ();
+
+}
+
+window.ns979_specificationShown=true;
+window.ns979_implementationShown=false;
+window.ns979_specificationIconId="ns979_specification-next-state";
+window.ns979_implementationIconId="ns979_implementation-next-state";
+window.ns979_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Food 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns980_toggledSpecification()" data-toggle="collapse" data-target="#ns980_specification"><i id="ns980_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns980_specification" class="collapse show" data-parent="#ns980_accordion"><div class="card-body"><p class="card-text">Code a game with a very fast starvation rate and lots of cherries with high-healing power.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns980_toggledImplementation()" data-toggle="collapse" data-target="#ns980_implementation"><i id="ns980_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns980_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns980_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-food)
+ (basic-food #:sprite          cherry-sprite
+             #:name            &quot;Cherries&quot;
+             #:amount-in-world 20
+             #:heals-by        50))
+
+(survival-game
+ #:food-list       (list (my-food))
+ #:starvation-rate 100)</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns980_hackPrism = function(){
+if( window.ns980_prismHacked ) return; 
+ window.ns980_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns980_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns980_toggledSpecification = function(){
+window.ns980_specificationShown  = ! window.ns980_specificationShown;
+ window.ns980_render();
+
+}
+
+window.ns980_toggledImplementation = function(){
+window.ns980_implementationShown  = ! window.ns980_implementationShown;
+ window.ns980_render();
+
+}
+
+window.ns980_implementationNextState = function(){
+return  window.ns980_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns980_specificationNextState = function(){
+return  window.ns980_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns980_disintegrate = function(){
+window.ns980_hackPrism (); 
+ var ns = document.querySelector(" #ns980_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns980_render = function(){
+document.getElementById( window.ns980_specificationIconId ) .className  =  window.ns980_specificationNextState ();
+ document.getElementById( window.ns980_implementationIconId ) .className =  window.ns980_implementationNextState ();
+
+}
+
+window.ns980_specificationShown=true;
+window.ns980_implementationShown=false;
+window.ns980_specificationIconId="ns980_specification-next-state";
+window.ns980_implementationIconId="ns980_implementation-next-state";
+window.ns980_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Food 6</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns981_toggledSpecification()" data-toggle="collapse" data-target="#ns981_specification"><i id="ns981_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns981_specification" class="collapse show" data-parent="#ns981_accordion"><div class="card-body"><p class="card-text">Code a game with 3 food types: common cherries, trick smores that deplete your health, and a single high-healing carrot that spawns, only once, on a specific tile.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns981_toggledImplementation()" data-toggle="collapse" data-target="#ns981_implementation"><i id="ns981_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns981_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns981_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (basic-cherry)
+ (basic-food #:sprite          cherry-sprite
+             #:name            &quot;Cherries&quot;
+             #:amount-in-world 15))
+
+(define (basic-smores)
+ (basic-food #:sprite          smores-sprite
+             #:name            &quot;Smores&quot;
+             #:heals-by        -10))
+
+(define (special-carrot)
+ (basic-food #:sprite   carrot-sprite
+             #:name     &quot;Carrots&quot;
+             #:tile     4
+             #:amount-in-world 1
+             #:heals-by 50
+             #:respawn? #f))
+
+(survival-game
+ #:food-list       (list (basic-cherry)
+                         (basic-smores)
+                         (special-carrot)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns981_hackPrism = function(){
+if( window.ns981_prismHacked ) return; 
+ window.ns981_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns981_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns981_toggledSpecification = function(){
+window.ns981_specificationShown  = ! window.ns981_specificationShown;
+ window.ns981_render();
+
+}
+
+window.ns981_toggledImplementation = function(){
+window.ns981_implementationShown  = ! window.ns981_implementationShown;
+ window.ns981_render();
+
+}
+
+window.ns981_implementationNextState = function(){
+return  window.ns981_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns981_specificationNextState = function(){
+return  window.ns981_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns981_disintegrate = function(){
+window.ns981_hackPrism (); 
+ var ns = document.querySelector(" #ns981_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns981_render = function(){
+document.getElementById( window.ns981_specificationIconId ) .className  =  window.ns981_specificationNextState ();
+ document.getElementById( window.ns981_implementationIconId ) .className =  window.ns981_implementationNextState ();
+
+}
+
+window.ns981_specificationShown=true;
+window.ns981_implementationShown=false;
+window.ns981_specificationIconId="ns981_specification-next-state";
+window.ns981_implementationIconId="ns981_implementation-next-state";
+window.ns981_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Game Jam 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns982_toggledSpecification()" data-toggle="collapse" data-target="#ns982_specification"><i id="ns982_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns982_specification" class="collapse show" data-parent="#ns982_accordion"><div class="card-body"><p class="card-text">????</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns982_toggledImplementation()" data-toggle="collapse" data-target="#ns982_implementation"><i id="ns982_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns982_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns982_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:avatar       (basic-avatar)
+ #:coin-list    (list (basic-coin))
+ #:food-list    (list (basic-food #:amount-in-world 10))
+ #:enemy-list   (list (basic-enemy))
+ #:crafter-list (list (basic-crafter)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns982_hackPrism = function(){
+if( window.ns982_prismHacked ) return; 
+ window.ns982_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns982_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns982_toggledSpecification = function(){
+window.ns982_specificationShown  = ! window.ns982_specificationShown;
+ window.ns982_render();
+
+}
+
+window.ns982_toggledImplementation = function(){
+window.ns982_implementationShown  = ! window.ns982_implementationShown;
+ window.ns982_render();
+
+}
+
+window.ns982_implementationNextState = function(){
+return  window.ns982_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns982_specificationNextState = function(){
+return  window.ns982_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns982_disintegrate = function(){
+window.ns982_hackPrism (); 
+ var ns = document.querySelector(" #ns982_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns982_render = function(){
+document.getElementById( window.ns982_specificationIconId ) .className  =  window.ns982_specificationNextState ();
+ document.getElementById( window.ns982_implementationIconId ) .className =  window.ns982_implementationNextState ();
+
+}
+
+window.ns982_specificationShown=true;
+window.ns982_implementationShown=false;
+window.ns982_specificationIconId="ns982_specification-next-state";
+window.ns982_implementationIconId="ns982_implementation-next-state";
+window.ns982_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Game Jam 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns983_toggledSpecification()" data-toggle="collapse" data-target="#ns983_specification"><i id="ns983_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns983_specification" class="collapse show" data-parent="#ns983_accordion"><div class="card-body"><p class="card-text">????</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns983_toggledImplementation()" data-toggle="collapse" data-target="#ns983_implementation"><i id="ns983_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns983_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns983_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-avatar)
+ (basic-avatar #:sprite wizard-sprite))
+
+(define (gold-coin)
+ (basic-coin #:sprite goldcoin-sprite
+             #:name &quot;gold coin&quot;
+             #:amount-in-world 4
+             #:value 40))
+
+(define (toasted-marshmallow)
+ (basic-food #:sprite          toastedmarshmallow-sprite
+             #:name            &quot;toasted marshmallow&quot;
+             #:heals-by        5
+             #:amount-in-world 5))
+
+(define (cherry)
+ (basic-food #:sprite          cherry-sprite
+             #:name            &quot;cherry&quot;
+             #:heals-by        50
+             #:respawn?        #f))
+
+(define (carrot)
+ (basic-food #:sprite          carrot-sprite
+             #:name            &quot;carrot&quot;
+             #:amount-in-world 5))
+
+(define (bowl)
+ (basic-food #:sprite          bowl-sprite
+             #:name            &quot;bowl&quot;
+             #:heals-by        0
+             #:amount-in-world 2))
+
+(define (my-enemy-1)
+ (basic-enemy #:ai              'easy
+              #:sprite          snake-sprite
+              #:amount-in-world 5))
+
+(define (my-enemy-2)
+ (basic-enemy #:ai              'medium
+              #:sprite          bat-sprite
+              #:amount-in-world 2
+              #:night-only?     #t))
+
+(define (smores)
+ (basic-food #:sprite smores-sprite
+             #:name &quot;smores&quot;
+             #:heals-by 40))
+
+(define (steak)
+ (basic-food #:sprite  steak-sprite
+             #:name    &quot;steak&quot;
+             #:heals-by 50))
+
+(define (carrot-stew)
+ (basic-food #:sprite   carrotstew-sprite
+             #:name     &quot;carrot-stew&quot;
+             #:heals-by 60))
+
+(define smores-recipe
+ (recipe #:product     (smores)
+         #:build-time  10
+         #:ingredients (list &quot;toasted marshmallow&quot;)))
+
+(define steak-recipe
+ (recipe #:product     (steak)
+         #:build-time  5
+         #:ingredients (list &quot;cherry&quot; &quot;toasted marshmallow&quot;)))
+
+(define carrot-stew-recipe
+ (recipe #:product     (carrot-stew)
+         #:build-time  15
+         #:ingredients (list &quot;carrot&quot; &quot;bowl&quot;)))
+
+(define (campfire)
+ (basic-crafter #:sprite      campfire-sprite
+                #:position    (posn 200 200)
+                #:tile        2
+                #:recipe-list (list smores-recipe
+                                    steak-recipe)))
+
+(define (cauldron)
+ (basic-crafter #:sprite      cauldron-sprite
+                #:position    (posn 200 200)
+                #:tile        3
+                #:recipe-list (list carrot-stew-recipe)))
+
+(survival-game
+ #:avatar       (my-avatar)
+ #:coin-list    (list
+
+
+                  (gold-coin))
+ #:food-list    (list (toasted-marshmallow)
+                      (cherry)
+                      (carrot)
+                      (bowl))
+ #:enemy-list   (list (my-enemy-1)
+                      (my-enemy-2))
+ #:crafter-list (list (cauldron)
+                      (campfire)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns983_hackPrism = function(){
+if( window.ns983_prismHacked ) return; 
+ window.ns983_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns983_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns983_toggledSpecification = function(){
+window.ns983_specificationShown  = ! window.ns983_specificationShown;
+ window.ns983_render();
+
+}
+
+window.ns983_toggledImplementation = function(){
+window.ns983_implementationShown  = ! window.ns983_implementationShown;
+ window.ns983_render();
+
+}
+
+window.ns983_implementationNextState = function(){
+return  window.ns983_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns983_specificationNextState = function(){
+return  window.ns983_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns983_disintegrate = function(){
+window.ns983_hackPrism (); 
+ var ns = document.querySelector(" #ns983_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns983_render = function(){
+document.getElementById( window.ns983_specificationIconId ) .className  =  window.ns983_specificationNextState ();
+ document.getElementById( window.ns983_implementationIconId ) .className =  window.ns983_implementationNextState ();
+
+}
+
+window.ns983_specificationShown=true;
+window.ns983_implementationShown=false;
+window.ns983_specificationIconId="ns983_specification-next-state";
+window.ns983_implementationIconId="ns983_implementation-next-state";
+window.ns983_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns984_toggledSpecification()" data-toggle="collapse" data-target="#ns984_specification"><i id="ns984_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns984_specification" class="collapse show" data-parent="#ns984_accordion"><div class="card-body"><p class="card-text">Code the basic survival game.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns984_toggledImplementation()" data-toggle="collapse" data-target="#ns984_implementation"><i id="ns984_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns984_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns984_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game)</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns984_hackPrism = function(){
+if( window.ns984_prismHacked ) return; 
+ window.ns984_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns984_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns984_toggledSpecification = function(){
+window.ns984_specificationShown  = ! window.ns984_specificationShown;
+ window.ns984_render();
+
+}
+
+window.ns984_toggledImplementation = function(){
+window.ns984_implementationShown  = ! window.ns984_implementationShown;
+ window.ns984_render();
+
+}
+
+window.ns984_implementationNextState = function(){
+return  window.ns984_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns984_specificationNextState = function(){
+return  window.ns984_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns984_disintegrate = function(){
+window.ns984_hackPrism (); 
+ var ns = document.querySelector(" #ns984_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns984_render = function(){
+document.getElementById( window.ns984_specificationIconId ) .className  =  window.ns984_specificationNextState ();
+ document.getElementById( window.ns984_implementationIconId ) .className =  window.ns984_implementationNextState ();
+
+}
+
+window.ns984_specificationShown=true;
+window.ns984_implementationShown=false;
+window.ns984_specificationIconId="ns984_specification-next-state";
+window.ns984_implementationIconId="ns984_implementation-next-state";
+window.ns984_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Level Design 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns985_toggledSpecification()" data-toggle="collapse" data-target="#ns985_specification"><i id="ns985_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns985_specification" class="collapse show" data-parent="#ns985_accordion"><div class="card-body"><p class="card-text">Code a game with a forest background with world objects.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns985_toggledImplementation()" data-toggle="collapse" data-target="#ns985_implementation"><i id="ns985_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns985_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns985_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:bg (basic-bg #:image FOREST-BG)
+ #:enable-world-objects? #t)</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns985_hackPrism = function(){
+if( window.ns985_prismHacked ) return; 
+ window.ns985_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns985_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns985_toggledSpecification = function(){
+window.ns985_specificationShown  = ! window.ns985_specificationShown;
+ window.ns985_render();
+
+}
+
+window.ns985_toggledImplementation = function(){
+window.ns985_implementationShown  = ! window.ns985_implementationShown;
+ window.ns985_render();
+
+}
+
+window.ns985_implementationNextState = function(){
+return  window.ns985_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns985_specificationNextState = function(){
+return  window.ns985_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns985_disintegrate = function(){
+window.ns985_hackPrism (); 
+ var ns = document.querySelector(" #ns985_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns985_render = function(){
+document.getElementById( window.ns985_specificationIconId ) .className  =  window.ns985_specificationNextState ();
+ document.getElementById( window.ns985_implementationIconId ) .className =  window.ns985_implementationNextState ();
+
+}
+
+window.ns985_specificationShown=true;
+window.ns985_implementationShown=false;
+window.ns985_specificationIconId="ns985_specification-next-state";
+window.ns985_implementationIconId="ns985_implementation-next-state";
+window.ns985_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Level Design 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns986_toggledSpecification()" data-toggle="collapse" data-target="#ns986_specification"><i id="ns986_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns986_specification" class="collapse show" data-parent="#ns986_accordion"><div class="card-body"><p class="card-text">Code a game with a forest background filled with high definition trees.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns986_toggledImplementation()" data-toggle="collapse" data-target="#ns986_implementation"><i id="ns986_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns986_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns986_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:bg             (basic-bg #:image FOREST-BG)
+ #:other-entities (make-world-objects round-tree
+                                      pine-tree
+                                      #:hd? #t))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns986_hackPrism = function(){
+if( window.ns986_prismHacked ) return; 
+ window.ns986_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns986_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns986_toggledSpecification = function(){
+window.ns986_specificationShown  = ! window.ns986_specificationShown;
+ window.ns986_render();
+
+}
+
+window.ns986_toggledImplementation = function(){
+window.ns986_implementationShown  = ! window.ns986_implementationShown;
+ window.ns986_render();
+
+}
+
+window.ns986_implementationNextState = function(){
+return  window.ns986_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns986_specificationNextState = function(){
+return  window.ns986_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns986_disintegrate = function(){
+window.ns986_hackPrism (); 
+ var ns = document.querySelector(" #ns986_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns986_render = function(){
+document.getElementById( window.ns986_specificationIconId ) .className  =  window.ns986_specificationNextState ();
+ document.getElementById( window.ns986_implementationIconId ) .className =  window.ns986_implementationNextState ();
+
+}
+
+window.ns986_specificationShown=true;
+window.ns986_implementationShown=false;
+window.ns986_specificationIconId="ns986_specification-next-state";
+window.ns986_implementationIconId="ns986_implementation-next-state";
+window.ns986_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Level Design 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns987_toggledSpecification()" data-toggle="collapse" data-target="#ns987_specification"><i id="ns987_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns987_specification" class="collapse show" data-parent="#ns987_accordion"><div class="card-body"><p class="card-text">Code a game with a pink background filled with random color candy-cane-trees and snow-pine-trees.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns987_toggledImplementation()" data-toggle="collapse" data-target="#ns987_implementation"><i id="ns987_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns987_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns987_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:bg             (basic-bg #:image PINK-BG)
+ #:other-entities (make-world-objects candy-cane-tree
+                                      snow-pine-tree
+                                      #:hd? #t
+                                      #:random-color? #t))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns987_hackPrism = function(){
+if( window.ns987_prismHacked ) return; 
+ window.ns987_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns987_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns987_toggledSpecification = function(){
+window.ns987_specificationShown  = ! window.ns987_specificationShown;
+ window.ns987_render();
+
+}
+
+window.ns987_toggledImplementation = function(){
+window.ns987_implementationShown  = ! window.ns987_implementationShown;
+ window.ns987_render();
+
+}
+
+window.ns987_implementationNextState = function(){
+return  window.ns987_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns987_specificationNextState = function(){
+return  window.ns987_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns987_disintegrate = function(){
+window.ns987_hackPrism (); 
+ var ns = document.querySelector(" #ns987_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns987_render = function(){
+document.getElementById( window.ns987_specificationIconId ) .className  =  window.ns987_specificationNextState ();
+ document.getElementById( window.ns987_implementationIconId ) .className =  window.ns987_implementationNextState ();
+
+}
+
+window.ns987_specificationShown=true;
+window.ns987_implementationShown=false;
+window.ns987_specificationIconId="ns987_specification-next-state";
+window.ns987_implementationIconId="ns987_implementation-next-state";
+window.ns987_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Level Design 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns988_toggledSpecification()" data-toggle="collapse" data-target="#ns988_specification"><i id="ns988_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns988_specification" class="collapse show" data-parent="#ns988_accordion"><div class="card-body"><p class="card-text">Code a game with 3 world objects with customized position, tile, size, and/or hue.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns988_toggledImplementation()" data-toggle="collapse" data-target="#ns988_implementation"><i id="ns988_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns988_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns988_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:other-entities (pine-tree   (posn 100 200) #:tile 0)
+ (wood-house  (posn 100 200) #:tile 1 #:size 0.5)
+ (brick-house (posn 100 200) #:tile 2 #:hue (random 360)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns988_hackPrism = function(){
+if( window.ns988_prismHacked ) return; 
+ window.ns988_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns988_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns988_toggledSpecification = function(){
+window.ns988_specificationShown  = ! window.ns988_specificationShown;
+ window.ns988_render();
+
+}
+
+window.ns988_toggledImplementation = function(){
+window.ns988_implementationShown  = ! window.ns988_implementationShown;
+ window.ns988_render();
+
+}
+
+window.ns988_implementationNextState = function(){
+return  window.ns988_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns988_specificationNextState = function(){
+return  window.ns988_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns988_disintegrate = function(){
+window.ns988_hackPrism (); 
+ var ns = document.querySelector(" #ns988_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns988_render = function(){
+document.getElementById( window.ns988_specificationIconId ) .className  =  window.ns988_specificationNextState ();
+ document.getElementById( window.ns988_implementationIconId ) .className =  window.ns988_implementationNextState ();
+
+}
+
+window.ns988_specificationShown=true;
+window.ns988_implementationShown=false;
+window.ns988_specificationIconId="ns988_specification-next-state";
+window.ns988_implementationIconId="ns988_implementation-next-state";
+window.ns988_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Npc 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns989_toggledSpecification()" data-toggle="collapse" data-target="#ns989_specification"><i id="ns989_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns989_specification" class="collapse show" data-parent="#ns989_accordion"><div class="card-body"><p class="card-text">Code a game with a basic NPC.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns989_toggledImplementation()" data-toggle="collapse" data-target="#ns989_implementation"><i id="ns989_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns989_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns989_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:npc-list (list (basic-npc)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns989_hackPrism = function(){
+if( window.ns989_prismHacked ) return; 
+ window.ns989_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns989_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns989_toggledSpecification = function(){
+window.ns989_specificationShown  = ! window.ns989_specificationShown;
+ window.ns989_render();
+
+}
+
+window.ns989_toggledImplementation = function(){
+window.ns989_implementationShown  = ! window.ns989_implementationShown;
+ window.ns989_render();
+
+}
+
+window.ns989_implementationNextState = function(){
+return  window.ns989_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns989_specificationNextState = function(){
+return  window.ns989_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns989_disintegrate = function(){
+window.ns989_hackPrism (); 
+ var ns = document.querySelector(" #ns989_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns989_render = function(){
+document.getElementById( window.ns989_specificationIconId ) .className  =  window.ns989_specificationNextState ();
+ document.getElementById( window.ns989_implementationIconId ) .className =  window.ns989_implementationNextState ();
+
+}
+
+window.ns989_specificationShown=true;
+window.ns989_implementationShown=false;
+window.ns989_specificationIconId="ns989_specification-next-state";
+window.ns989_implementationIconId="ns989_implementation-next-state";
+window.ns989_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Npc 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns990_toggledSpecification()" data-toggle="collapse" data-target="#ns990_specification"><i id="ns990_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns990_specification" class="collapse show" data-parent="#ns990_accordion"><div class="card-body"><p class="card-text">Code a game with a named witch NPC.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns990_toggledImplementation()" data-toggle="collapse" data-target="#ns990_implementation"><i id="ns990_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns990_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns990_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-npc)
+ (basic-npc
+   #:sprite witch-sprite
+   #:name   &quot;Witch&quot;))
+
+(survival-game
+ #:npc-list (list (my-npc)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns990_hackPrism = function(){
+if( window.ns990_prismHacked ) return; 
+ window.ns990_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns990_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns990_toggledSpecification = function(){
+window.ns990_specificationShown  = ! window.ns990_specificationShown;
+ window.ns990_render();
+
+}
+
+window.ns990_toggledImplementation = function(){
+window.ns990_implementationShown  = ! window.ns990_implementationShown;
+ window.ns990_render();
+
+}
+
+window.ns990_implementationNextState = function(){
+return  window.ns990_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns990_specificationNextState = function(){
+return  window.ns990_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns990_disintegrate = function(){
+window.ns990_hackPrism (); 
+ var ns = document.querySelector(" #ns990_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns990_render = function(){
+document.getElementById( window.ns990_specificationIconId ) .className  =  window.ns990_specificationNextState ();
+ document.getElementById( window.ns990_implementationIconId ) .className =  window.ns990_implementationNextState ();
+
+}
+
+window.ns990_specificationShown=true;
+window.ns990_implementationShown=false;
+window.ns990_specificationIconId="ns990_specification-next-state";
+window.ns990_implementationIconId="ns990_implementation-next-state";
+window.ns990_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Npc 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns991_toggledSpecification()" data-toggle="collapse" data-target="#ns991_specification"><i id="ns991_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns991_specification" class="collapse show" data-parent="#ns991_accordion"><div class="card-body"><p class="card-text">Code a game with an NPC with custom dialog.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns991_toggledImplementation()" data-toggle="collapse" data-target="#ns991_implementation"><i id="ns991_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns991_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns991_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-npc)
+ (basic-npc
+   #:dialog (list &quot;Woah, who are you??&quot;
+                  &quot;Nevermind -- I'm too busy.&quot;
+                  &quot;Move along, now!&quot;)))
+
+(survival-game
+ #:npc-list (list (my-npc)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns991_hackPrism = function(){
+if( window.ns991_prismHacked ) return; 
+ window.ns991_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns991_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns991_toggledSpecification = function(){
+window.ns991_specificationShown  = ! window.ns991_specificationShown;
+ window.ns991_render();
+
+}
+
+window.ns991_toggledImplementation = function(){
+window.ns991_implementationShown  = ! window.ns991_implementationShown;
+ window.ns991_render();
+
+}
+
+window.ns991_implementationNextState = function(){
+return  window.ns991_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns991_specificationNextState = function(){
+return  window.ns991_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns991_disintegrate = function(){
+window.ns991_hackPrism (); 
+ var ns = document.querySelector(" #ns991_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns991_render = function(){
+document.getElementById( window.ns991_specificationIconId ) .className  =  window.ns991_specificationNextState ();
+ document.getElementById( window.ns991_implementationIconId ) .className =  window.ns991_implementationNextState ();
+
+}
+
+window.ns991_specificationShown=true;
+window.ns991_implementationShown=false;
+window.ns991_specificationIconId="ns991_specification-next-state";
+window.ns991_implementationIconId="ns991_implementation-next-state";
+window.ns991_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Npc 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns992_toggledSpecification()" data-toggle="collapse" data-target="#ns992_specification"><i id="ns992_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns992_specification" class="collapse show" data-parent="#ns992_accordion"><div class="card-body"><p class="card-text">Code a game with a witch NPC who follows you. Give them a name and a specific start tile.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns992_toggledImplementation()" data-toggle="collapse" data-target="#ns992_implementation"><i id="ns992_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns992_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns992_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-npc)
+ (basic-npc
+   #:sprite witch-sprite
+   #:name   &quot;Witch&quot;
+   #:tile   3
+   #:mode   'follow))
+
+(survival-game
+ #:npc-list (list (my-npc)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns992_hackPrism = function(){
+if( window.ns992_prismHacked ) return; 
+ window.ns992_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns992_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns992_toggledSpecification = function(){
+window.ns992_specificationShown  = ! window.ns992_specificationShown;
+ window.ns992_render();
+
+}
+
+window.ns992_toggledImplementation = function(){
+window.ns992_implementationShown  = ! window.ns992_implementationShown;
+ window.ns992_render();
+
+}
+
+window.ns992_implementationNextState = function(){
+return  window.ns992_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns992_specificationNextState = function(){
+return  window.ns992_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns992_disintegrate = function(){
+window.ns992_hackPrism (); 
+ var ns = document.querySelector(" #ns992_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns992_render = function(){
+document.getElementById( window.ns992_specificationIconId ) .className  =  window.ns992_specificationNextState ();
+ document.getElementById( window.ns992_implementationIconId ) .className =  window.ns992_implementationNextState ();
+
+}
+
+window.ns992_specificationShown=true;
+window.ns992_implementationShown=false;
+window.ns992_specificationIconId="ns992_specification-next-state";
+window.ns992_implementationIconId="ns992_implementation-next-state";
+window.ns992_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Npc 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns993_toggledSpecification()" data-toggle="collapse" data-target="#ns993_specification"><i id="ns993_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns993_specification" class="collapse show" data-parent="#ns993_accordion"><div class="card-body"><p class="card-text">Code a game with 2 NPCs with custom dialog and two additional customizations each.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns993_toggledImplementation()" data-toggle="collapse" data-target="#ns993_implementation"><i id="ns993_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns993_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns993_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-npc)
+ (basic-npc
+   #:name   &quot;Francis&quot;
+   #:tile   4
+   #:dialog (list &quot;Greetings!&quot;
+                  &quot;You better find some food soon...&quot;)))
+
+(define (another-npc)
+ (basic-npc
+   #:sprite witch-sprite
+   #:mode   'pace
+   #:dialog (list &quot;Now where did I put it...&quot;
+                  &quot;Have you seen an eye of newt?&quot;
+                  &quot;Oh, I think I see it!&quot;)))
+
+(survival-game
+ #:npc-list (list (my-npc) (another-npc)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns993_hackPrism = function(){
+if( window.ns993_prismHacked ) return; 
+ window.ns993_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns993_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns993_toggledSpecification = function(){
+window.ns993_specificationShown  = ! window.ns993_specificationShown;
+ window.ns993_render();
+
+}
+
+window.ns993_toggledImplementation = function(){
+window.ns993_implementationShown  = ! window.ns993_implementationShown;
+ window.ns993_render();
+
+}
+
+window.ns993_implementationNextState = function(){
+return  window.ns993_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns993_specificationNextState = function(){
+return  window.ns993_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns993_disintegrate = function(){
+window.ns993_hackPrism (); 
+ var ns = document.querySelector(" #ns993_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns993_render = function(){
+document.getElementById( window.ns993_specificationIconId ) .className  =  window.ns993_specificationNextState ();
+ document.getElementById( window.ns993_implementationIconId ) .className =  window.ns993_implementationNextState ();
+
+}
+
+window.ns993_specificationShown=true;
+window.ns993_implementationShown=false;
+window.ns993_specificationIconId="ns993_specification-next-state";
+window.ns993_implementationIconId="ns993_implementation-next-state";
+window.ns993_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns994_toggledSpecification()" data-toggle="collapse" data-target="#ns994_specification"><i id="ns994_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns994_specification" class="collapse show" data-parent="#ns994_accordion"><div class="card-body"><p class="card-text">Code a game with a very long day/night cycle.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns994_toggledImplementation()" data-toggle="collapse" data-target="#ns994_implementation"><i id="ns994_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns994_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns994_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:sky    (basic-sky #:length-of-day 5000))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns994_hackPrism = function(){
+if( window.ns994_prismHacked ) return; 
+ window.ns994_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns994_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns994_toggledSpecification = function(){
+window.ns994_specificationShown  = ! window.ns994_specificationShown;
+ window.ns994_render();
+
+}
+
+window.ns994_toggledImplementation = function(){
+window.ns994_implementationShown  = ! window.ns994_implementationShown;
+ window.ns994_render();
+
+}
+
+window.ns994_implementationNextState = function(){
+return  window.ns994_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns994_specificationNextState = function(){
+return  window.ns994_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns994_disintegrate = function(){
+window.ns994_hackPrism (); 
+ var ns = document.querySelector(" #ns994_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns994_render = function(){
+document.getElementById( window.ns994_specificationIconId ) .className  =  window.ns994_specificationNextState ();
+ document.getElementById( window.ns994_implementationIconId ) .className =  window.ns994_implementationNextState ();
+
+}
+
+window.ns994_specificationShown=true;
+window.ns994_implementationShown=false;
+window.ns994_specificationIconId="ns994_specification-next-state";
+window.ns994_implementationIconId="ns994_implementation-next-state";
+window.ns994_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns995_toggledSpecification()" data-toggle="collapse" data-target="#ns995_specification"><i id="ns995_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns995_specification" class="collapse show" data-parent="#ns995_accordion"><div class="card-body"><p class="card-text">Code a game with a custom-colored night sky.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns995_toggledImplementation()" data-toggle="collapse" data-target="#ns995_implementation"><i id="ns995_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns995_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns995_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:sky (basic-sky #:night-sky-color  'darkmagenta))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns995_hackPrism = function(){
+if( window.ns995_prismHacked ) return; 
+ window.ns995_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns995_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns995_toggledSpecification = function(){
+window.ns995_specificationShown  = ! window.ns995_specificationShown;
+ window.ns995_render();
+
+}
+
+window.ns995_toggledImplementation = function(){
+window.ns995_implementationShown  = ! window.ns995_implementationShown;
+ window.ns995_render();
+
+}
+
+window.ns995_implementationNextState = function(){
+return  window.ns995_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns995_specificationNextState = function(){
+return  window.ns995_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns995_disintegrate = function(){
+window.ns995_hackPrism (); 
+ var ns = document.querySelector(" #ns995_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns995_render = function(){
+document.getElementById( window.ns995_specificationIconId ) .className  =  window.ns995_specificationNextState ();
+ document.getElementById( window.ns995_implementationIconId ) .className =  window.ns995_implementationNextState ();
+
+}
+
+window.ns995_specificationShown=true;
+window.ns995_implementationShown=false;
+window.ns995_specificationIconId="ns995_specification-next-state";
+window.ns995_implementationIconId="ns995_implementation-next-state";
+window.ns995_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns996_toggledSpecification()" data-toggle="collapse" data-target="#ns996_specification"><i id="ns996_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns996_specification" class="collapse show" data-parent="#ns996_accordion"><div class="card-body"><p class="card-text">Code a game with a short day/night cycle where it gets pitch-black at midnight.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns996_toggledImplementation()" data-toggle="collapse" data-target="#ns996_implementation"><i id="ns996_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns996_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns996_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:sky    (basic-sky #:length-of-day 500
+                     #:max-darkness  255))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns996_hackPrism = function(){
+if( window.ns996_prismHacked ) return; 
+ window.ns996_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns996_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns996_toggledSpecification = function(){
+window.ns996_specificationShown  = ! window.ns996_specificationShown;
+ window.ns996_render();
+
+}
+
+window.ns996_toggledImplementation = function(){
+window.ns996_implementationShown  = ! window.ns996_implementationShown;
+ window.ns996_render();
+
+}
+
+window.ns996_implementationNextState = function(){
+return  window.ns996_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns996_specificationNextState = function(){
+return  window.ns996_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns996_disintegrate = function(){
+window.ns996_hackPrism (); 
+ var ns = document.querySelector(" #ns996_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns996_render = function(){
+document.getElementById( window.ns996_specificationIconId ) .className  =  window.ns996_specificationNextState ();
+ document.getElementById( window.ns996_implementationIconId ) .className =  window.ns996_implementationNextState ();
+
+}
+
+window.ns996_specificationShown=true;
+window.ns996_implementationShown=false;
+window.ns996_specificationIconId="ns996_specification-next-state";
+window.ns996_implementationIconId="ns996_implementation-next-state";
+window.ns996_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns997_toggledSpecification()" data-toggle="collapse" data-target="#ns997_specification"><i id="ns997_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns997_specification" class="collapse show" data-parent="#ns997_accordion"><div class="card-body"><p class="card-text">Code a game with a short night, and many nocturnal enemies.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns997_toggledImplementation()" data-toggle="collapse" data-target="#ns997_implementation"><i id="ns997_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns997_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns997_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(survival-game
+ #:enemy-list   (list (basic-enemy #:amount-in-world 20
+                                   #:night-only? #t))
+ #:sky          (basic-sky #:length-of-day    2400
+                           #:start-of-daytime 200
+                           #:end-of-daytime   2200))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns997_hackPrism = function(){
+if( window.ns997_prismHacked ) return; 
+ window.ns997_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns997_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns997_toggledSpecification = function(){
+window.ns997_specificationShown  = ! window.ns997_specificationShown;
+ window.ns997_render();
+
+}
+
+window.ns997_toggledImplementation = function(){
+window.ns997_implementationShown  = ! window.ns997_implementationShown;
+ window.ns997_render();
+
+}
+
+window.ns997_implementationNextState = function(){
+return  window.ns997_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns997_specificationNextState = function(){
+return  window.ns997_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns997_disintegrate = function(){
+window.ns997_hackPrism (); 
+ var ns = document.querySelector(" #ns997_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns997_render = function(){
+document.getElementById( window.ns997_specificationIconId ) .className  =  window.ns997_specificationNextState ();
+ document.getElementById( window.ns997_implementationIconId ) .className =  window.ns997_implementationNextState ();
+
+}
+
+window.ns997_specificationShown=true;
+window.ns997_implementationShown=false;
+window.ns997_specificationIconId="ns997_specification-next-state";
+window.ns997_implementationIconId="ns997_implementation-next-state";
+window.ns997_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Weapon Crafter 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns998_toggledSpecification()" data-toggle="collapse" data-target="#ns998_specification"><i id="ns998_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns998_specification" class="collapse show" data-parent="#ns998_accordion"><div class="card-body"><p class="card-text">Code a game with a crafter that builds swords.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns998_toggledImplementation()" data-toggle="collapse" data-target="#ns998_implementation"><i id="ns998_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns998_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns998_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-sword-recipe
+ (recipe #:product (sword)
+         #:build-time 20))
+
+(survival-game
+ #:crafter-list (list (basic-crafter
+                        #:sprite      woodtable-sprite
+                        #:recipe-list (list my-sword-recipe))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns998_hackPrism = function(){
+if( window.ns998_prismHacked ) return; 
+ window.ns998_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns998_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns998_toggledSpecification = function(){
+window.ns998_specificationShown  = ! window.ns998_specificationShown;
+ window.ns998_render();
+
+}
+
+window.ns998_toggledImplementation = function(){
+window.ns998_implementationShown  = ! window.ns998_implementationShown;
+ window.ns998_render();
+
+}
+
+window.ns998_implementationNextState = function(){
+return  window.ns998_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns998_specificationNextState = function(){
+return  window.ns998_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns998_disintegrate = function(){
+window.ns998_hackPrism (); 
+ var ns = document.querySelector(" #ns998_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns998_render = function(){
+document.getElementById( window.ns998_specificationIconId ) .className  =  window.ns998_specificationNextState ();
+ document.getElementById( window.ns998_implementationIconId ) .className =  window.ns998_implementationNextState ();
+
+}
+
+window.ns998_specificationShown=true;
+window.ns998_implementationShown=false;
+window.ns998_specificationIconId="ns998_specification-next-state";
+window.ns998_implementationIconId="ns998_implementation-next-state";
+window.ns998_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Weapon Crafter 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns999_toggledSpecification()" data-toggle="collapse" data-target="#ns999_specification"><i id="ns999_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns999_specification" class="collapse show" data-parent="#ns999_accordion"><div class="card-body"><p class="card-text">Code a game with a wood table crafter that slowly builds a high-damage sword.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns999_toggledImplementation()" data-toggle="collapse" data-target="#ns999_implementation"><i id="ns999_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns999_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns999_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-sword-recipe
+ (recipe #:product (sword #:damage 100)
+         #:build-time 100))
+
+(survival-game
+ #:crafter-list (list (basic-crafter
+                        #:sprite      woodtable-sprite
+                        #:recipe-list (list my-sword-recipe))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns999_hackPrism = function(){
+if( window.ns999_prismHacked ) return; 
+ window.ns999_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns999_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns999_toggledSpecification = function(){
+window.ns999_specificationShown  = ! window.ns999_specificationShown;
+ window.ns999_render();
+
+}
+
+window.ns999_toggledImplementation = function(){
+window.ns999_implementationShown  = ! window.ns999_implementationShown;
+ window.ns999_render();
+
+}
+
+window.ns999_implementationNextState = function(){
+return  window.ns999_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns999_specificationNextState = function(){
+return  window.ns999_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns999_disintegrate = function(){
+window.ns999_hackPrism (); 
+ var ns = document.querySelector(" #ns999_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns999_render = function(){
+document.getElementById( window.ns999_specificationIconId ) .className  =  window.ns999_specificationNextState ();
+ document.getElementById( window.ns999_implementationIconId ) .className =  window.ns999_implementationNextState ();
+
+}
+
+window.ns999_specificationShown=true;
+window.ns999_implementationShown=false;
+window.ns999_specificationIconId="ns999_specification-next-state";
+window.ns999_implementationIconId="ns999_implementation-next-state";
+window.ns999_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Weapon Crafter 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-4"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns1000_toggledSpecification()" data-toggle="collapse" data-target="#ns1000_specification"><i id="ns1000_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns1000_specification" class="collapse show" data-parent="#ns1000_accordion"><div class="card-body"><p class="card-text">Code a game with coins, and a wood table crafter that instantly builds fast-moving fire-magic for 100 gold.</p></div></div></div></div><div class="col-8"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns1000_toggledImplementation()" data-toggle="collapse" data-target="#ns1000_implementation"><i id="ns1000_implementation-next-state" class="fa fa-eye"></i> Implementation</button></div><div id="ns1000_implementation" class="collapse hide"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns1000_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-fire-magic-recipe
+ (recipe #:product (fire-magic #:name &quot;Fast Flame&quot;
+                               #:speed 7)
+         #:cost       100))
+
+(survival-game
+ #:coin-list    (list (basic-coin))
+ #:crafter-list (list (basic-crafter
+                        #:sprite woodtable-sprite
+                        #:recipe-list (list my-fire-magic-recipe))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns1000_hackPrism = function(){
+if( window.ns1000_prismHacked ) return; 
+ window.ns1000_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns1000_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+}
+
+window.ns1000_toggledSpecification = function(){
+window.ns1000_specificationShown  = ! window.ns1000_specificationShown;
+ window.ns1000_render();
+
+}
+
+window.ns1000_toggledImplementation = function(){
+window.ns1000_implementationShown  = ! window.ns1000_implementationShown;
+ window.ns1000_render();
+
+}
+
+window.ns1000_implementationNextState = function(){
+return  window.ns1000_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns1000_specificationNextState = function(){
+return  window.ns1000_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+}
+
+window.ns1000_disintegrate = function(){
+window.ns1000_hackPrism (); 
+ var ns = document.querySelector(" #ns1000_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+}
+
+window.ns1000_render = function(){
+document.getElementById( window.ns1000_specificationIconId ) .className  =  window.ns1000_specificationNextState ();
+ document.getElementById( window.ns1000_implementationIconId ) .className =  window.ns1000_implementationNextState ();
+
+}
+
+window.ns1000_specificationShown=true;
+window.ns1000_implementationShown=false;
+window.ns1000_specificationIconId="ns1000_specification-next-state";
+window.ns1000_implementationIconId="ns1000_implementation-next-state";
+window.ns1000_prismHacked=false;
+
+//]]>
+</script></div><div class="tab-pane fade p-3" id="documentation" class="p-3"><h3>Documentation</h3></div></div></div><script src="/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script><script src="/js/font-awesome.js"></script></body></html>
