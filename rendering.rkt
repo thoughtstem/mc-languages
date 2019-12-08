@@ -58,7 +58,12 @@
 
   (div id: (ns "implementation") class: "collapse hide"
    (card-body 
-    (button-danger on-click: (call 'disintegrate) "Disintegrate?")
+    (div class: "button-group"
+      (button-danger 
+         on-click: (call 'disintegrate) 
+         'data-toggle: "tooltip" 'data-placement: "top" 
+         'title: "Remove random word" 
+         (i class: "fas fa-crosshairs")))
     (card-text 
      (pre 
       (code class: "lang-scheme" code-s)))))))
