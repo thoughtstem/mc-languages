@@ -28,7 +28,7 @@
      'data-toggle: "collapse" 
      'data-target: (ns# "specification") 
      (i id: (ns "specification-next-state") 
-        class: "fa fa-eye-slash") 
+        class: "fa fa-eye") 
         " Specification"))
 
   (div id: (ns "specification") 
@@ -56,7 +56,7 @@
         class: "fa fa-eye")  ;sync state...
      " Implementation"))
 
-  (div id: (ns "implementation") class: "collapse hide"
+  (div id: (ns "implementation") class: "collapse show"
    (card-body 
     (div class: "button-group"
       (button-danger 
@@ -76,7 +76,7 @@
          (col-4 (specification-toggle-card k))
          (col-8 (implementation-toggle-card k))))
         (script ([specificationShown 'true]
-                 [implementationShown 'false]
+                 [implementationShown 'true]
                  [specificationIconId (ns "specification-next-state")]
                  [implementationIconId (ns "implementation-next-state")]
                  [prismHacked 'false])
