@@ -50,7 +50,6 @@
    (container 
     (h1 "Languages")
     (card-deck
-     ;TODO: Extract this lang card functionality.
      (lang-card "adventure" "For creating adventure games")
      (lang-card "survival" "For creating survival games")
      (lang-card "website" "For making websites")
