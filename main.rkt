@@ -7,6 +7,7 @@
          ts-kata-util/katas/main
          (only-in ts-adventure/katas adventure-katas)
          (only-in ts-survival/katas survival-katas)
+         (only-in ts-3d-exploration/katas exploration-katas)
          "./rendering.rkt")
 
 ;Move to site?
@@ -50,28 +51,19 @@
     (h1 "Languages")
     (card-deck
      ;TODO: Extract this lang card functionality.
-     (card 
-      (card-header
-       (button-link
-        (link-to "adventure.html" "#lang adventure")))
-      ;Put badges? Put some kind of unique graphic, so the languages don't all look the same and boring...
-      (card-body
-       (card-text "For creating adventure games.")))
-     (card 
-      (card-header
-       (button-link
-        (link-to "survival.html" "#lang survival")))
-      ;Put badges?
-      (card-body
-       (card-text "For creating survival games.")))
-     (card 
-      (card-header
-       (button-link
-        (link-to "website.html" "website")))
-      ;Put badges?
-      (card-body
-       (card-text "For creating websites")))
-       )))))
+     (lang-card "adventure" "For creating adventure games")
+     (lang-card "survival" "For creating survival games")
+     (lang-card "website" "For making websites")
+     (lang-card "3d-exploration" "For making 3d scenes"))))))
+
+(define (lang-card name desc)
+ (card 
+  (card-header
+   (button-link
+    (link-to (~a name ".html") name)))
+  ;Put badges?
+  (card-body
+   (card-text desc))))
 
 (define (languages-pages #:wrap-content (wrap content))
   (list
@@ -80,7 +72,7 @@
     (lang-page "adventure" adventure-katas '(lib "adventure/scribblings/manual.scrbl") #:wrap-content wrap)
     (lang-page "survival"  survival-katas  '(lib "survival/scribblings/manual.scrbl")  #:wrap-content wrap)
     (lang-page "website"   (kata-collection '()) '(lib "website/scribblings/website.scrbl")  #:wrap-content wrap)
-    ))
+    (lang-page "3d-exploration" exploration-katas '(lib "3d-exploration/scribblings/manual.scrbl")  #:wrap-content wrap)))
 
 (module+ main
    (render (list 
