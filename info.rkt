@@ -4,6 +4,10 @@
                "https://github.com/thoughtstem/website.git"
                "https://github.com/thoughtstem/website-js.git"
                "https://github.com/thoughtstem/website-scribble.git"
+               "https://github.com/thoughtstem/TS-GE-Languages.git?path=adventure"
+               "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-adventure"
+               "https://github.com/thoughtstem/TS-GE-Languages.git?path=survival"
+               "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-survival"
                "https://github.com/thoughtstem/TS-VR-Languages.git?path=3d-exploration"
                "https://github.com/thoughtstem/TS-VR-Katas.git?path=ts-3d-exploration"))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
