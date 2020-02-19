@@ -28,7 +28,7 @@
      'data-toggle: "collapse" 
      'data-target: (ns# "specification") 
      (i id: (ns "specification-next-state") 
-        class: "fa fa-eye") 
+        class: "fa fa-eye-slash") 
         " Specification"))
 
   (div id: (ns "specification") 
@@ -53,7 +53,9 @@
      'data-toggle: "collapse" 
      'data-target: (ns# "implementation") 
      (i id: (ns "implementation-next-state") 
-        class: "fa fa-eye")  ;sync state...
+        class: ;#;(sync class: #:with-function 'implementationNextState) 
+               ;Idea: finds the id from surrounding context(?), injects a snippet "getEl(id).className = implementationNextState()" into endof:render() and endof:construct(), compiles to (void)?
+        "fa fa-eye-slash")  ;sync state...
      " Implementation"))
 
   (div id: (ns "implementation") class: "collapse show"
@@ -77,7 +79,7 @@
          (col-8 (implementation-toggle-card k))))
         (script ([specificationShown 'true]
                  [implementationShown 'true]
-                 [specificationIconId (ns "specification-next-state")]
+                 [specificationIconId  (ns "specification-next-state")]
                  [implementationIconId (ns "implementation-next-state")]
                  [prismHacked 'false])
 
@@ -136,4 +138,3 @@
           (function (render)
             @js{@getEl{@specificationIconId}.className  = @specificationNextState()}
             @js{@getEl{@implementationIconId}.className = @implementationNextState()}) ))))
-
