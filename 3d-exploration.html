@@ -1,0 +1,2239 @@
+<html><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><script>
+//<![CDATA[
+function preloadSupported() {
+  var relList = document.createElement('link').relList;
+  return !!(relList && relList.supports && relList.supports('preload'));
+}
+//]]>
+</script><script async="" src="/mc-languages/js/modernizr-custom.js"></script><link rel="stylesheet" type="text/css" href="/mc-languages/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-brands.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-solid.min.css" /><script>
+//<![CDATA[
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+//]]>
+</script><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script></head><body><script src="/mc-languages/js/jquery-3.4.1.min.js"></script><script async="" src="/mc-languages/js/moment.min.js"></script><div class="container"><h2>#lang 3d-exploration</h2><ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#translations">Translations</a></li><li class="nav-item"><a class="nav-link" data-toggle="tab" href="#documentation">Documentation</a></li></ul><div class="tab-content"><div class="tab-pane fade show active p-3" id="translations" class="p-3"><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Animations 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2310_toggledSpecification()" data-toggle="collapse" data-target="#ns2310_specification"><i id="ns2310_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2310_specification" class="collapse show" data-parent="#ns2310_accordion"><div class="card-body"><p class="card-text">Code a scene with a random-colored cylinder that continuously grows and shrinks.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2310_toggledImplementation()" data-toggle="collapse" data-target="#ns2310_implementation"><i id="ns2310_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2310_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2310_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-cylinder)
+ (basic-cylinder
+  #:color (random-color)
+  #:animations-list (do-many
+                     (animate-scale #:to 5))))
+
+(exploration-scene
+#:ground-objects (list
+                  (my-cylinder)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2310_hackPrism = function(){
+if( window.ns2310_prismHacked ) return; 
+ window.ns2310_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2310_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2310_toggledSpecification = function(){
+window.ns2310_specificationShown  = ! window.ns2310_specificationShown;
+ window.ns2310_render();
+
+
+}
+
+window.ns2310_toggledImplementation = function(){
+window.ns2310_implementationShown  = ! window.ns2310_implementationShown;
+ window.ns2310_render();
+
+
+}
+
+window.ns2310_implementationNextState = function(){
+return  window.ns2310_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2310_specificationNextState = function(){
+return  window.ns2310_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2310_disintegrate = function(){
+window.ns2310_hackPrism (); 
+ var ns = document.querySelector(" #ns2310_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2310_render = function(){
+document.getElementById( window.ns2310_specificationIconId ) .className  =  window.ns2310_specificationNextState ();
+ document.getElementById( window.ns2310_implementationIconId ) .className =  window.ns2310_implementationNextState ();
+
+
+}
+
+window.ns2310_specificationShown=true;
+window.ns2310_implementationShown=true;
+window.ns2310_specificationIconId="ns2310_specification-next-state";
+window.ns2310_implementationIconId="ns2310_implementation-next-state";
+window.ns2310_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Animations 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2311_toggledSpecification()" data-toggle="collapse" data-target="#ns2311_specification"><i id="ns2311_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2311_specification" class="collapse show" data-parent="#ns2311_accordion"><div class="card-body"><p class="card-text">Code a scene with a cone that moves back and forth several times.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2311_toggledImplementation()" data-toggle="collapse" data-target="#ns2311_implementation"><i id="ns2311_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2311_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2311_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-cone)
+ (basic-cone
+  #:animations-list (do-many
+                     (animate-position
+                      #:loops 5
+                      #:to (position 0 0 0)))))
+
+(exploration-scene
+#:sky-objects (list (my-cone)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2311_hackPrism = function(){
+if( window.ns2311_prismHacked ) return; 
+ window.ns2311_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2311_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2311_toggledSpecification = function(){
+window.ns2311_specificationShown  = ! window.ns2311_specificationShown;
+ window.ns2311_render();
+
+
+}
+
+window.ns2311_toggledImplementation = function(){
+window.ns2311_implementationShown  = ! window.ns2311_implementationShown;
+ window.ns2311_render();
+
+
+}
+
+window.ns2311_implementationNextState = function(){
+return  window.ns2311_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2311_specificationNextState = function(){
+return  window.ns2311_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2311_disintegrate = function(){
+window.ns2311_hackPrism (); 
+ var ns = document.querySelector(" #ns2311_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2311_render = function(){
+document.getElementById( window.ns2311_specificationIconId ) .className  =  window.ns2311_specificationNextState ();
+ document.getElementById( window.ns2311_implementationIconId ) .className =  window.ns2311_implementationNextState ();
+
+
+}
+
+window.ns2311_specificationShown=true;
+window.ns2311_implementationShown=true;
+window.ns2311_specificationIconId="ns2311_specification-next-state";
+window.ns2311_implementationIconId="ns2311_implementation-next-state";
+window.ns2311_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Animations 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2312_toggledSpecification()" data-toggle="collapse" data-target="#ns2312_specification"><i id="ns2312_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2312_specification" class="collapse show" data-parent="#ns2312_accordion"><div class="card-body"><p class="card-text">Code a scene with a random-colored box that grows and shrinks while rotating back and forth.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2312_toggledImplementation()" data-toggle="collapse" data-target="#ns2312_implementation"><i id="ns2312_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2312_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2312_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-box)
+ (basic-box
+  #:color (random-color)
+  #:animations-list (do-many
+                     (animate-rotation)
+                     (animate-scale #:to 3))))
+
+(exploration-scene
+#:ground-objects (list
+                  (my-box)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2312_hackPrism = function(){
+if( window.ns2312_prismHacked ) return; 
+ window.ns2312_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2312_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2312_toggledSpecification = function(){
+window.ns2312_specificationShown  = ! window.ns2312_specificationShown;
+ window.ns2312_render();
+
+
+}
+
+window.ns2312_toggledImplementation = function(){
+window.ns2312_implementationShown  = ! window.ns2312_implementationShown;
+ window.ns2312_render();
+
+
+}
+
+window.ns2312_implementationNextState = function(){
+return  window.ns2312_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2312_specificationNextState = function(){
+return  window.ns2312_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2312_disintegrate = function(){
+window.ns2312_hackPrism (); 
+ var ns = document.querySelector(" #ns2312_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2312_render = function(){
+document.getElementById( window.ns2312_specificationIconId ) .className  =  window.ns2312_specificationNextState ();
+ document.getElementById( window.ns2312_implementationIconId ) .className =  window.ns2312_implementationNextState ();
+
+
+}
+
+window.ns2312_specificationShown=true;
+window.ns2312_implementationShown=true;
+window.ns2312_specificationIconId="ns2312_specification-next-state";
+window.ns2312_implementationIconId="ns2312_implementation-next-state";
+window.ns2312_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Animations 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2313_toggledSpecification()" data-toggle="collapse" data-target="#ns2313_specification"><i id="ns2313_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2313_specification" class="collapse show" data-parent="#ns2313_accordion"><div class="card-body"><p class="card-text">Code a scene with an Earth sphere rotating around a Sun sphere.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2313_toggledImplementation()" data-toggle="collapse" data-target="#ns2313_implementation"><i id="ns2313_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2313_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2313_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (earth)
+ (basic-sphere
+  #:position (position 25 0 0)
+  #:texture earth-bg))
+
+(define (sun)
+ (basic-sphere #:texture sun-bg
+               #:radius 5
+               #:animations-list (do-many
+                                  (animate-rotation))
+               #:components-list (list
+                                  (earth))))
+
+(exploration-scene
+#:sky-objects (list
+               (sun)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2313_hackPrism = function(){
+if( window.ns2313_prismHacked ) return; 
+ window.ns2313_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2313_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2313_toggledSpecification = function(){
+window.ns2313_specificationShown  = ! window.ns2313_specificationShown;
+ window.ns2313_render();
+
+
+}
+
+window.ns2313_toggledImplementation = function(){
+window.ns2313_implementationShown  = ! window.ns2313_implementationShown;
+ window.ns2313_render();
+
+
+}
+
+window.ns2313_implementationNextState = function(){
+return  window.ns2313_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2313_specificationNextState = function(){
+return  window.ns2313_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2313_disintegrate = function(){
+window.ns2313_hackPrism (); 
+ var ns = document.querySelector(" #ns2313_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2313_render = function(){
+document.getElementById( window.ns2313_specificationIconId ) .className  =  window.ns2313_specificationNextState ();
+ document.getElementById( window.ns2313_implementationIconId ) .className =  window.ns2313_implementationNextState ();
+
+
+}
+
+window.ns2313_specificationShown=true;
+window.ns2313_implementationShown=true;
+window.ns2313_specificationIconId="ns2313_specification-next-state";
+window.ns2313_implementationIconId="ns2313_implementation-next-state";
+window.ns2313_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Animations 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2314_toggledSpecification()" data-toggle="collapse" data-target="#ns2314_specification"><i id="ns2314_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2314_specification" class="collapse show" data-parent="#ns2314_accordion"><div class="card-body"><p class="card-text">Code a scene with a bird flying away.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2314_toggledImplementation()" data-toggle="collapse" data-target="#ns2314_implementation"><i id="ns2314_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2314_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2314_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-model)
+ (3d-model #:model bird
+           #:position (position 0 0 0)
+           #:animations-list (do-many
+                              (animate-position
+                               #:to (position 100 100 100)
+                               #:loops 0))))
+
+(exploration-scene
+#:ground-objects (list
+                  (my-model)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2314_hackPrism = function(){
+if( window.ns2314_prismHacked ) return; 
+ window.ns2314_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2314_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2314_toggledSpecification = function(){
+window.ns2314_specificationShown  = ! window.ns2314_specificationShown;
+ window.ns2314_render();
+
+
+}
+
+window.ns2314_toggledImplementation = function(){
+window.ns2314_implementationShown  = ! window.ns2314_implementationShown;
+ window.ns2314_render();
+
+
+}
+
+window.ns2314_implementationNextState = function(){
+return  window.ns2314_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2314_specificationNextState = function(){
+return  window.ns2314_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2314_disintegrate = function(){
+window.ns2314_hackPrism (); 
+ var ns = document.querySelector(" #ns2314_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2314_render = function(){
+document.getElementById( window.ns2314_specificationIconId ) .className  =  window.ns2314_specificationNextState ();
+ document.getElementById( window.ns2314_implementationIconId ) .className =  window.ns2314_implementationNextState ();
+
+
+}
+
+window.ns2314_specificationShown=true;
+window.ns2314_implementationShown=true;
+window.ns2314_specificationIconId="ns2314_specification-next-state";
+window.ns2314_implementationIconId="ns2314_implementation-next-state";
+window.ns2314_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Environment 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2315_toggledSpecification()" data-toggle="collapse" data-target="#ns2315_specification"><i id="ns2315_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2315_specification" class="collapse show" data-parent="#ns2315_accordion"><div class="card-body"><p class="card-text">Code a scene with a volcano environment.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2315_toggledImplementation()" data-toggle="collapse" data-target="#ns2315_implementation"><i id="ns2315_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2315_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2315_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:environment (basic-environment
+               #:preset 'volcano))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2315_hackPrism = function(){
+if( window.ns2315_prismHacked ) return; 
+ window.ns2315_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2315_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2315_toggledSpecification = function(){
+window.ns2315_specificationShown  = ! window.ns2315_specificationShown;
+ window.ns2315_render();
+
+
+}
+
+window.ns2315_toggledImplementation = function(){
+window.ns2315_implementationShown  = ! window.ns2315_implementationShown;
+ window.ns2315_render();
+
+
+}
+
+window.ns2315_implementationNextState = function(){
+return  window.ns2315_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2315_specificationNextState = function(){
+return  window.ns2315_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2315_disintegrate = function(){
+window.ns2315_hackPrism (); 
+ var ns = document.querySelector(" #ns2315_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2315_render = function(){
+document.getElementById( window.ns2315_specificationIconId ) .className  =  window.ns2315_specificationNextState ();
+ document.getElementById( window.ns2315_implementationIconId ) .className =  window.ns2315_implementationNextState ();
+
+
+}
+
+window.ns2315_specificationShown=true;
+window.ns2315_implementationShown=true;
+window.ns2315_specificationIconId="ns2315_specification-next-state";
+window.ns2315_implementationIconId="ns2315_implementation-next-state";
+window.ns2315_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Environment 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2316_toggledSpecification()" data-toggle="collapse" data-target="#ns2316_specification"><i id="ns2316_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2316_specification" class="collapse show" data-parent="#ns2316_accordion"><div class="card-body"><p class="card-text">Code a scene with an environment with many, small mushrooms.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2316_toggledImplementation()" data-toggle="collapse" data-target="#ns2316_implementation"><i id="ns2316_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2316_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2316_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:environment (basic-environment
+               #:dressing 'mushrooms
+               #:dressing-amount 25
+               #:dressing-scale 0.5))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2316_hackPrism = function(){
+if( window.ns2316_prismHacked ) return; 
+ window.ns2316_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2316_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2316_toggledSpecification = function(){
+window.ns2316_specificationShown  = ! window.ns2316_specificationShown;
+ window.ns2316_render();
+
+
+}
+
+window.ns2316_toggledImplementation = function(){
+window.ns2316_implementationShown  = ! window.ns2316_implementationShown;
+ window.ns2316_render();
+
+
+}
+
+window.ns2316_implementationNextState = function(){
+return  window.ns2316_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2316_specificationNextState = function(){
+return  window.ns2316_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2316_disintegrate = function(){
+window.ns2316_hackPrism (); 
+ var ns = document.querySelector(" #ns2316_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2316_render = function(){
+document.getElementById( window.ns2316_specificationIconId ) .className  =  window.ns2316_specificationNextState ();
+ document.getElementById( window.ns2316_implementationIconId ) .className =  window.ns2316_implementationNextState ();
+
+
+}
+
+window.ns2316_specificationShown=true;
+window.ns2316_implementationShown=true;
+window.ns2316_specificationIconId="ns2316_specification-next-state";
+window.ns2316_implementationIconId="ns2316_implementation-next-state";
+window.ns2316_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Environment 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2317_toggledSpecification()" data-toggle="collapse" data-target="#ns2317_specification"><i id="ns2317_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2317_specification" class="collapse show" data-parent="#ns2317_accordion"><div class="card-body"><p class="card-text">Code a scene with a spiky ground that has a red and black checkerboard texture.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2317_toggledImplementation()" data-toggle="collapse" data-target="#ns2317_implementation"><i id="ns2317_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2317_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2317_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:environment (basic-environment
+               #:ground 'spikes
+               #:ground-texture 'checkerboard
+               #:ground-color-1 'red
+               #:ground-color-2 'black))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2317_hackPrism = function(){
+if( window.ns2317_prismHacked ) return; 
+ window.ns2317_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2317_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2317_toggledSpecification = function(){
+window.ns2317_specificationShown  = ! window.ns2317_specificationShown;
+ window.ns2317_render();
+
+
+}
+
+window.ns2317_toggledImplementation = function(){
+window.ns2317_implementationShown  = ! window.ns2317_implementationShown;
+ window.ns2317_render();
+
+
+}
+
+window.ns2317_implementationNextState = function(){
+return  window.ns2317_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2317_specificationNextState = function(){
+return  window.ns2317_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2317_disintegrate = function(){
+window.ns2317_hackPrism (); 
+ var ns = document.querySelector(" #ns2317_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2317_render = function(){
+document.getElementById( window.ns2317_specificationIconId ) .className  =  window.ns2317_specificationNextState ();
+ document.getElementById( window.ns2317_implementationIconId ) .className =  window.ns2317_implementationNextState ();
+
+
+}
+
+window.ns2317_specificationShown=true;
+window.ns2317_implementationShown=true;
+window.ns2317_specificationIconId="ns2317_specification-next-state";
+window.ns2317_implementationIconId="ns2317_implementation-next-state";
+window.ns2317_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Environment 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2318_toggledSpecification()" data-toggle="collapse" data-target="#ns2318_specification"><i id="ns2318_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2318_specification" class="collapse show" data-parent="#ns2318_accordion"><div class="card-body"><p class="card-text">Code a scene with a foggy egyptian environment, and both horizon and sky colors.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2318_toggledImplementation()" data-toggle="collapse" data-target="#ns2318_implementation"><i id="ns2318_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2318_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2318_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:environment (basic-environment
+               #:preset 'egypt
+               #:horizon-color 'orange
+               #:sky-color 'dark-blue
+               #:fog 0.6))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2318_hackPrism = function(){
+if( window.ns2318_prismHacked ) return; 
+ window.ns2318_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2318_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2318_toggledSpecification = function(){
+window.ns2318_specificationShown  = ! window.ns2318_specificationShown;
+ window.ns2318_render();
+
+
+}
+
+window.ns2318_toggledImplementation = function(){
+window.ns2318_implementationShown  = ! window.ns2318_implementationShown;
+ window.ns2318_render();
+
+
+}
+
+window.ns2318_implementationNextState = function(){
+return  window.ns2318_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2318_specificationNextState = function(){
+return  window.ns2318_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2318_disintegrate = function(){
+window.ns2318_hackPrism (); 
+ var ns = document.querySelector(" #ns2318_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2318_render = function(){
+document.getElementById( window.ns2318_specificationIconId ) .className  =  window.ns2318_specificationNextState ();
+ document.getElementById( window.ns2318_implementationIconId ) .className =  window.ns2318_implementationNextState ();
+
+
+}
+
+window.ns2318_specificationShown=true;
+window.ns2318_implementationShown=true;
+window.ns2318_specificationIconId="ns2318_specification-next-state";
+window.ns2318_implementationIconId="ns2318_implementation-next-state";
+window.ns2318_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Ground Objects 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2319_toggledSpecification()" data-toggle="collapse" data-target="#ns2319_specification"><i id="ns2319_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2319_specification" class="collapse show" data-parent="#ns2319_accordion"><div class="card-body"><p class="card-text">Code a scene with a red, semi-transparent sphere on the ground.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2319_toggledImplementation()" data-toggle="collapse" data-target="#ns2319_implementation"><i id="ns2319_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2319_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2319_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-sphere)
+ (basic-sphere #:color 'red
+               #:opacity 0.75))
+
+(exploration-scene
+#:ground-objects (list (my-sphere)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2319_hackPrism = function(){
+if( window.ns2319_prismHacked ) return; 
+ window.ns2319_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2319_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2319_toggledSpecification = function(){
+window.ns2319_specificationShown  = ! window.ns2319_specificationShown;
+ window.ns2319_render();
+
+
+}
+
+window.ns2319_toggledImplementation = function(){
+window.ns2319_implementationShown  = ! window.ns2319_implementationShown;
+ window.ns2319_render();
+
+
+}
+
+window.ns2319_implementationNextState = function(){
+return  window.ns2319_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2319_specificationNextState = function(){
+return  window.ns2319_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2319_disintegrate = function(){
+window.ns2319_hackPrism (); 
+ var ns = document.querySelector(" #ns2319_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2319_render = function(){
+document.getElementById( window.ns2319_specificationIconId ) .className  =  window.ns2319_specificationNextState ();
+ document.getElementById( window.ns2319_implementationIconId ) .className =  window.ns2319_implementationNextState ();
+
+
+}
+
+window.ns2319_specificationShown=true;
+window.ns2319_implementationShown=true;
+window.ns2319_specificationIconId="ns2319_specification-next-state";
+window.ns2319_implementationIconId="ns2319_implementation-next-state";
+window.ns2319_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Ground Objects 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2320_toggledSpecification()" data-toggle="collapse" data-target="#ns2320_specification"><i id="ns2320_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2320_specification" class="collapse show" data-parent="#ns2320_accordion"><div class="card-body"><p class="card-text">Code a scene with a large cylinder and a large blue box.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2320_toggledImplementation()" data-toggle="collapse" data-target="#ns2320_implementation"><i id="ns2320_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2320_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2320_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-cylinder)
+ (basic-cylinder #:radius 3
+                 #:height 5))
+
+(define (my-box)
+ (basic-box #:scale 5
+            #:color 'blue))
+
+(exploration-scene
+#:ground-objects (list (my-cylinder)
+                       (my-box)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2320_hackPrism = function(){
+if( window.ns2320_prismHacked ) return; 
+ window.ns2320_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2320_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2320_toggledSpecification = function(){
+window.ns2320_specificationShown  = ! window.ns2320_specificationShown;
+ window.ns2320_render();
+
+
+}
+
+window.ns2320_toggledImplementation = function(){
+window.ns2320_implementationShown  = ! window.ns2320_implementationShown;
+ window.ns2320_render();
+
+
+}
+
+window.ns2320_implementationNextState = function(){
+return  window.ns2320_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2320_specificationNextState = function(){
+return  window.ns2320_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2320_disintegrate = function(){
+window.ns2320_hackPrism (); 
+ var ns = document.querySelector(" #ns2320_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2320_render = function(){
+document.getElementById( window.ns2320_specificationIconId ) .className  =  window.ns2320_specificationNextState ();
+ document.getElementById( window.ns2320_implementationIconId ) .className =  window.ns2320_implementationNextState ();
+
+
+}
+
+window.ns2320_specificationShown=true;
+window.ns2320_implementationShown=true;
+window.ns2320_specificationIconId="ns2320_specification-next-state";
+window.ns2320_implementationIconId="ns2320_implementation-next-state";
+window.ns2320_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Ground Objects 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2321_toggledSpecification()" data-toggle="collapse" data-target="#ns2321_specification"><i id="ns2321_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2321_specification" class="collapse show" data-parent="#ns2321_accordion"><div class="card-body"><p class="card-text">Code a scene with 3 large orange oceans.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2321_toggledImplementation()" data-toggle="collapse" data-target="#ns2321_implementation"><i id="ns2321_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2321_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2321_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-ocean)
+ (basic-ocean #:color 'orange
+              #:width 30
+              #:depth 20))
+
+(exploration-scene
+#:ground-objects (list (my-ocean)
+                       (my-ocean)
+                       (my-ocean)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2321_hackPrism = function(){
+if( window.ns2321_prismHacked ) return; 
+ window.ns2321_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2321_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2321_toggledSpecification = function(){
+window.ns2321_specificationShown  = ! window.ns2321_specificationShown;
+ window.ns2321_render();
+
+
+}
+
+window.ns2321_toggledImplementation = function(){
+window.ns2321_implementationShown  = ! window.ns2321_implementationShown;
+ window.ns2321_render();
+
+
+}
+
+window.ns2321_implementationNextState = function(){
+return  window.ns2321_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2321_specificationNextState = function(){
+return  window.ns2321_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2321_disintegrate = function(){
+window.ns2321_hackPrism (); 
+ var ns = document.querySelector(" #ns2321_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2321_render = function(){
+document.getElementById( window.ns2321_specificationIconId ) .className  =  window.ns2321_specificationNextState ();
+ document.getElementById( window.ns2321_implementationIconId ) .className =  window.ns2321_implementationNextState ();
+
+
+}
+
+window.ns2321_specificationShown=true;
+window.ns2321_implementationShown=true;
+window.ns2321_specificationIconId="ns2321_specification-next-state";
+window.ns2321_implementationIconId="ns2321_implementation-next-state";
+window.ns2321_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Ground Objects 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2322_toggledSpecification()" data-toggle="collapse" data-target="#ns2322_specification"><i id="ns2322_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2322_specification" class="collapse show" data-parent="#ns2322_accordion"><div class="card-body"><p class="card-text">Code a scene with a sphere that changes color when you click on it.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2322_toggledImplementation()" data-toggle="collapse" data-target="#ns2322_implementation"><i id="ns2322_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2322_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2322_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-sphere)
+ (basic-sphere
+  #:color 'red
+  #:on-mouse-click (do-many
+                    (color 'blue))))
+
+(exploration-scene
+#:ground-objects (list (my-sphere)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2322_hackPrism = function(){
+if( window.ns2322_prismHacked ) return; 
+ window.ns2322_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2322_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2322_toggledSpecification = function(){
+window.ns2322_specificationShown  = ! window.ns2322_specificationShown;
+ window.ns2322_render();
+
+
+}
+
+window.ns2322_toggledImplementation = function(){
+window.ns2322_implementationShown  = ! window.ns2322_implementationShown;
+ window.ns2322_render();
+
+
+}
+
+window.ns2322_implementationNextState = function(){
+return  window.ns2322_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2322_specificationNextState = function(){
+return  window.ns2322_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2322_disintegrate = function(){
+window.ns2322_hackPrism (); 
+ var ns = document.querySelector(" #ns2322_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2322_render = function(){
+document.getElementById( window.ns2322_specificationIconId ) .className  =  window.ns2322_specificationNextState ();
+ document.getElementById( window.ns2322_implementationIconId ) .className =  window.ns2322_implementationNextState ();
+
+
+}
+
+window.ns2322_specificationShown=true;
+window.ns2322_implementationShown=true;
+window.ns2322_specificationIconId="ns2322_specification-next-state";
+window.ns2322_implementationIconId="ns2322_implementation-next-state";
+window.ns2322_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Ground Objects 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2323_toggledSpecification()" data-toggle="collapse" data-target="#ns2323_specification"><i id="ns2323_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2323_specification" class="collapse show" data-parent="#ns2323_accordion"><div class="card-body"><p class="card-text">Code a scene with a cylinder that changes color and grows when look at and reverts back when not looked at.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2323_toggledImplementation()" data-toggle="collapse" data-target="#ns2323_implementation"><i id="ns2323_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2323_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2323_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-cylinder)
+ (basic-cylinder
+  #:color 'orange
+  #:on-mouse-enter (do-many
+                    (color 'yellow)
+                    (radius 5))
+  #:on-mouse-leave (do-many
+                    (color 'orange)
+                    (radius 1))))
+
+(exploration-scene
+#:ground-objects (list (my-cylinder)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2323_hackPrism = function(){
+if( window.ns2323_prismHacked ) return; 
+ window.ns2323_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2323_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2323_toggledSpecification = function(){
+window.ns2323_specificationShown  = ! window.ns2323_specificationShown;
+ window.ns2323_render();
+
+
+}
+
+window.ns2323_toggledImplementation = function(){
+window.ns2323_implementationShown  = ! window.ns2323_implementationShown;
+ window.ns2323_render();
+
+
+}
+
+window.ns2323_implementationNextState = function(){
+return  window.ns2323_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2323_specificationNextState = function(){
+return  window.ns2323_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2323_disintegrate = function(){
+window.ns2323_hackPrism (); 
+ var ns = document.querySelector(" #ns2323_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2323_render = function(){
+document.getElementById( window.ns2323_specificationIconId ) .className  =  window.ns2323_specificationNextState ();
+ document.getElementById( window.ns2323_implementationIconId ) .className =  window.ns2323_implementationNextState ();
+
+
+}
+
+window.ns2323_specificationShown=true;
+window.ns2323_implementationShown=true;
+window.ns2323_specificationIconId="ns2323_specification-next-state";
+window.ns2323_implementationIconId="ns2323_implementation-next-state";
+window.ns2323_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2324_toggledSpecification()" data-toggle="collapse" data-target="#ns2324_specification"><i id="ns2324_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2324_specification" class="collapse show" data-parent="#ns2324_accordion"><div class="card-body"><p class="card-text">Code a basic 3d scene.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2324_toggledImplementation()" data-toggle="collapse" data-target="#ns2324_implementation"><i id="ns2324_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2324_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2324_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene)</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2324_hackPrism = function(){
+if( window.ns2324_prismHacked ) return; 
+ window.ns2324_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2324_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2324_toggledSpecification = function(){
+window.ns2324_specificationShown  = ! window.ns2324_specificationShown;
+ window.ns2324_render();
+
+
+}
+
+window.ns2324_toggledImplementation = function(){
+window.ns2324_implementationShown  = ! window.ns2324_implementationShown;
+ window.ns2324_render();
+
+
+}
+
+window.ns2324_implementationNextState = function(){
+return  window.ns2324_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2324_specificationNextState = function(){
+return  window.ns2324_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2324_disintegrate = function(){
+window.ns2324_hackPrism (); 
+ var ns = document.querySelector(" #ns2324_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2324_render = function(){
+document.getElementById( window.ns2324_specificationIconId ) .className  =  window.ns2324_specificationNextState ();
+ document.getElementById( window.ns2324_implementationIconId ) .className =  window.ns2324_implementationNextState ();
+
+
+}
+
+window.ns2324_specificationShown=true;
+window.ns2324_implementationShown=true;
+window.ns2324_specificationIconId="ns2324_specification-next-state";
+window.ns2324_implementationIconId="ns2324_implementation-next-state";
+window.ns2324_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Particles 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2325_toggledSpecification()" data-toggle="collapse" data-target="#ns2325_specification"><i id="ns2325_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2325_specification" class="collapse show" data-parent="#ns2325_accordion"><div class="card-body"><p class="card-text">Code a scene with a particle geyser.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2325_toggledImplementation()" data-toggle="collapse" data-target="#ns2325_implementation"><i id="ns2325_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2325_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2325_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:ground-objects (list (basic-particles)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2325_hackPrism = function(){
+if( window.ns2325_prismHacked ) return; 
+ window.ns2325_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2325_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2325_toggledSpecification = function(){
+window.ns2325_specificationShown  = ! window.ns2325_specificationShown;
+ window.ns2325_render();
+
+
+}
+
+window.ns2325_toggledImplementation = function(){
+window.ns2325_implementationShown  = ! window.ns2325_implementationShown;
+ window.ns2325_render();
+
+
+}
+
+window.ns2325_implementationNextState = function(){
+return  window.ns2325_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2325_specificationNextState = function(){
+return  window.ns2325_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2325_disintegrate = function(){
+window.ns2325_hackPrism (); 
+ var ns = document.querySelector(" #ns2325_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2325_render = function(){
+document.getElementById( window.ns2325_specificationIconId ) .className  =  window.ns2325_specificationNextState ();
+ document.getElementById( window.ns2325_implementationIconId ) .className =  window.ns2325_implementationNextState ();
+
+
+}
+
+window.ns2325_specificationShown=true;
+window.ns2325_implementationShown=true;
+window.ns2325_specificationIconId="ns2325_specification-next-state";
+window.ns2325_implementationIconId="ns2325_implementation-next-state";
+window.ns2325_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Particles 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2326_toggledSpecification()" data-toggle="collapse" data-target="#ns2326_specification"><i id="ns2326_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2326_specification" class="collapse show" data-parent="#ns2326_accordion"><div class="card-body"><p class="card-text">Code a scene with large, slow sky particles that disappear before they hit the ground.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2326_toggledImplementation()" data-toggle="collapse" data-target="#ns2326_implementation"><i id="ns2326_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2326_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2326_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-particles)
+ (basic-particles
+  #:speed 5
+  #:size 5
+  #:age 3))
+
+(exploration-scene
+#:sky-objects (list
+               (my-particles)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2326_hackPrism = function(){
+if( window.ns2326_prismHacked ) return; 
+ window.ns2326_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2326_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2326_toggledSpecification = function(){
+window.ns2326_specificationShown  = ! window.ns2326_specificationShown;
+ window.ns2326_render();
+
+
+}
+
+window.ns2326_toggledImplementation = function(){
+window.ns2326_implementationShown  = ! window.ns2326_implementationShown;
+ window.ns2326_render();
+
+
+}
+
+window.ns2326_implementationNextState = function(){
+return  window.ns2326_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2326_specificationNextState = function(){
+return  window.ns2326_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2326_disintegrate = function(){
+window.ns2326_hackPrism (); 
+ var ns = document.querySelector(" #ns2326_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2326_render = function(){
+document.getElementById( window.ns2326_specificationIconId ) .className  =  window.ns2326_specificationNextState ();
+ document.getElementById( window.ns2326_implementationIconId ) .className =  window.ns2326_implementationNextState ();
+
+
+}
+
+window.ns2326_specificationShown=true;
+window.ns2326_implementationShown=true;
+window.ns2326_specificationIconId="ns2326_specification-next-state";
+window.ns2326_implementationIconId="ns2326_implementation-next-state";
+window.ns2326_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Particles 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2327_toggledSpecification()" data-toggle="collapse" data-target="#ns2327_specification"><i id="ns2327_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2327_specification" class="collapse show" data-parent="#ns2327_accordion"><div class="card-body"><p class="card-text">Code a scene with heavy rain.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2327_toggledImplementation()" data-toggle="collapse" data-target="#ns2327_implementation"><i id="ns2327_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2327_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2327_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-particles)
+ (basic-particles #:preset 'rain
+                  #:count 5000))
+
+(exploration-scene
+#:sky-objects (list
+               (my-particles)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2327_hackPrism = function(){
+if( window.ns2327_prismHacked ) return; 
+ window.ns2327_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2327_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2327_toggledSpecification = function(){
+window.ns2327_specificationShown  = ! window.ns2327_specificationShown;
+ window.ns2327_render();
+
+
+}
+
+window.ns2327_toggledImplementation = function(){
+window.ns2327_implementationShown  = ! window.ns2327_implementationShown;
+ window.ns2327_render();
+
+
+}
+
+window.ns2327_implementationNextState = function(){
+return  window.ns2327_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2327_specificationNextState = function(){
+return  window.ns2327_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2327_disintegrate = function(){
+window.ns2327_hackPrism (); 
+ var ns = document.querySelector(" #ns2327_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2327_render = function(){
+document.getElementById( window.ns2327_specificationIconId ) .className  =  window.ns2327_specificationNextState ();
+ document.getElementById( window.ns2327_implementationIconId ) .className =  window.ns2327_implementationNextState ();
+
+
+}
+
+window.ns2327_specificationShown=true;
+window.ns2327_implementationShown=true;
+window.ns2327_specificationIconId="ns2327_specification-next-state";
+window.ns2327_implementationIconId="ns2327_implementation-next-state";
+window.ns2327_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Particles 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2328_toggledSpecification()" data-toggle="collapse" data-target="#ns2328_specification"><i id="ns2328_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2328_specification" class="collapse show" data-parent="#ns2328_accordion"><div class="card-body"><p class="card-text">Code a scene with an egyptian environment and a lot of dust.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2328_toggledImplementation()" data-toggle="collapse" data-target="#ns2328_implementation"><i id="ns2328_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2328_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2328_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-particles)
+ (basic-particles #:preset 'dust
+                  #:count 4000))
+
+(exploration-scene
+#:environment (basic-environment
+               #:preset 'egypt)
+#:ground-objects (list
+                  (my-particles)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2328_hackPrism = function(){
+if( window.ns2328_prismHacked ) return; 
+ window.ns2328_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2328_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2328_toggledSpecification = function(){
+window.ns2328_specificationShown  = ! window.ns2328_specificationShown;
+ window.ns2328_render();
+
+
+}
+
+window.ns2328_toggledImplementation = function(){
+window.ns2328_implementationShown  = ! window.ns2328_implementationShown;
+ window.ns2328_render();
+
+
+}
+
+window.ns2328_implementationNextState = function(){
+return  window.ns2328_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2328_specificationNextState = function(){
+return  window.ns2328_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2328_disintegrate = function(){
+window.ns2328_hackPrism (); 
+ var ns = document.querySelector(" #ns2328_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2328_render = function(){
+document.getElementById( window.ns2328_specificationIconId ) .className  =  window.ns2328_specificationNextState ();
+ document.getElementById( window.ns2328_implementationIconId ) .className =  window.ns2328_implementationNextState ();
+
+
+}
+
+window.ns2328_specificationShown=true;
+window.ns2328_implementationShown=true;
+window.ns2328_specificationIconId="ns2328_specification-next-state";
+window.ns2328_implementationIconId="ns2328_implementation-next-state";
+window.ns2328_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Particles 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2329_toggledSpecification()" data-toggle="collapse" data-target="#ns2329_specification"><i id="ns2329_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2329_specification" class="collapse show" data-parent="#ns2329_accordion"><div class="card-body"><p class="card-text">Code a scene with a forest environment that has dark horizon and sky colors, some fog, as well as many custom image particles.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2329_toggledImplementation()" data-toggle="collapse" data-target="#ns2329_implementation"><i id="ns2329_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2329_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2329_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-environment)
+ (basic-environment
+  #:preset 'forest
+  #:horizon-color 'dark-blue
+  #:sky-color 'black
+  #:fog 0.5))
+
+(define (my-particles)
+ (basic-particles #:preset 'dust
+                  #:image dragon-image
+                  #:count 2000))
+
+(exploration-scene
+#:environment (my-environment)
+#:sky-objects (list
+               (my-particles)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2329_hackPrism = function(){
+if( window.ns2329_prismHacked ) return; 
+ window.ns2329_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2329_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2329_toggledSpecification = function(){
+window.ns2329_specificationShown  = ! window.ns2329_specificationShown;
+ window.ns2329_render();
+
+
+}
+
+window.ns2329_toggledImplementation = function(){
+window.ns2329_implementationShown  = ! window.ns2329_implementationShown;
+ window.ns2329_render();
+
+
+}
+
+window.ns2329_implementationNextState = function(){
+return  window.ns2329_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2329_specificationNextState = function(){
+return  window.ns2329_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2329_disintegrate = function(){
+window.ns2329_hackPrism (); 
+ var ns = document.querySelector(" #ns2329_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2329_render = function(){
+document.getElementById( window.ns2329_specificationIconId ) .className  =  window.ns2329_specificationNextState ();
+ document.getElementById( window.ns2329_implementationIconId ) .className =  window.ns2329_implementationNextState ();
+
+
+}
+
+window.ns2329_specificationShown=true;
+window.ns2329_implementationShown=true;
+window.ns2329_specificationIconId="ns2329_specification-next-state";
+window.ns2329_implementationIconId="ns2329_implementation-next-state";
+window.ns2329_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky Objects 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2330_toggledSpecification()" data-toggle="collapse" data-target="#ns2330_specification"><i id="ns2330_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2330_specification" class="collapse show" data-parent="#ns2330_accordion"><div class="card-body"><p class="card-text">Code a scene with a cone in the sky that has random scale, color, and rotation.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2330_toggledImplementation()" data-toggle="collapse" data-target="#ns2330_implementation"><i id="ns2330_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2330_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2330_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:sky-objects (list (basic-cone
+                     #:scale (random-scale)
+                     #:color (random-color)
+                     #:rotation (random-rotation))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2330_hackPrism = function(){
+if( window.ns2330_prismHacked ) return; 
+ window.ns2330_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2330_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2330_toggledSpecification = function(){
+window.ns2330_specificationShown  = ! window.ns2330_specificationShown;
+ window.ns2330_render();
+
+
+}
+
+window.ns2330_toggledImplementation = function(){
+window.ns2330_implementationShown  = ! window.ns2330_implementationShown;
+ window.ns2330_render();
+
+
+}
+
+window.ns2330_implementationNextState = function(){
+return  window.ns2330_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2330_specificationNextState = function(){
+return  window.ns2330_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2330_disintegrate = function(){
+window.ns2330_hackPrism (); 
+ var ns = document.querySelector(" #ns2330_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2330_render = function(){
+document.getElementById( window.ns2330_specificationIconId ) .className  =  window.ns2330_specificationNextState ();
+ document.getElementById( window.ns2330_implementationIconId ) .className =  window.ns2330_implementationNextState ();
+
+
+}
+
+window.ns2330_specificationShown=true;
+window.ns2330_implementationShown=true;
+window.ns2330_specificationIconId="ns2330_specification-next-state";
+window.ns2330_implementationIconId="ns2330_implementation-next-state";
+window.ns2330_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky Objects 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2331_toggledSpecification()" data-toggle="collapse" data-target="#ns2331_specification"><i id="ns2331_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2331_specification" class="collapse show" data-parent="#ns2331_accordion"><div class="card-body"><p class="card-text">Code a scene with 2 sky objects: a highly-transparent, random-colored object and a 3D model.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2331_toggledImplementation()" data-toggle="collapse" data-target="#ns2331_implementation"><i id="ns2331_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2331_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2331_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define (my-sphere)
+ (basic-sphere
+  #:color (random-color)
+  #:opacity 0.2))
+
+(exploration-scene
+#:sky-objects (list (my-sphere)
+                    thoughtstem-logo))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2331_hackPrism = function(){
+if( window.ns2331_prismHacked ) return; 
+ window.ns2331_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2331_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2331_toggledSpecification = function(){
+window.ns2331_specificationShown  = ! window.ns2331_specificationShown;
+ window.ns2331_render();
+
+
+}
+
+window.ns2331_toggledImplementation = function(){
+window.ns2331_implementationShown  = ! window.ns2331_implementationShown;
+ window.ns2331_render();
+
+
+}
+
+window.ns2331_implementationNextState = function(){
+return  window.ns2331_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2331_specificationNextState = function(){
+return  window.ns2331_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2331_disintegrate = function(){
+window.ns2331_hackPrism (); 
+ var ns = document.querySelector(" #ns2331_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2331_render = function(){
+document.getElementById( window.ns2331_specificationIconId ) .className  =  window.ns2331_specificationNextState ();
+ document.getElementById( window.ns2331_implementationIconId ) .className =  window.ns2331_implementationNextState ();
+
+
+}
+
+window.ns2331_specificationShown=true;
+window.ns2331_implementationShown=true;
+window.ns2331_specificationIconId="ns2331_specification-next-state";
+window.ns2331_implementationIconId="ns2331_implementation-next-state";
+window.ns2331_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky Objects 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2332_toggledSpecification()" data-toggle="collapse" data-target="#ns2332_specification"><i id="ns2332_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2332_specification" class="collapse show" data-parent="#ns2332_accordion"><div class="card-body"><p class="card-text">Code a scene with several 3D models in the sky.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2332_toggledImplementation()" data-toggle="collapse" data-target="#ns2332_implementation"><i id="ns2332_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2332_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2332_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:sky-objects (list bird
+                    astronaut
+                    sword))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2332_hackPrism = function(){
+if( window.ns2332_prismHacked ) return; 
+ window.ns2332_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2332_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2332_toggledSpecification = function(){
+window.ns2332_specificationShown  = ! window.ns2332_specificationShown;
+ window.ns2332_render();
+
+
+}
+
+window.ns2332_toggledImplementation = function(){
+window.ns2332_implementationShown  = ! window.ns2332_implementationShown;
+ window.ns2332_render();
+
+
+}
+
+window.ns2332_implementationNextState = function(){
+return  window.ns2332_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2332_specificationNextState = function(){
+return  window.ns2332_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2332_disintegrate = function(){
+window.ns2332_hackPrism (); 
+ var ns = document.querySelector(" #ns2332_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2332_render = function(){
+document.getElementById( window.ns2332_specificationIconId ) .className  =  window.ns2332_specificationNextState ();
+ document.getElementById( window.ns2332_implementationIconId ) .className =  window.ns2332_implementationNextState ();
+
+
+}
+
+window.ns2332_specificationShown=true;
+window.ns2332_implementationShown=true;
+window.ns2332_specificationIconId="ns2332_specification-next-state";
+window.ns2332_implementationIconId="ns2332_implementation-next-state";
+window.ns2332_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky Objects 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2333_toggledSpecification()" data-toggle="collapse" data-target="#ns2333_specification"><i id="ns2333_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2333_specification" class="collapse show" data-parent="#ns2333_accordion"><div class="card-body"><p class="card-text">Code a scene with a fog-free egyptian environment and stars.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2333_toggledImplementation()" data-toggle="collapse" data-target="#ns2333_implementation"><i id="ns2333_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2333_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2333_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:environment (basic-environment
+               #:preset 'egypt
+               #:fog 0)
+#:stars (basic-stars))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2333_hackPrism = function(){
+if( window.ns2333_prismHacked ) return; 
+ window.ns2333_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2333_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2333_toggledSpecification = function(){
+window.ns2333_specificationShown  = ! window.ns2333_specificationShown;
+ window.ns2333_render();
+
+
+}
+
+window.ns2333_toggledImplementation = function(){
+window.ns2333_implementationShown  = ! window.ns2333_implementationShown;
+ window.ns2333_render();
+
+
+}
+
+window.ns2333_implementationNextState = function(){
+return  window.ns2333_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2333_specificationNextState = function(){
+return  window.ns2333_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2333_disintegrate = function(){
+window.ns2333_hackPrism (); 
+ var ns = document.querySelector(" #ns2333_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2333_render = function(){
+document.getElementById( window.ns2333_specificationIconId ) .className  =  window.ns2333_specificationNextState ();
+ document.getElementById( window.ns2333_implementationIconId ) .className =  window.ns2333_implementationNextState ();
+
+
+}
+
+window.ns2333_specificationShown=true;
+window.ns2333_implementationShown=true;
+window.ns2333_specificationIconId="ns2333_specification-next-state";
+window.ns2333_implementationIconId="ns2333_implementation-next-state";
+window.ns2333_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Sky Objects 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2334_toggledSpecification()" data-toggle="collapse" data-target="#ns2334_specification"><i id="ns2334_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2334_specification" class="collapse show" data-parent="#ns2334_accordion"><div class="card-body"><p class="card-text">Code a scene with a fog-free forest environment, stars, and dark horizon and sky colors.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2334_toggledImplementation()" data-toggle="collapse" data-target="#ns2334_implementation"><i id="ns2334_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2334_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2334_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(exploration-scene
+#:environment (basic-environment
+               #:preset 'forest
+               #:horizon-color 'dark-blue
+               #:sky-color 'black
+               #:fog 0)
+#:stars (basic-stars))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2334_hackPrism = function(){
+if( window.ns2334_prismHacked ) return; 
+ window.ns2334_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2334_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2334_toggledSpecification = function(){
+window.ns2334_specificationShown  = ! window.ns2334_specificationShown;
+ window.ns2334_render();
+
+
+}
+
+window.ns2334_toggledImplementation = function(){
+window.ns2334_implementationShown  = ! window.ns2334_implementationShown;
+ window.ns2334_render();
+
+
+}
+
+window.ns2334_implementationNextState = function(){
+return  window.ns2334_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2334_specificationNextState = function(){
+return  window.ns2334_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2334_disintegrate = function(){
+window.ns2334_hackPrism (); 
+ var ns = document.querySelector(" #ns2334_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2334_render = function(){
+document.getElementById( window.ns2334_specificationIconId ) .className  =  window.ns2334_specificationNextState ();
+ document.getElementById( window.ns2334_implementationIconId ) .className =  window.ns2334_implementationNextState ();
+
+
+}
+
+window.ns2334_specificationShown=true;
+window.ns2334_implementationShown=true;
+window.ns2334_specificationIconId="ns2334_specification-next-state";
+window.ns2334_implementationIconId="ns2334_implementation-next-state";
+window.ns2334_prismHacked=false;
+
+//]]>
+</script></div><div class="tab-pane fade p-3" id="documentation" class="p-3"><iframe src="/mc-languages/3d-exploration-doc/3d-exploration-doc.html" frameborder="0" scrolling="no" onload="var t = this;setInterval(function(){resizeIframe(t)},1000);" style="width:100%; border: none;"></iframe></div></div></div><script src="/mc-languages/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script></body></html>

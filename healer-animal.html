@@ -1,0 +1,2253 @@
+<html><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><script>
+//<![CDATA[
+function preloadSupported() {
+  var relList = document.createElement('link').relList;
+  return !!(relList && relList.supports && relList.supports('preload'));
+}
+//]]>
+</script><script async="" src="/mc-languages/js/modernizr-custom.js"></script><link rel="stylesheet" type="text/css" href="/mc-languages/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-brands.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-solid.min.css" /><script>
+//<![CDATA[
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+//]]>
+</script><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script></head><body><script src="/mc-languages/js/jquery-3.4.1.min.js"></script><script async="" src="/mc-languages/js/moment.min.js"></script><div class="container"><h2>#lang healer-animal</h2><div class="card"><div class="card-header">About this Language</div><div class="card-body"><p>This is a ratchet language best for young elementary coders. Customize your avatar, add food to eat, friends to heal, and enemies to avoid!</p><p><b>TIP:</b> This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet.</p></div></div><br /><ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#translations">Translations</a></li><li class="nav-item"><a class="nav-link" data-toggle="tab" href="#documentation">Documentation</a></li></ul><div class="tab-content"><div class="tab-pane fade show active p-3" id="translations" class="p-3"><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Foods 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2405_toggledSpecification()" data-toggle="collapse" data-target="#ns2405_specification"><i id="ns2405_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2405_specification" class="collapse show" data-parent="#ns2405_accordion"><div class="card-body"><p class="card-text">Code a game with a chicken.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2405_toggledImplementation()" data-toggle="collapse" data-target="#ns2405_implementation"><i id="ns2405_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2405_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2405_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-foods
+
+(start chicken)</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//1.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2405_hackPrism = function(){
+if( window.ns2405_prismHacked ) return; 
+ window.ns2405_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2405_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2405_toggledSpecification = function(){
+window.ns2405_specificationShown  = ! window.ns2405_specificationShown;
+ window.ns2405_render();
+
+
+}
+
+window.ns2405_toggledImplementation = function(){
+window.ns2405_implementationShown  = ! window.ns2405_implementationShown;
+ window.ns2405_render();
+
+
+}
+
+window.ns2405_implementationNextState = function(){
+return  window.ns2405_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2405_specificationNextState = function(){
+return  window.ns2405_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2405_disintegrate = function(){
+window.ns2405_hackPrism (); 
+ var ns = document.querySelector(" #ns2405_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2405_render = function(){
+document.getElementById( window.ns2405_specificationIconId ) .className  =  window.ns2405_specificationNextState ();
+ document.getElementById( window.ns2405_implementationIconId ) .className =  window.ns2405_implementationNextState ();
+
+
+}
+
+window.ns2405_specificationShown=true;
+window.ns2405_implementationShown=true;
+window.ns2405_specificationIconId="ns2405_specification-next-state";
+window.ns2405_implementationIconId="ns2405_implementation-next-state";
+window.ns2405_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Foods 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2406_toggledSpecification()" data-toggle="collapse" data-target="#ns2406_specification"><i id="ns2406_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2406_specification" class="collapse show" data-parent="#ns2406_accordion"><div class="card-body"><p class="card-text">Code a game with a chicken eating apples.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2406_toggledImplementation()" data-toggle="collapse" data-target="#ns2406_implementation"><i id="ns2406_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2406_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2406_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-foods
+
+(start chicken (apple))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//2.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2406_hackPrism = function(){
+if( window.ns2406_prismHacked ) return; 
+ window.ns2406_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2406_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2406_toggledSpecification = function(){
+window.ns2406_specificationShown  = ! window.ns2406_specificationShown;
+ window.ns2406_render();
+
+
+}
+
+window.ns2406_toggledImplementation = function(){
+window.ns2406_implementationShown  = ! window.ns2406_implementationShown;
+ window.ns2406_render();
+
+
+}
+
+window.ns2406_implementationNextState = function(){
+return  window.ns2406_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2406_specificationNextState = function(){
+return  window.ns2406_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2406_disintegrate = function(){
+window.ns2406_hackPrism (); 
+ var ns = document.querySelector(" #ns2406_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2406_render = function(){
+document.getElementById( window.ns2406_specificationIconId ) .className  =  window.ns2406_specificationNextState ();
+ document.getElementById( window.ns2406_implementationIconId ) .className =  window.ns2406_implementationNextState ();
+
+
+}
+
+window.ns2406_specificationShown=true;
+window.ns2406_implementationShown=true;
+window.ns2406_specificationIconId="ns2406_specification-next-state";
+window.ns2406_implementationIconId="ns2406_implementation-next-state";
+window.ns2406_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Foods 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2407_toggledSpecification()" data-toggle="collapse" data-target="#ns2407_specification"><i id="ns2407_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2407_specification" class="collapse show" data-parent="#ns2407_accordion"><div class="card-body"><p class="card-text">Code a game with a llama eating broccoli and grapes.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2407_toggledImplementation()" data-toggle="collapse" data-target="#ns2407_implementation"><i id="ns2407_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2407_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2407_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-foods
+
+(start llama (broccoli grapes))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//3.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2407_hackPrism = function(){
+if( window.ns2407_prismHacked ) return; 
+ window.ns2407_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2407_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2407_toggledSpecification = function(){
+window.ns2407_specificationShown  = ! window.ns2407_specificationShown;
+ window.ns2407_render();
+
+
+}
+
+window.ns2407_toggledImplementation = function(){
+window.ns2407_implementationShown  = ! window.ns2407_implementationShown;
+ window.ns2407_render();
+
+
+}
+
+window.ns2407_implementationNextState = function(){
+return  window.ns2407_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2407_specificationNextState = function(){
+return  window.ns2407_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2407_disintegrate = function(){
+window.ns2407_hackPrism (); 
+ var ns = document.querySelector(" #ns2407_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2407_render = function(){
+document.getElementById( window.ns2407_specificationIconId ) .className  =  window.ns2407_specificationNextState ();
+ document.getElementById( window.ns2407_implementationIconId ) .className =  window.ns2407_implementationNextState ();
+
+
+}
+
+window.ns2407_specificationShown=true;
+window.ns2407_implementationShown=true;
+window.ns2407_specificationIconId="ns2407_specification-next-state";
+window.ns2407_implementationIconId="ns2407_implementation-next-state";
+window.ns2407_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Foods 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2408_toggledSpecification()" data-toggle="collapse" data-target="#ns2408_specification"><i id="ns2408_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2408_specification" class="collapse show" data-parent="#ns2408_accordion"><div class="card-body"><p class="card-text">Code a game with a horse eating grapes, onions and apples.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2408_toggledImplementation()" data-toggle="collapse" data-target="#ns2408_implementation"><i id="ns2408_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2408_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2408_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-foods
+
+(start horse (grapes onion apple))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//4.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2408_hackPrism = function(){
+if( window.ns2408_prismHacked ) return; 
+ window.ns2408_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2408_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2408_toggledSpecification = function(){
+window.ns2408_specificationShown  = ! window.ns2408_specificationShown;
+ window.ns2408_render();
+
+
+}
+
+window.ns2408_toggledImplementation = function(){
+window.ns2408_implementationShown  = ! window.ns2408_implementationShown;
+ window.ns2408_render();
+
+
+}
+
+window.ns2408_implementationNextState = function(){
+return  window.ns2408_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2408_specificationNextState = function(){
+return  window.ns2408_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2408_disintegrate = function(){
+window.ns2408_hackPrism (); 
+ var ns = document.querySelector(" #ns2408_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2408_render = function(){
+document.getElementById( window.ns2408_specificationIconId ) .className  =  window.ns2408_specificationNextState ();
+ document.getElementById( window.ns2408_implementationIconId ) .className =  window.ns2408_implementationNextState ();
+
+
+}
+
+window.ns2408_specificationShown=true;
+window.ns2408_implementationShown=true;
+window.ns2408_specificationIconId="ns2408_specification-next-state";
+window.ns2408_implementationIconId="ns2408_implementation-next-state";
+window.ns2408_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Foods 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2409_toggledSpecification()" data-toggle="collapse" data-target="#ns2409_specification"><i id="ns2409_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2409_specification" class="collapse show" data-parent="#ns2409_accordion"><div class="card-body"><p class="card-text">Code a game with a [choose-your-own-sprite] eating [choose-your-own-sprite], [choose-your-own-sprite] and [choose-your-own-sprite].</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2409_toggledImplementation()" data-toggle="collapse" data-target="#ns2409_implementation"><i id="ns2409_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2409_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2409_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-foods
+
+(start rand (rand rand rand))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//5.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2409_hackPrism = function(){
+if( window.ns2409_prismHacked ) return; 
+ window.ns2409_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2409_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2409_toggledSpecification = function(){
+window.ns2409_specificationShown  = ! window.ns2409_specificationShown;
+ window.ns2409_render();
+
+
+}
+
+window.ns2409_toggledImplementation = function(){
+window.ns2409_implementationShown  = ! window.ns2409_implementationShown;
+ window.ns2409_render();
+
+
+}
+
+window.ns2409_implementationNextState = function(){
+return  window.ns2409_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2409_specificationNextState = function(){
+return  window.ns2409_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2409_disintegrate = function(){
+window.ns2409_hackPrism (); 
+ var ns = document.querySelector(" #ns2409_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2409_render = function(){
+document.getElementById( window.ns2409_specificationIconId ) .className  =  window.ns2409_specificationNextState ();
+ document.getElementById( window.ns2409_implementationIconId ) .className =  window.ns2409_implementationNextState ();
+
+
+}
+
+window.ns2409_specificationShown=true;
+window.ns2409_implementationShown=true;
+window.ns2409_specificationIconId="ns2409_specification-next-state";
+window.ns2409_implementationIconId="ns2409_implementation-next-state";
+window.ns2409_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 000</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2410_toggledSpecification()" data-toggle="collapse" data-target="#ns2410_specification"><i id="ns2410_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2410_specification" class="collapse show" data-parent="#ns2410_accordion"><div class="card-body"><p class="card-text">Code a basic game with no customizations.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2410_toggledImplementation()" data-toggle="collapse" data-target="#ns2410_implementation"><i id="ns2410_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2410_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2410_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-foods
+
+(start)</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//6.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2410_hackPrism = function(){
+if( window.ns2410_prismHacked ) return; 
+ window.ns2410_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2410_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2410_toggledSpecification = function(){
+window.ns2410_specificationShown  = ! window.ns2410_specificationShown;
+ window.ns2410_render();
+
+
+}
+
+window.ns2410_toggledImplementation = function(){
+window.ns2410_implementationShown  = ! window.ns2410_implementationShown;
+ window.ns2410_render();
+
+
+}
+
+window.ns2410_implementationNextState = function(){
+return  window.ns2410_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2410_specificationNextState = function(){
+return  window.ns2410_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2410_disintegrate = function(){
+window.ns2410_hackPrism (); 
+ var ns = document.querySelector(" #ns2410_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2410_render = function(){
+document.getElementById( window.ns2410_specificationIconId ) .className  =  window.ns2410_specificationNextState ();
+ document.getElementById( window.ns2410_implementationIconId ) .className =  window.ns2410_implementationNextState ();
+
+
+}
+
+window.ns2410_specificationShown=true;
+window.ns2410_implementationShown=true;
+window.ns2410_specificationIconId="ns2410_specification-next-state";
+window.ns2410_implementationIconId="ns2410_implementation-next-state";
+window.ns2410_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2411_toggledSpecification()" data-toggle="collapse" data-target="#ns2411_specification"><i id="ns2411_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2411_specification" class="collapse show" data-parent="#ns2411_accordion"><div class="card-body"><p class="card-text">Code a game with a llama eating apples, and with llama friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2411_toggledImplementation()" data-toggle="collapse" data-target="#ns2411_implementation"><i id="ns2411_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2411_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2411_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start llama (apple) (llama))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//7.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2411_hackPrism = function(){
+if( window.ns2411_prismHacked ) return; 
+ window.ns2411_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2411_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2411_toggledSpecification = function(){
+window.ns2411_specificationShown  = ! window.ns2411_specificationShown;
+ window.ns2411_render();
+
+
+}
+
+window.ns2411_toggledImplementation = function(){
+window.ns2411_implementationShown  = ! window.ns2411_implementationShown;
+ window.ns2411_render();
+
+
+}
+
+window.ns2411_implementationNextState = function(){
+return  window.ns2411_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2411_specificationNextState = function(){
+return  window.ns2411_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2411_disintegrate = function(){
+window.ns2411_hackPrism (); 
+ var ns = document.querySelector(" #ns2411_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2411_render = function(){
+document.getElementById( window.ns2411_specificationIconId ) .className  =  window.ns2411_specificationNextState ();
+ document.getElementById( window.ns2411_implementationIconId ) .className =  window.ns2411_implementationNextState ();
+
+
+}
+
+window.ns2411_specificationShown=true;
+window.ns2411_implementationShown=true;
+window.ns2411_specificationIconId="ns2411_specification-next-state";
+window.ns2411_implementationIconId="ns2411_implementation-next-state";
+window.ns2411_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2412_toggledSpecification()" data-toggle="collapse" data-target="#ns2412_specification"><i id="ns2412_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2412_specification" class="collapse show" data-parent="#ns2412_accordion"><div class="card-body"><p class="card-text">Code a game with a cow eating bananas and mushrooms, and with cow and rabbit friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2412_toggledImplementation()" data-toggle="collapse" data-target="#ns2412_implementation"><i id="ns2412_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2412_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2412_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start cow (banana mushroom) (cow rabbit))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//8.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2412_hackPrism = function(){
+if( window.ns2412_prismHacked ) return; 
+ window.ns2412_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2412_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2412_toggledSpecification = function(){
+window.ns2412_specificationShown  = ! window.ns2412_specificationShown;
+ window.ns2412_render();
+
+
+}
+
+window.ns2412_toggledImplementation = function(){
+window.ns2412_implementationShown  = ! window.ns2412_implementationShown;
+ window.ns2412_render();
+
+
+}
+
+window.ns2412_implementationNextState = function(){
+return  window.ns2412_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2412_specificationNextState = function(){
+return  window.ns2412_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2412_disintegrate = function(){
+window.ns2412_hackPrism (); 
+ var ns = document.querySelector(" #ns2412_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2412_render = function(){
+document.getElementById( window.ns2412_specificationIconId ) .className  =  window.ns2412_specificationNextState ();
+ document.getElementById( window.ns2412_implementationIconId ) .className =  window.ns2412_implementationNextState ();
+
+
+}
+
+window.ns2412_specificationShown=true;
+window.ns2412_implementationShown=true;
+window.ns2412_specificationIconId="ns2412_specification-next-state";
+window.ns2412_implementationIconId="ns2412_implementation-next-state";
+window.ns2412_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2413_toggledSpecification()" data-toggle="collapse" data-target="#ns2413_specification"><i id="ns2413_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2413_specification" class="collapse show" data-parent="#ns2413_accordion"><div class="card-body"><p class="card-text">Code a game with a red rabbit eating kiwis and apples, and with pig friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2413_toggledImplementation()" data-toggle="collapse" data-target="#ns2413_implementation"><i id="ns2413_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2413_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2413_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start (rabbit red) (kiwi apple) (pig))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//9.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2413_hackPrism = function(){
+if( window.ns2413_prismHacked ) return; 
+ window.ns2413_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2413_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2413_toggledSpecification = function(){
+window.ns2413_specificationShown  = ! window.ns2413_specificationShown;
+ window.ns2413_render();
+
+
+}
+
+window.ns2413_toggledImplementation = function(){
+window.ns2413_implementationShown  = ! window.ns2413_implementationShown;
+ window.ns2413_render();
+
+
+}
+
+window.ns2413_implementationNextState = function(){
+return  window.ns2413_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2413_specificationNextState = function(){
+return  window.ns2413_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2413_disintegrate = function(){
+window.ns2413_hackPrism (); 
+ var ns = document.querySelector(" #ns2413_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2413_render = function(){
+document.getElementById( window.ns2413_specificationIconId ) .className  =  window.ns2413_specificationNextState ();
+ document.getElementById( window.ns2413_implementationIconId ) .className =  window.ns2413_implementationNextState ();
+
+
+}
+
+window.ns2413_specificationShown=true;
+window.ns2413_implementationShown=true;
+window.ns2413_specificationIconId="ns2413_specification-next-state";
+window.ns2413_implementationIconId="ns2413_implementation-next-state";
+window.ns2413_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2414_toggledSpecification()" data-toggle="collapse" data-target="#ns2414_specification"><i id="ns2414_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2414_specification" class="collapse show" data-parent="#ns2414_accordion"><div class="card-body"><p class="card-text">Code a game with an orange pig eating bananas and mushrooms, and with llama and [choose-your-own-sprite] friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2414_toggledImplementation()" data-toggle="collapse" data-target="#ns2414_implementation"><i id="ns2414_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2414_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2414_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start
+  (pig orange)
+  (banana mushroom)
+  (llama rand))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//10.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2414_hackPrism = function(){
+if( window.ns2414_prismHacked ) return; 
+ window.ns2414_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2414_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2414_toggledSpecification = function(){
+window.ns2414_specificationShown  = ! window.ns2414_specificationShown;
+ window.ns2414_render();
+
+
+}
+
+window.ns2414_toggledImplementation = function(){
+window.ns2414_implementationShown  = ! window.ns2414_implementationShown;
+ window.ns2414_render();
+
+
+}
+
+window.ns2414_implementationNextState = function(){
+return  window.ns2414_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2414_specificationNextState = function(){
+return  window.ns2414_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2414_disintegrate = function(){
+window.ns2414_hackPrism (); 
+ var ns = document.querySelector(" #ns2414_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2414_render = function(){
+document.getElementById( window.ns2414_specificationIconId ) .className  =  window.ns2414_specificationNextState ();
+ document.getElementById( window.ns2414_implementationIconId ) .className =  window.ns2414_implementationNextState ();
+
+
+}
+
+window.ns2414_specificationShown=true;
+window.ns2414_implementationShown=true;
+window.ns2414_specificationIconId="ns2414_specification-next-state";
+window.ns2414_implementationIconId="ns2414_implementation-next-state";
+window.ns2414_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2415_toggledSpecification()" data-toggle="collapse" data-target="#ns2415_specification"><i id="ns2415_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2415_specification" class="collapse show" data-parent="#ns2415_accordion"><div class="card-body"><p class="card-text">Code a game with a yellow apple eating kiwis and bananas, and with cow, pig and rabbit friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2415_toggledImplementation()" data-toggle="collapse" data-target="#ns2415_implementation"><i id="ns2415_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2415_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2415_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start
+  (apple yellow)
+  (kiwi banana)
+  (cow pig rabbit))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//11.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2415_hackPrism = function(){
+if( window.ns2415_prismHacked ) return; 
+ window.ns2415_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2415_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2415_toggledSpecification = function(){
+window.ns2415_specificationShown  = ! window.ns2415_specificationShown;
+ window.ns2415_render();
+
+
+}
+
+window.ns2415_toggledImplementation = function(){
+window.ns2415_implementationShown  = ! window.ns2415_implementationShown;
+ window.ns2415_render();
+
+
+}
+
+window.ns2415_implementationNextState = function(){
+return  window.ns2415_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2415_specificationNextState = function(){
+return  window.ns2415_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2415_disintegrate = function(){
+window.ns2415_hackPrism (); 
+ var ns = document.querySelector(" #ns2415_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2415_render = function(){
+document.getElementById( window.ns2415_specificationIconId ) .className  =  window.ns2415_specificationNextState ();
+ document.getElementById( window.ns2415_implementationIconId ) .className =  window.ns2415_implementationNextState ();
+
+
+}
+
+window.ns2415_specificationShown=true;
+window.ns2415_implementationShown=true;
+window.ns2415_specificationIconId="ns2415_specification-next-state";
+window.ns2415_implementationIconId="ns2415_implementation-next-state";
+window.ns2415_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 006</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2416_toggledSpecification()" data-toggle="collapse" data-target="#ns2416_specification"><i id="ns2416_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2416_specification" class="collapse show" data-parent="#ns2416_accordion"><div class="card-body"><p class="card-text">Code a game with a llama eating 5 kiwis, and with 5 cow friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2416_toggledImplementation()" data-toggle="collapse" data-target="#ns2416_implementation"><i id="ns2416_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2416_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2416_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start llama ((kiwi 5)) ((cow 5)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//12.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2416_hackPrism = function(){
+if( window.ns2416_prismHacked ) return; 
+ window.ns2416_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2416_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2416_toggledSpecification = function(){
+window.ns2416_specificationShown  = ! window.ns2416_specificationShown;
+ window.ns2416_render();
+
+
+}
+
+window.ns2416_toggledImplementation = function(){
+window.ns2416_implementationShown  = ! window.ns2416_implementationShown;
+ window.ns2416_render();
+
+
+}
+
+window.ns2416_implementationNextState = function(){
+return  window.ns2416_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2416_specificationNextState = function(){
+return  window.ns2416_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2416_disintegrate = function(){
+window.ns2416_hackPrism (); 
+ var ns = document.querySelector(" #ns2416_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2416_render = function(){
+document.getElementById( window.ns2416_specificationIconId ) .className  =  window.ns2416_specificationNextState ();
+ document.getElementById( window.ns2416_implementationIconId ) .className =  window.ns2416_implementationNextState ();
+
+
+}
+
+window.ns2416_specificationShown=true;
+window.ns2416_implementationShown=true;
+window.ns2416_specificationIconId="ns2416_specification-next-state";
+window.ns2416_implementationIconId="ns2416_implementation-next-state";
+window.ns2416_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 007</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2417_toggledSpecification()" data-toggle="collapse" data-target="#ns2417_specification"><i id="ns2417_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2417_specification" class="collapse show" data-parent="#ns2417_accordion"><div class="card-body"><p class="card-text">Code a game with a green cow eating apples, and with blue rabbit friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2417_toggledImplementation()" data-toggle="collapse" data-target="#ns2417_implementation"><i id="ns2417_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2417_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2417_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start (cow green) (apple) ((rabbit blue)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//13.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2417_hackPrism = function(){
+if( window.ns2417_prismHacked ) return; 
+ window.ns2417_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2417_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2417_toggledSpecification = function(){
+window.ns2417_specificationShown  = ! window.ns2417_specificationShown;
+ window.ns2417_render();
+
+
+}
+
+window.ns2417_toggledImplementation = function(){
+window.ns2417_implementationShown  = ! window.ns2417_implementationShown;
+ window.ns2417_render();
+
+
+}
+
+window.ns2417_implementationNextState = function(){
+return  window.ns2417_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2417_specificationNextState = function(){
+return  window.ns2417_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2417_disintegrate = function(){
+window.ns2417_hackPrism (); 
+ var ns = document.querySelector(" #ns2417_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2417_render = function(){
+document.getElementById( window.ns2417_specificationIconId ) .className  =  window.ns2417_specificationNextState ();
+ document.getElementById( window.ns2417_implementationIconId ) .className =  window.ns2417_implementationNextState ();
+
+
+}
+
+window.ns2417_specificationShown=true;
+window.ns2417_implementationShown=true;
+window.ns2417_specificationIconId="ns2417_specification-next-state";
+window.ns2417_implementationIconId="ns2417_implementation-next-state";
+window.ns2417_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 008</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2418_toggledSpecification()" data-toggle="collapse" data-target="#ns2418_specification"><i id="ns2418_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2418_specification" class="collapse show" data-parent="#ns2418_accordion"><div class="card-body"><p class="card-text">Code a game with a rabbit eating 4 orange bananas and 2 yellow mushrooms, and with 3 purple pig friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2418_toggledImplementation()" data-toggle="collapse" data-target="#ns2418_implementation"><i id="ns2418_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2418_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2418_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start
+  rabbit
+  ((banana orange 4) (mushroom yellow 2))
+  ((pig purple 3)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//14.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2418_hackPrism = function(){
+if( window.ns2418_prismHacked ) return; 
+ window.ns2418_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2418_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2418_toggledSpecification = function(){
+window.ns2418_specificationShown  = ! window.ns2418_specificationShown;
+ window.ns2418_render();
+
+
+}
+
+window.ns2418_toggledImplementation = function(){
+window.ns2418_implementationShown  = ! window.ns2418_implementationShown;
+ window.ns2418_render();
+
+
+}
+
+window.ns2418_implementationNextState = function(){
+return  window.ns2418_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2418_specificationNextState = function(){
+return  window.ns2418_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2418_disintegrate = function(){
+window.ns2418_hackPrism (); 
+ var ns = document.querySelector(" #ns2418_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2418_render = function(){
+document.getElementById( window.ns2418_specificationIconId ) .className  =  window.ns2418_specificationNextState ();
+ document.getElementById( window.ns2418_implementationIconId ) .className =  window.ns2418_implementationNextState ();
+
+
+}
+
+window.ns2418_specificationShown=true;
+window.ns2418_implementationShown=true;
+window.ns2418_specificationIconId="ns2418_specification-next-state";
+window.ns2418_implementationIconId="ns2418_implementation-next-state";
+window.ns2418_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 009</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2419_toggledSpecification()" data-toggle="collapse" data-target="#ns2419_specification"><i id="ns2419_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2419_specification" class="collapse show" data-parent="#ns2419_accordion"><div class="card-body"><p class="card-text">Code a game with a pig eating 5 blue kiwis, and with 3 apple and red banana friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2419_toggledImplementation()" data-toggle="collapse" data-target="#ns2419_implementation"><i id="ns2419_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2419_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2419_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start
+  pig
+  ((kiwi blue 5))
+  ((apple 3) (banana red)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//15.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2419_hackPrism = function(){
+if( window.ns2419_prismHacked ) return; 
+ window.ns2419_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2419_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2419_toggledSpecification = function(){
+window.ns2419_specificationShown  = ! window.ns2419_specificationShown;
+ window.ns2419_render();
+
+
+}
+
+window.ns2419_toggledImplementation = function(){
+window.ns2419_implementationShown  = ! window.ns2419_implementationShown;
+ window.ns2419_render();
+
+
+}
+
+window.ns2419_implementationNextState = function(){
+return  window.ns2419_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2419_specificationNextState = function(){
+return  window.ns2419_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2419_disintegrate = function(){
+window.ns2419_hackPrism (); 
+ var ns = document.querySelector(" #ns2419_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2419_render = function(){
+document.getElementById( window.ns2419_specificationIconId ) .className  =  window.ns2419_specificationNextState ();
+ document.getElementById( window.ns2419_implementationIconId ) .className =  window.ns2419_implementationNextState ();
+
+
+}
+
+window.ns2419_specificationShown=true;
+window.ns2419_implementationShown=true;
+window.ns2419_specificationIconId="ns2419_specification-next-state";
+window.ns2419_implementationIconId="ns2419_implementation-next-state";
+window.ns2419_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Friends 010</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2420_toggledSpecification()" data-toggle="collapse" data-target="#ns2420_specification"><i id="ns2420_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2420_specification" class="collapse show" data-parent="#ns2420_accordion"><div class="card-body"><p class="card-text">Code a game with an orange [choose-your-own-sprite] eating yellow mushrooms, green kiwis and 2 apples, and with 2 llama and purple [choose-your-own-sprite] friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2420_toggledImplementation()" data-toggle="collapse" data-target="#ns2420_implementation"><i id="ns2420_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2420_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2420_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-friends
+
+(start
+  (rand orange)
+  ((mushroom yellow) (kiwi green) (apple 2))
+  ((llama 2) (rand purple)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//16.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2420_hackPrism = function(){
+if( window.ns2420_prismHacked ) return; 
+ window.ns2420_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2420_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2420_toggledSpecification = function(){
+window.ns2420_specificationShown  = ! window.ns2420_specificationShown;
+ window.ns2420_render();
+
+
+}
+
+window.ns2420_toggledImplementation = function(){
+window.ns2420_implementationShown  = ! window.ns2420_implementationShown;
+ window.ns2420_render();
+
+
+}
+
+window.ns2420_implementationNextState = function(){
+return  window.ns2420_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2420_specificationNextState = function(){
+return  window.ns2420_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2420_disintegrate = function(){
+window.ns2420_hackPrism (); 
+ var ns = document.querySelector(" #ns2420_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2420_render = function(){
+document.getElementById( window.ns2420_specificationIconId ) .className  =  window.ns2420_specificationNextState ();
+ document.getElementById( window.ns2420_implementationIconId ) .className =  window.ns2420_implementationNextState ();
+
+
+}
+
+window.ns2420_specificationShown=true;
+window.ns2420_implementationShown=true;
+window.ns2420_specificationIconId="ns2420_specification-next-state";
+window.ns2420_implementationIconId="ns2420_implementation-next-state";
+window.ns2420_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2421_toggledSpecification()" data-toggle="collapse" data-target="#ns2421_specification"><i id="ns2421_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2421_specification" class="collapse show" data-parent="#ns2421_accordion"><div class="card-body"><p class="card-text">Code a game with a llama eating 5 apples, and with 5 pig friends, and with pig enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2421_toggledImplementation()" data-toggle="collapse" data-target="#ns2421_implementation"><i id="ns2421_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2421_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2421_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start llama ((apple 5)) ((pig 5)) (pig))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//17.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2421_hackPrism = function(){
+if( window.ns2421_prismHacked ) return; 
+ window.ns2421_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2421_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2421_toggledSpecification = function(){
+window.ns2421_specificationShown  = ! window.ns2421_specificationShown;
+ window.ns2421_render();
+
+
+}
+
+window.ns2421_toggledImplementation = function(){
+window.ns2421_implementationShown  = ! window.ns2421_implementationShown;
+ window.ns2421_render();
+
+
+}
+
+window.ns2421_implementationNextState = function(){
+return  window.ns2421_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2421_specificationNextState = function(){
+return  window.ns2421_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2421_disintegrate = function(){
+window.ns2421_hackPrism (); 
+ var ns = document.querySelector(" #ns2421_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2421_render = function(){
+document.getElementById( window.ns2421_specificationIconId ) .className  =  window.ns2421_specificationNextState ();
+ document.getElementById( window.ns2421_implementationIconId ) .className =  window.ns2421_implementationNextState ();
+
+
+}
+
+window.ns2421_specificationShown=true;
+window.ns2421_implementationShown=true;
+window.ns2421_specificationIconId="ns2421_specification-next-state";
+window.ns2421_implementationIconId="ns2421_implementation-next-state";
+window.ns2421_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2422_toggledSpecification()" data-toggle="collapse" data-target="#ns2422_specification"><i id="ns2422_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2422_specification" class="collapse show" data-parent="#ns2422_accordion"><div class="card-body"><p class="card-text">Code a game with a [choose-your-own-sprite] eating green kiwis, and with 2 dog friends, and with 3 dog enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2422_toggledImplementation()" data-toggle="collapse" data-target="#ns2422_implementation"><i id="ns2422_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2422_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2422_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start rand ((kiwi green)) ((dog 2)) ((dog 3)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//18.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2422_hackPrism = function(){
+if( window.ns2422_prismHacked ) return; 
+ window.ns2422_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2422_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2422_toggledSpecification = function(){
+window.ns2422_specificationShown  = ! window.ns2422_specificationShown;
+ window.ns2422_render();
+
+
+}
+
+window.ns2422_toggledImplementation = function(){
+window.ns2422_implementationShown  = ! window.ns2422_implementationShown;
+ window.ns2422_render();
+
+
+}
+
+window.ns2422_implementationNextState = function(){
+return  window.ns2422_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2422_specificationNextState = function(){
+return  window.ns2422_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2422_disintegrate = function(){
+window.ns2422_hackPrism (); 
+ var ns = document.querySelector(" #ns2422_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2422_render = function(){
+document.getElementById( window.ns2422_specificationIconId ) .className  =  window.ns2422_specificationNextState ();
+ document.getElementById( window.ns2422_implementationIconId ) .className =  window.ns2422_implementationNextState ();
+
+
+}
+
+window.ns2422_specificationShown=true;
+window.ns2422_implementationShown=true;
+window.ns2422_specificationIconId="ns2422_specification-next-state";
+window.ns2422_implementationIconId="ns2422_implementation-next-state";
+window.ns2422_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2423_toggledSpecification()" data-toggle="collapse" data-target="#ns2423_specification"><i id="ns2423_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2423_specification" class="collapse show" data-parent="#ns2423_accordion"><div class="card-body"><p class="card-text">Code a game with a cow eating purple strawberries, and with 5 kiwi friends, and with grapes enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2423_toggledImplementation()" data-toggle="collapse" data-target="#ns2423_implementation"><i id="ns2423_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2423_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2423_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start
+  cow
+  ((strawberry purple))
+  ((kiwi 5))
+  (grapes))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//19.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2423_hackPrism = function(){
+if( window.ns2423_prismHacked ) return; 
+ window.ns2423_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2423_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2423_toggledSpecification = function(){
+window.ns2423_specificationShown  = ! window.ns2423_specificationShown;
+ window.ns2423_render();
+
+
+}
+
+window.ns2423_toggledImplementation = function(){
+window.ns2423_implementationShown  = ! window.ns2423_implementationShown;
+ window.ns2423_render();
+
+
+}
+
+window.ns2423_implementationNextState = function(){
+return  window.ns2423_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2423_specificationNextState = function(){
+return  window.ns2423_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2423_disintegrate = function(){
+window.ns2423_hackPrism (); 
+ var ns = document.querySelector(" #ns2423_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2423_render = function(){
+document.getElementById( window.ns2423_specificationIconId ) .className  =  window.ns2423_specificationNextState ();
+ document.getElementById( window.ns2423_implementationIconId ) .className =  window.ns2423_implementationNextState ();
+
+
+}
+
+window.ns2423_specificationShown=true;
+window.ns2423_implementationShown=true;
+window.ns2423_specificationIconId="ns2423_specification-next-state";
+window.ns2423_implementationIconId="ns2423_implementation-next-state";
+window.ns2423_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2424_toggledSpecification()" data-toggle="collapse" data-target="#ns2424_specification"><i id="ns2424_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2424_specification" class="collapse show" data-parent="#ns2424_accordion"><div class="card-body"><p class="card-text">Code a game with an apple eating 5 orange kiwis and 5 blue strawberries, and with grapes and apple friends, and with 3 red kiwi enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2424_toggledImplementation()" data-toggle="collapse" data-target="#ns2424_implementation"><i id="ns2424_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2424_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2424_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start
+  apple
+  ((kiwi orange 5) (strawberry blue 5))
+  (grapes apple)
+  ((kiwi red 3)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//20.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2424_hackPrism = function(){
+if( window.ns2424_prismHacked ) return; 
+ window.ns2424_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2424_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2424_toggledSpecification = function(){
+window.ns2424_specificationShown  = ! window.ns2424_specificationShown;
+ window.ns2424_render();
+
+
+}
+
+window.ns2424_toggledImplementation = function(){
+window.ns2424_implementationShown  = ! window.ns2424_implementationShown;
+ window.ns2424_render();
+
+
+}
+
+window.ns2424_implementationNextState = function(){
+return  window.ns2424_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2424_specificationNextState = function(){
+return  window.ns2424_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2424_disintegrate = function(){
+window.ns2424_hackPrism (); 
+ var ns = document.querySelector(" #ns2424_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2424_render = function(){
+document.getElementById( window.ns2424_specificationIconId ) .className  =  window.ns2424_specificationNextState ();
+ document.getElementById( window.ns2424_implementationIconId ) .className =  window.ns2424_implementationNextState ();
+
+
+}
+
+window.ns2424_specificationShown=true;
+window.ns2424_implementationShown=true;
+window.ns2424_specificationIconId="ns2424_specification-next-state";
+window.ns2424_implementationIconId="ns2424_implementation-next-state";
+window.ns2424_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2425_toggledSpecification()" data-toggle="collapse" data-target="#ns2425_specification"><i id="ns2425_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2425_specification" class="collapse show" data-parent="#ns2425_accordion"><div class="card-body"><p class="card-text">Code a game with a [choose-your-own-sprite] eating 5 yellow apples, and with 5 blue apple friends, and with 5 green apple enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2425_toggledImplementation()" data-toggle="collapse" data-target="#ns2425_implementation"><i id="ns2425_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2425_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2425_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start
+  rand
+  ((apple yellow 5))
+  ((apple blue 5))
+  ((apple green 5)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//21.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2425_hackPrism = function(){
+if( window.ns2425_prismHacked ) return; 
+ window.ns2425_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2425_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2425_toggledSpecification = function(){
+window.ns2425_specificationShown  = ! window.ns2425_specificationShown;
+ window.ns2425_render();
+
+
+}
+
+window.ns2425_toggledImplementation = function(){
+window.ns2425_implementationShown  = ! window.ns2425_implementationShown;
+ window.ns2425_render();
+
+
+}
+
+window.ns2425_implementationNextState = function(){
+return  window.ns2425_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2425_specificationNextState = function(){
+return  window.ns2425_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2425_disintegrate = function(){
+window.ns2425_hackPrism (); 
+ var ns = document.querySelector(" #ns2425_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2425_render = function(){
+document.getElementById( window.ns2425_specificationIconId ) .className  =  window.ns2425_specificationNextState ();
+ document.getElementById( window.ns2425_implementationIconId ) .className =  window.ns2425_implementationNextState ();
+
+
+}
+
+window.ns2425_specificationShown=true;
+window.ns2425_implementationShown=true;
+window.ns2425_specificationIconId="ns2425_specification-next-state";
+window.ns2425_implementationIconId="ns2425_implementation-next-state";
+window.ns2425_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 006</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2426_toggledSpecification()" data-toggle="collapse" data-target="#ns2426_specification"><i id="ns2426_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2426_specification" class="collapse show" data-parent="#ns2426_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) with a llama eating 5 green apples; 2) with a llama eating 5 orange apples, and with 3 wolf friends.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2426_toggledImplementation()" data-toggle="collapse" data-target="#ns2426_implementation"><i id="ns2426_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2426_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2426_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start llama ((apple green 5)))
+
+(start llama ((apple orange 5)) ((wolf 3)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//22.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2426_hackPrism = function(){
+if( window.ns2426_prismHacked ) return; 
+ window.ns2426_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2426_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2426_toggledSpecification = function(){
+window.ns2426_specificationShown  = ! window.ns2426_specificationShown;
+ window.ns2426_render();
+
+
+}
+
+window.ns2426_toggledImplementation = function(){
+window.ns2426_implementationShown  = ! window.ns2426_implementationShown;
+ window.ns2426_render();
+
+
+}
+
+window.ns2426_implementationNextState = function(){
+return  window.ns2426_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2426_specificationNextState = function(){
+return  window.ns2426_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2426_disintegrate = function(){
+window.ns2426_hackPrism (); 
+ var ns = document.querySelector(" #ns2426_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2426_render = function(){
+document.getElementById( window.ns2426_specificationIconId ) .className  =  window.ns2426_specificationNextState ();
+ document.getElementById( window.ns2426_implementationIconId ) .className =  window.ns2426_implementationNextState ();
+
+
+}
+
+window.ns2426_specificationShown=true;
+window.ns2426_implementationShown=true;
+window.ns2426_specificationIconId="ns2426_specification-next-state";
+window.ns2426_implementationIconId="ns2426_implementation-next-state";
+window.ns2426_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 007</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2427_toggledSpecification()" data-toggle="collapse" data-target="#ns2427_specification"><i id="ns2427_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2427_specification" class="collapse show" data-parent="#ns2427_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) with an orange llama eating 8 kiwis, and with llama friends; 2) with a red llama eating 2 kiwis, and with 3 llama friends, and with dog enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2427_toggledImplementation()" data-toggle="collapse" data-target="#ns2427_implementation"><i id="ns2427_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2427_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2427_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start (llama orange) ((kiwi 8)) (llama))
+
+(start (llama red) ((kiwi 2)) ((llama 3)) (dog))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//23.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2427_hackPrism = function(){
+if( window.ns2427_prismHacked ) return; 
+ window.ns2427_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2427_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2427_toggledSpecification = function(){
+window.ns2427_specificationShown  = ! window.ns2427_specificationShown;
+ window.ns2427_render();
+
+
+}
+
+window.ns2427_toggledImplementation = function(){
+window.ns2427_implementationShown  = ! window.ns2427_implementationShown;
+ window.ns2427_render();
+
+
+}
+
+window.ns2427_implementationNextState = function(){
+return  window.ns2427_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2427_specificationNextState = function(){
+return  window.ns2427_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2427_disintegrate = function(){
+window.ns2427_hackPrism (); 
+ var ns = document.querySelector(" #ns2427_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2427_render = function(){
+document.getElementById( window.ns2427_specificationIconId ) .className  =  window.ns2427_specificationNextState ();
+ document.getElementById( window.ns2427_implementationIconId ) .className =  window.ns2427_implementationNextState ();
+
+
+}
+
+window.ns2427_specificationShown=true;
+window.ns2427_implementationShown=true;
+window.ns2427_specificationIconId="ns2427_specification-next-state";
+window.ns2427_implementationIconId="ns2427_implementation-next-state";
+window.ns2427_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 008</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2428_toggledSpecification()" data-toggle="collapse" data-target="#ns2428_specification"><i id="ns2428_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2428_specification" class="collapse show" data-parent="#ns2428_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) with a cow eating 2 red cows, and with 3 orange cow friends, and with yellow cow enemies; 2) with an apple eating 2 blue apples, and with 3 green apple friends, and with 4 purple apple enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2428_toggledImplementation()" data-toggle="collapse" data-target="#ns2428_implementation"><i id="ns2428_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2428_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2428_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start
+  cow
+  ((cow red 2))
+  ((cow orange 3))
+  ((cow yellow)))
+
+(start
+  apple
+  ((apple blue 2))
+  ((apple green 3))
+  ((apple purple 4)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//24.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2428_hackPrism = function(){
+if( window.ns2428_prismHacked ) return; 
+ window.ns2428_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2428_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2428_toggledSpecification = function(){
+window.ns2428_specificationShown  = ! window.ns2428_specificationShown;
+ window.ns2428_render();
+
+
+}
+
+window.ns2428_toggledImplementation = function(){
+window.ns2428_implementationShown  = ! window.ns2428_implementationShown;
+ window.ns2428_render();
+
+
+}
+
+window.ns2428_implementationNextState = function(){
+return  window.ns2428_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2428_specificationNextState = function(){
+return  window.ns2428_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2428_disintegrate = function(){
+window.ns2428_hackPrism (); 
+ var ns = document.querySelector(" #ns2428_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2428_render = function(){
+document.getElementById( window.ns2428_specificationIconId ) .className  =  window.ns2428_specificationNextState ();
+ document.getElementById( window.ns2428_implementationIconId ) .className =  window.ns2428_implementationNextState ();
+
+
+}
+
+window.ns2428_specificationShown=true;
+window.ns2428_implementationShown=true;
+window.ns2428_specificationIconId="ns2428_specification-next-state";
+window.ns2428_implementationIconId="ns2428_implementation-next-state";
+window.ns2428_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 009</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2429_toggledSpecification()" data-toggle="collapse" data-target="#ns2429_specification"><i id="ns2429_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2429_specification" class="collapse show" data-parent="#ns2429_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) with a rabbit eating 2 orange kiwis; 2) with a llama eating strawberries, and with 4 green llama friends; 3) with a horse eating grapes, and with pig friends, and with 3 red wolf enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2429_toggledImplementation()" data-toggle="collapse" data-target="#ns2429_implementation"><i id="ns2429_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2429_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2429_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start rabbit ((kiwi orange 2)))
+
+(start llama (strawberry) ((llama green 4)))
+
+(start horse (grapes) (pig) ((wolf red 3)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//25.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2429_hackPrism = function(){
+if( window.ns2429_prismHacked ) return; 
+ window.ns2429_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2429_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2429_toggledSpecification = function(){
+window.ns2429_specificationShown  = ! window.ns2429_specificationShown;
+ window.ns2429_render();
+
+
+}
+
+window.ns2429_toggledImplementation = function(){
+window.ns2429_implementationShown  = ! window.ns2429_implementationShown;
+ window.ns2429_render();
+
+
+}
+
+window.ns2429_implementationNextState = function(){
+return  window.ns2429_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2429_specificationNextState = function(){
+return  window.ns2429_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2429_disintegrate = function(){
+window.ns2429_hackPrism (); 
+ var ns = document.querySelector(" #ns2429_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2429_render = function(){
+document.getElementById( window.ns2429_specificationIconId ) .className  =  window.ns2429_specificationNextState ();
+ document.getElementById( window.ns2429_implementationIconId ) .className =  window.ns2429_implementationNextState ();
+
+
+}
+
+window.ns2429_specificationShown=true;
+window.ns2429_implementationShown=true;
+window.ns2429_specificationIconId="ns2429_specification-next-state";
+window.ns2429_implementationIconId="ns2429_implementation-next-state";
+window.ns2429_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Healer Enemies 010</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2430_toggledSpecification()" data-toggle="collapse" data-target="#ns2430_specification"><i id="ns2430_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns2430_specification" class="collapse show" data-parent="#ns2430_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) with a cow eating 2 apples; 2) with a cow eating blue kiwis, and with 4 green llama friends; 3) with a cow eating grapes, and with 2 pig friends, and with 3 red wolf enemies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns2430_toggledImplementation()" data-toggle="collapse" data-target="#ns2430_implementation"><i id="ns2430_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns2430_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns2430_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang healer-animal-enemies
+
+(start cow ((apple 2)))
+
+(start cow ((kiwi blue)) ((llama green 4)))
+
+(start cow (grapes) ((pig 2)) ((wolf red 3)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//26.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns2430_hackPrism = function(){
+if( window.ns2430_prismHacked ) return; 
+ window.ns2430_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns2430_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns2430_toggledSpecification = function(){
+window.ns2430_specificationShown  = ! window.ns2430_specificationShown;
+ window.ns2430_render();
+
+
+}
+
+window.ns2430_toggledImplementation = function(){
+window.ns2430_implementationShown  = ! window.ns2430_implementationShown;
+ window.ns2430_render();
+
+
+}
+
+window.ns2430_implementationNextState = function(){
+return  window.ns2430_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2430_specificationNextState = function(){
+return  window.ns2430_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns2430_disintegrate = function(){
+window.ns2430_hackPrism (); 
+ var ns = document.querySelector(" #ns2430_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns2430_render = function(){
+document.getElementById( window.ns2430_specificationIconId ) .className  =  window.ns2430_specificationNextState ();
+ document.getElementById( window.ns2430_implementationIconId ) .className =  window.ns2430_implementationNextState ();
+
+
+}
+
+window.ns2430_specificationShown=true;
+window.ns2430_implementationShown=true;
+window.ns2430_specificationIconId="ns2430_specification-next-state";
+window.ns2430_implementationIconId="ns2430_implementation-next-state";
+window.ns2430_prismHacked=false;
+
+//]]>
+</script></div><div class="tab-pane fade p-3" id="documentation" class="p-3"><iframe src="/mc-languages/healer-animal-doc/healer-animal-doc.html" frameborder="0" scrolling="no" onload="var t = this;setInterval(function(){resizeIframe(t)},1000);" style="width:100%; border: none;"></iframe></div></div></div><script src="/mc-languages/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script></body></html>
