@@ -80,8 +80,19 @@
   (list
     (scribble-files)
     (languages-index-page #:wrap-content wrap) 
-    (lang-page "adventure" adventure-katas '(lib "adventure/scribblings/manual.scrbl") #:wrap-content wrap)
-    (lang-page "survival"  survival-katas  '(lib "survival/scribblings/manual.scrbl")  #:wrap-content wrap)
+    (lang-page "adventure" adventure-katas '(lib "adventure/scribblings/manual.scrbl") #:wrap-content wrap
+               #:lang-desc (list (p "Use this language to create your own adventure-style game!")
+                                 (ul (li "Customize your avatar!")
+                                     (li "Add enemies and NPCs -- Non-Player Characters!")
+                                     (li "Customize QUESTS for your avatar to complete!")
+                                     (li "Use cutscenes to add story to your game!"))))
+    (lang-page "survival"  survival-katas  '(lib "survival/scribblings/manual.scrbl")  #:wrap-content wrap
+               #:lang-desc (list (p "Use this language to create your own survival-style game!")
+                                 (ul (li "Customize your avatar!")
+                                     (li "Add food to help your avatar battle hunger!")
+                                     (li "Add enemies for extra challenges!")
+                                     (li "Customize recipies and craft new foods and weapons in game!")
+                                     (li "Dabble in level design!"))))
     (lang-page "battlearena" battle-arena-katas '(lib "battlearena/scribblings/manual.scrbl") #:wrap-content wrap)
     (lang-page "website"   (kata-collection '()) '(lib "website/scribblings/website.scrbl")  #:wrap-content wrap)
     (lang-page "3d-exploration" exploration-katas '(lib "3d-exploration/scribblings/manual.scrbl")  #:wrap-content wrap)
