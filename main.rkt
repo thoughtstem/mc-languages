@@ -92,8 +92,9 @@
     ))
 
 (module+ main
-   (render (list 
-            (bootstrap-files)
-            (languages-pages))
-           #:to "out"))
+  (with-prefix "mc-languages" ;Remove this when we host it at languages.metacoders.org
+    (render (list 
+              (bootstrap-files)
+              (languages-pages))
+            #:to "out")))
 
