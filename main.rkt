@@ -49,7 +49,8 @@
        "Documentation")
       (active-tab-pane 
        id: "translations" class: "p-3"
-       (map kata->html (kata-collection-katas katas)))
+       (map kata->html
+            (bring-hello-world-kata-top (kata-collection-katas katas))))
       (tab-pane 
        id: "documentation" class: "p-3"
        (scribble->html doc (~a name "-doc"))))))))

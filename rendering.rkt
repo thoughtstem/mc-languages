@@ -1,6 +1,7 @@
 #lang at-exp racket
 
-(provide kata->html)
+(provide kata->html
+         bring-hello-world-kata-top)
 
 (require ts-kata-util
          ts-kata-util/katas/main
@@ -175,4 +176,23 @@
           (function (render)
             @js{@getEl{@specificationIconId}.className  = @specificationNextState()}
             @js{@getEl{@implementationIconId}.className = @implementationNextState()}) ))))
+
+
+
+(define (bring-hello-world-kata-top katas)
+  
+  (define (is-hello-world? k)
+  (string-contains? (kata-name k) "Hello"))
+  
+  (define new-top (filter is-hello-world? katas))
+  (define new-tail (remove is-hello-world? katas))
+  
+  (flatten (list new-top new-tail)))
+
+#;(define (sub-divide-katas ks)
+    ;this function should take a list of katas
+    ;and divide into sublists by the kata title
+    ;perhaps use the define-sub-collection code?
+    ;which I don't understand at all -SL
+    )
 
