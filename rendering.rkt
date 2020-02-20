@@ -21,6 +21,9 @@
   (string-titlecase (string-replace (~a s) "-" " ")))
 
 (define (specification-toggle-card k)
+  (define stimulus
+    (stimulus-data (kata-stimulus k)))
+  
  (card
   (card-header 
    (button-link 
@@ -36,19 +39,40 @@
        'data-parent: (ns# "accordion")
    (card-body 
     (card-text
-     (~a (expression-data (stimulus-data (kata-stimulus k)))))))))
+     (~a (expression-data stimulus))
+
+     )))))
 
 (define (implementation-toggle-card k)
- (define code-s
-   (string-join 
-      (map (compose wrap-parens syntax->string)
-          ;Drop 3 to get rid of (module name lang ...)
-          (drop (stx->list (kata->syntax k)) 3))
-      "\n\n"))
+  (define res
+    (response-data (kata-response k)))
 
- (card
-  (card-header
-   (button-link 
+  
+  (define code-s
+    (if (kata->syntax k)
+        (string-join 
+         (map (compose wrap-parens syntax->string)
+              ;Drop 3 to get rid of (module name lang ...)
+              (drop (stx->list (kata->syntax k)) 3))
+         "\n\n")
+        ;Have to handle the ratchet katas differently, and it's a bit of a mess.
+        ;TODO: One day, simplify the kata data structure
+        (let ([ed (expression-data res)])
+          (when (not (string? (first ed)))
+            (expression-data (first ed)))
+          )))
+
+  (define maybe-ratchet-img
+    (if (kata->syntax k)
+        #f
+        (let ([ed (expression-data res)])
+          (list
+           (h5 "In Ratchet:")
+           (write-img (last ed))))))
+
+  (card
+   (card-header
+    (button-link 
      on-click: (call 'toggledImplementation) ;set state...
      'data-toggle: "collapse" 
      'data-target: (ns# "implementation") 
@@ -56,25 +80,38 @@
         class: "fa fa-eye")  ;sync state...
      " Implementation"))
 
-  (div id: (ns "implementation") class: "collapse show"
-   (card-body 
-    (div class: "button-group"
-      (button-danger 
-         on-click: (call 'disintegrate) 
-         'data-toggle: "tooltip" 'data-placement: "top" 
-         'title: "Remove random word" 
-         (i class: "fas fa-crosshairs")))
-    (card-text 
-     (pre 
-      (code class: "lang-scheme" code-s)))))))
+   (div id: (ns "implementation") class: "collapse show"
+        (card-body 
+         (div class: "button-group"
+              (button-danger 
+               on-click: (call 'disintegrate) 
+               'data-toggle: "tooltip" 'data-placement: "top" 
+               'title: "Remove random word" 
+               (i class: "fas fa-crosshairs")))
+         (card-text 
+          (pre 
+           (code class: "lang-scheme" code-s))
+          maybe-ratchet-img
+          )))))
 
 (define (kata->html k)
-   (when (kata->syntax k)
-      (enclose
+  (define res
+    (response-data (kata-response k)))
+
+  (define stim
+    (stimulus-data (kata-stimulus k)))
+
+
+  ;Filters out katas like the Code of Awesomeness katas, which are not coding katas
+  ;TODO: Don't use katas for things that aren't coding exercises (that would be a game or a story now)
+  (when (and (not (string? res))
+             (not (string? stim))) 
+   (enclose
        (cardify #:header (symbol->title (kata-id k))
-        (row
-         (col-4 (specification-toggle-card k))
-         (col-8 (implementation-toggle-card k))))
+        (responsive-row #:columns 2
+          (specification-toggle-card k)
+          (implementation-toggle-card k)
+         ))
         (script ([specificationShown 'true]
                  [implementationShown 'true]
                  [specificationIconId (ns "specification-next-state")]
@@ -135,5 +172,7 @@
 
           (function (render)
             @js{@getEl{@specificationIconId}.className  = @specificationNextState()}
-            @js{@getEl{@implementationIconId}.className = @implementationNextState()}) ))))
+            @js{@getEl{@implementationIconId}.className = @implementationNextState()}) ))
+
+  ))
 
