@@ -40,8 +40,8 @@
         (card (card-header "To Install")
               (card-body
                (p "Package Source: " (b install-name) )
-               ;commented out until video is made!
-               ;(p "Need a reminder how to install a package? Check out " (a href: "google.com" "this video!"))
+               ;TODO move video to youtube asap
+               (p "Need a reminder how to install a package? Check out " (a href: "https://drive.google.com/file/d/1WAz_JyzR3V2fKXW7TxbCPaJob76zlJAv/view?usp=sharing" "this video!"))
                ))
         #f))
   
