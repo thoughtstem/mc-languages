@@ -27,12 +27,20 @@
 
 (require (prefix-in adventure: (lib "adventure/scribblings/manual.scrbl")))
 
-(define (lang-page name katas docs-location #:wrap-content [wrap content] #:install-name [install-name #f]#:lang-desc [lang-desc #f])
+(define (lang-page name katas docs-location
+                   #:wrap-content [wrap content]
+                   #:install-name [install-name #f]
+                   #:lang-desc [lang-desc #f]
+                   #:ratchet-lang? [ratchet-lang? #f])
 
   (define desc
     (if lang-desc
         (card (card-header "About this Language")
-              (card-body lang-desc))
+              (card-body lang-desc
+                         (if ratchet-lang?
+                             (p "Never used Ratchet or need a reminder? Check out this video: "
+                                (a href: "https://youtu.be/4xUgNpaSY5g" (b "How to Code in Ratchet")))
+                             #f)))
         #f))
 
   (define install-info
@@ -40,8 +48,8 @@
         (card (card-header "To Install")
               (card-body
                (p "Package Source: " (b install-name) )
-               ;TODO move video to youtube asap
-               (p "Need a reminder how to install a package? Check out " (a href: "https://drive.google.com/file/d/1WAz_JyzR3V2fKXW7TxbCPaJob76zlJAv/view?usp=sharing" "this video!"))
+               
+               (p "Need a reminder how to install a package? Check out " (a href: "https://youtu.be/nGaB3t__y4s" (b "this video tutorial.")))
                ))
         #f))
   
@@ -143,7 +151,8 @@
                                 (li "Add yummy food to eat!")
                                 (li "Add friend and heal them for points!")
                                 (li "Add enimies for an extra challenge!"))
-                            (p (b "TIP:") " This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet.")))
+                            (p (b "TIP:") " This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet."))
+               #:ratchet-lang? #t)
     (lang-page "clicker-cartoon" cartoon '(lib "clicker-cartoon-lib/scribblings/clicker-cartoon-lib.scrbl") #:wrap-content wrap
                #:install-name "https://github.com/thoughtstem/TS-K2-Languages.git?path=clicker-cartoon"
                #:lang-desc (list
@@ -152,7 +161,8 @@
                                 (li "Add collectables to click for points!")
                                 (li "Add avoidables that will chase you!")
                                 (li "Add special items for extra fun!"))
-                            (p (b "TIP:") " This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet.")))
+                            (p (b "TIP:") " This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet."))
+               #:ratchet-lang? #t)
     (lang-page "clicker-pokemon" pokemon '(lib "clicker-pokemon-lib/scribblings/clicker-pokemon-lib.scrbl") #:wrap-content wrap
                #:install-name "https://github.com/thoughtstem/TS-K2-Languages.git?path=clicker-cartoon"
                #:lang-desc (list
@@ -161,7 +171,8 @@
                                 (li "Add stones to collect for points!")
                                 (li "Add trainers that will chase you!")
                                 (li "Add special items for extra fun!"))
-                            (p (b "TIP:") " This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet.")))
+                            (p (b "TIP:") " This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet."))
+               #:ratchet-lang? #t)
     )
   )
 
