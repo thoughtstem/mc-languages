@@ -1,0 +1,2731 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><script>
+//<![CDATA[
+function preloadSupported() {
+  var relList = document.createElement('link').relList;
+  return !!(relList && relList.supports && relList.supports('preload'));
+}
+//]]>
+</script><script async="" src="/mc-languages/js/modernizr-custom.js"></script><link rel="stylesheet" type="text/css" href="/mc-languages/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-brands.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-solid.min.css" /><script>
+//<![CDATA[
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+//]]>
+</script><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script></head><body><script src="/mc-languages/js/jquery-3.4.1.min.js"></script><script async="" src="/mc-languages/js/moment.min.js"></script><div class="container"><h2>#lang clicker-pokemon</h2><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header">About this Language</div><div class="card-body"><p>Use this <b>Ratchet-enabled</b> language to create your own pokemon-themed clicker game!</p><ul><li>Customize your avatar to your favorite pokemon!</li><li>Add stones to collect for points!</li><li>Add trainers that will chase you!</li><li>Add special items for extra fun!</li></ul><p><b>TIP:</b> This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet.</p><p>Never used Ratchet or need a reminder? Check out this video: <a href="https://youtu.be/4xUgNpaSY5g"><b>How to Code in Ratchet</b></a></p></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header">To Install</div><div class="card-body"><p>Package Source: <b>https://github.com/thoughtstem/TS-K2-Languages.git?path=clicker-cartoon</b></p><p>Need a reminder how to install a package? Check out <a href="https://youtu.be/nGaB3t__y4s"><b>this video tutorial.</b></a></p></div></div></div></div><br /><ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#translations">Translations</a></li><li class="nav-item"><a class="nav-link" data-toggle="tab" href="#documentation">Documentation</a></li></ul><div class="tab-content"><div class="tab-pane fade show active p-3" id="translations" class="p-3"><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 000</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3816_toggledSpecification()" data-toggle="collapse" data-target="#ns3816_specification"><i id="ns3816_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3816_specification" class="collapse show" data-parent="#ns3816_accordion"><div class="card-body"><p class="card-text">Code a simple game with no customizations.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3816_toggledImplementation()" data-toggle="collapse" data-target="#ns3816_implementation"><i id="ns3816_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3816_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3816_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-forest)</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//59.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3816_hackPrism = function(){
+if( window.ns3816_prismHacked ) return; 
+ window.ns3816_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3816_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3816_toggledSpecification = function(){
+window.ns3816_specificationShown  = ! window.ns3816_specificationShown;
+ window.ns3816_render();
+
+
+}
+
+window.ns3816_toggledImplementation = function(){
+window.ns3816_implementationShown  = ! window.ns3816_implementationShown;
+ window.ns3816_render();
+
+
+}
+
+window.ns3816_implementationNextState = function(){
+return  window.ns3816_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3816_specificationNextState = function(){
+return  window.ns3816_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3816_disintegrate = function(){
+window.ns3816_hackPrism (); 
+ var ns = document.querySelector(" #ns3816_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3816_render = function(){
+document.getElementById( window.ns3816_specificationIconId ) .className  =  window.ns3816_specificationNextState ();
+ document.getElementById( window.ns3816_implementationIconId ) .className =  window.ns3816_implementationNextState ();
+
+
+}
+
+window.ns3816_specificationShown=true;
+window.ns3816_implementationShown=true;
+window.ns3816_specificationIconId="ns3816_specification-next-state";
+window.ns3816_implementationIconId="ns3816_implementation-next-state";
+window.ns3816_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3817_toggledSpecification()" data-toggle="collapse" data-target="#ns3817_specification"><i id="ns3817_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3817_specification" class="collapse show" data-parent="#ns3817_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a bulbasaur.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3817_toggledImplementation()" data-toggle="collapse" data-target="#ns3817_implementation"><i id="ns3817_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3817_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3817_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-forest bulbasaur)</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//60.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3817_hackPrism = function(){
+if( window.ns3817_prismHacked ) return; 
+ window.ns3817_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3817_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3817_toggledSpecification = function(){
+window.ns3817_specificationShown  = ! window.ns3817_specificationShown;
+ window.ns3817_render();
+
+
+}
+
+window.ns3817_toggledImplementation = function(){
+window.ns3817_implementationShown  = ! window.ns3817_implementationShown;
+ window.ns3817_render();
+
+
+}
+
+window.ns3817_implementationNextState = function(){
+return  window.ns3817_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3817_specificationNextState = function(){
+return  window.ns3817_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3817_disintegrate = function(){
+window.ns3817_hackPrism (); 
+ var ns = document.querySelector(" #ns3817_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3817_render = function(){
+document.getElementById( window.ns3817_specificationIconId ) .className  =  window.ns3817_specificationNextState ();
+ document.getElementById( window.ns3817_implementationIconId ) .className =  window.ns3817_implementationNextState ();
+
+
+}
+
+window.ns3817_specificationShown=true;
+window.ns3817_implementationShown=true;
+window.ns3817_specificationIconId="ns3817_specification-next-state";
+window.ns3817_implementationIconId="ns3817_implementation-next-state";
+window.ns3817_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3818_toggledSpecification()" data-toggle="collapse" data-target="#ns3818_specification"><i id="ns3818_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3818_specification" class="collapse show" data-parent="#ns3818_accordion"><div class="card-body"><p class="card-text">Code a snow game where the cursor is a squirtle collecting fire stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3818_toggledImplementation()" data-toggle="collapse" data-target="#ns3818_implementation"><i id="ns3818_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3818_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3818_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-snow squirtle (fire-stone))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//61.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3818_hackPrism = function(){
+if( window.ns3818_prismHacked ) return; 
+ window.ns3818_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3818_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3818_toggledSpecification = function(){
+window.ns3818_specificationShown  = ! window.ns3818_specificationShown;
+ window.ns3818_render();
+
+
+}
+
+window.ns3818_toggledImplementation = function(){
+window.ns3818_implementationShown  = ! window.ns3818_implementationShown;
+ window.ns3818_render();
+
+
+}
+
+window.ns3818_implementationNextState = function(){
+return  window.ns3818_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3818_specificationNextState = function(){
+return  window.ns3818_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3818_disintegrate = function(){
+window.ns3818_hackPrism (); 
+ var ns = document.querySelector(" #ns3818_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3818_render = function(){
+document.getElementById( window.ns3818_specificationIconId ) .className  =  window.ns3818_specificationNextState ();
+ document.getElementById( window.ns3818_implementationIconId ) .className =  window.ns3818_implementationNextState ();
+
+
+}
+
+window.ns3818_specificationShown=true;
+window.ns3818_implementationShown=true;
+window.ns3818_specificationIconId="ns3818_specification-next-state";
+window.ns3818_implementationIconId="ns3818_implementation-next-state";
+window.ns3818_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3819_toggledSpecification()" data-toggle="collapse" data-target="#ns3819_specification"><i id="ns3819_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3819_specification" class="collapse show" data-parent="#ns3819_accordion"><div class="card-body"><p class="card-text">Code a snow game where the cursor is a pikachu collecting fire stones and water stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3819_toggledImplementation()" data-toggle="collapse" data-target="#ns3819_implementation"><i id="ns3819_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3819_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3819_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-snow pikachu (fire-stone water-stone))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//62.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3819_hackPrism = function(){
+if( window.ns3819_prismHacked ) return; 
+ window.ns3819_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3819_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3819_toggledSpecification = function(){
+window.ns3819_specificationShown  = ! window.ns3819_specificationShown;
+ window.ns3819_render();
+
+
+}
+
+window.ns3819_toggledImplementation = function(){
+window.ns3819_implementationShown  = ! window.ns3819_implementationShown;
+ window.ns3819_render();
+
+
+}
+
+window.ns3819_implementationNextState = function(){
+return  window.ns3819_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3819_specificationNextState = function(){
+return  window.ns3819_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3819_disintegrate = function(){
+window.ns3819_hackPrism (); 
+ var ns = document.querySelector(" #ns3819_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3819_render = function(){
+document.getElementById( window.ns3819_specificationIconId ) .className  =  window.ns3819_specificationNextState ();
+ document.getElementById( window.ns3819_implementationIconId ) .className =  window.ns3819_implementationNextState ();
+
+
+}
+
+window.ns3819_specificationShown=true;
+window.ns3819_implementationShown=true;
+window.ns3819_specificationIconId="ns3819_specification-next-state";
+window.ns3819_implementationIconId="ns3819_implementation-next-state";
+window.ns3819_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3820_toggledSpecification()" data-toggle="collapse" data-target="#ns3820_specification"><i id="ns3820_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3820_specification" class="collapse show" data-parent="#ns3820_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a charmander collecting leaf stones and [choose-your-own-sprite].</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3820_toggledImplementation()" data-toggle="collapse" data-target="#ns3820_implementation"><i id="ns3820_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3820_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3820_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-forest charmander (leaf-stone rand))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//63.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3820_hackPrism = function(){
+if( window.ns3820_prismHacked ) return; 
+ window.ns3820_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3820_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3820_toggledSpecification = function(){
+window.ns3820_specificationShown  = ! window.ns3820_specificationShown;
+ window.ns3820_render();
+
+
+}
+
+window.ns3820_toggledImplementation = function(){
+window.ns3820_implementationShown  = ! window.ns3820_implementationShown;
+ window.ns3820_render();
+
+
+}
+
+window.ns3820_implementationNextState = function(){
+return  window.ns3820_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3820_specificationNextState = function(){
+return  window.ns3820_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3820_disintegrate = function(){
+window.ns3820_hackPrism (); 
+ var ns = document.querySelector(" #ns3820_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3820_render = function(){
+document.getElementById( window.ns3820_specificationIconId ) .className  =  window.ns3820_specificationNextState ();
+ document.getElementById( window.ns3820_implementationIconId ) .className =  window.ns3820_implementationNextState ();
+
+
+}
+
+window.ns3820_specificationShown=true;
+window.ns3820_implementationShown=true;
+window.ns3820_specificationIconId="ns3820_specification-next-state";
+window.ns3820_implementationIconId="ns3820_implementation-next-state";
+window.ns3820_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3821_toggledSpecification()" data-toggle="collapse" data-target="#ns3821_specification"><i id="ns3821_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3821_specification" class="collapse show" data-parent="#ns3821_accordion"><div class="card-body"><p class="card-text">Code a snow game where the cursor is a [choose-your-own-sprite] collecting speed 4 water stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3821_toggledImplementation()" data-toggle="collapse" data-target="#ns3821_implementation"><i id="ns3821_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3821_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3821_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-snow rand ((water-stone 4)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//64.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3821_hackPrism = function(){
+if( window.ns3821_prismHacked ) return; 
+ window.ns3821_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3821_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3821_toggledSpecification = function(){
+window.ns3821_specificationShown  = ! window.ns3821_specificationShown;
+ window.ns3821_render();
+
+
+}
+
+window.ns3821_toggledImplementation = function(){
+window.ns3821_implementationShown  = ! window.ns3821_implementationShown;
+ window.ns3821_render();
+
+
+}
+
+window.ns3821_implementationNextState = function(){
+return  window.ns3821_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3821_specificationNextState = function(){
+return  window.ns3821_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3821_disintegrate = function(){
+window.ns3821_hackPrism (); 
+ var ns = document.querySelector(" #ns3821_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3821_render = function(){
+document.getElementById( window.ns3821_specificationIconId ) .className  =  window.ns3821_specificationNextState ();
+ document.getElementById( window.ns3821_implementationIconId ) .className =  window.ns3821_implementationNextState ();
+
+
+}
+
+window.ns3821_specificationShown=true;
+window.ns3821_implementationShown=true;
+window.ns3821_specificationIconId="ns3821_specification-next-state";
+window.ns3821_implementationIconId="ns3821_implementation-next-state";
+window.ns3821_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 006</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3822_toggledSpecification()" data-toggle="collapse" data-target="#ns3822_specification"><i id="ns3822_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3822_specification" class="collapse show" data-parent="#ns3822_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a leaf stone collecting bulbasaurs, charmanders, and speed 1 squirtles.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3822_toggledImplementation()" data-toggle="collapse" data-target="#ns3822_implementation"><i id="ns3822_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3822_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3822_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-forest
+  leaf-stone
+  (bulbasaur charmander (squirtle 1)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//65.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3822_hackPrism = function(){
+if( window.ns3822_prismHacked ) return; 
+ window.ns3822_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3822_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3822_toggledSpecification = function(){
+window.ns3822_specificationShown  = ! window.ns3822_specificationShown;
+ window.ns3822_render();
+
+
+}
+
+window.ns3822_toggledImplementation = function(){
+window.ns3822_implementationShown  = ! window.ns3822_implementationShown;
+ window.ns3822_render();
+
+
+}
+
+window.ns3822_implementationNextState = function(){
+return  window.ns3822_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3822_specificationNextState = function(){
+return  window.ns3822_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3822_disintegrate = function(){
+window.ns3822_hackPrism (); 
+ var ns = document.querySelector(" #ns3822_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3822_render = function(){
+document.getElementById( window.ns3822_specificationIconId ) .className  =  window.ns3822_specificationNextState ();
+ document.getElementById( window.ns3822_implementationIconId ) .className =  window.ns3822_implementationNextState ();
+
+
+}
+
+window.ns3822_specificationShown=true;
+window.ns3822_implementationShown=true;
+window.ns3822_specificationIconId="ns3822_specification-next-state";
+window.ns3822_implementationIconId="ns3822_implementation-next-state";
+window.ns3822_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 007</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3823_toggledSpecification()" data-toggle="collapse" data-target="#ns3823_specification"><i id="ns3823_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3823_specification" class="collapse show" data-parent="#ns3823_accordion"><div class="card-body"><p class="card-text">Code a snow game where the cursor is a [choose-your-own-sprite] collecting speed 1 water stones and speed 5 fire stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3823_toggledImplementation()" data-toggle="collapse" data-target="#ns3823_implementation"><i id="ns3823_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3823_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3823_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-snow
+  rand
+  ((water-stone 1) (fire-stone 5)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//66.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3823_hackPrism = function(){
+if( window.ns3823_prismHacked ) return; 
+ window.ns3823_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3823_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3823_toggledSpecification = function(){
+window.ns3823_specificationShown  = ! window.ns3823_specificationShown;
+ window.ns3823_render();
+
+
+}
+
+window.ns3823_toggledImplementation = function(){
+window.ns3823_implementationShown  = ! window.ns3823_implementationShown;
+ window.ns3823_render();
+
+
+}
+
+window.ns3823_implementationNextState = function(){
+return  window.ns3823_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3823_specificationNextState = function(){
+return  window.ns3823_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3823_disintegrate = function(){
+window.ns3823_hackPrism (); 
+ var ns = document.querySelector(" #ns3823_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3823_render = function(){
+document.getElementById( window.ns3823_specificationIconId ) .className  =  window.ns3823_specificationNextState ();
+ document.getElementById( window.ns3823_implementationIconId ) .className =  window.ns3823_implementationNextState ();
+
+
+}
+
+window.ns3823_specificationShown=true;
+window.ns3823_implementationShown=true;
+window.ns3823_specificationIconId="ns3823_specification-next-state";
+window.ns3823_implementationIconId="ns3823_implementation-next-state";
+window.ns3823_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 008</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3824_toggledSpecification()" data-toggle="collapse" data-target="#ns3824_specification"><i id="ns3824_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3824_specification" class="collapse show" data-parent="#ns3824_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a pikachu collecting pikachus, pikachus, and pikachus.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3824_toggledImplementation()" data-toggle="collapse" data-target="#ns3824_implementation"><i id="ns3824_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3824_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3824_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-forest pikachu (pikachu pikachu pikachu))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//67.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3824_hackPrism = function(){
+if( window.ns3824_prismHacked ) return; 
+ window.ns3824_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3824_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3824_toggledSpecification = function(){
+window.ns3824_specificationShown  = ! window.ns3824_specificationShown;
+ window.ns3824_render();
+
+
+}
+
+window.ns3824_toggledImplementation = function(){
+window.ns3824_implementationShown  = ! window.ns3824_implementationShown;
+ window.ns3824_render();
+
+
+}
+
+window.ns3824_implementationNextState = function(){
+return  window.ns3824_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3824_specificationNextState = function(){
+return  window.ns3824_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3824_disintegrate = function(){
+window.ns3824_hackPrism (); 
+ var ns = document.querySelector(" #ns3824_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3824_render = function(){
+document.getElementById( window.ns3824_specificationIconId ) .className  =  window.ns3824_specificationNextState ();
+ document.getElementById( window.ns3824_implementationIconId ) .className =  window.ns3824_implementationNextState ();
+
+
+}
+
+window.ns3824_specificationShown=true;
+window.ns3824_implementationShown=true;
+window.ns3824_specificationIconId="ns3824_specification-next-state";
+window.ns3824_implementationIconId="ns3824_implementation-next-state";
+window.ns3824_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 009</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3825_toggledSpecification()" data-toggle="collapse" data-target="#ns3825_specification"><i id="ns3825_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3825_specification" class="collapse show" data-parent="#ns3825_accordion"><div class="card-body"><p class="card-text">Code a snow game where the cursor is a water stone collecting [choose-your-own-sprite] and speed 5 [choose-your-own-sprite].</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3825_toggledImplementation()" data-toggle="collapse" data-target="#ns3825_implementation"><i id="ns3825_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3825_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3825_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-snow water-stone (rand (rand 5)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//68.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3825_hackPrism = function(){
+if( window.ns3825_prismHacked ) return; 
+ window.ns3825_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3825_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3825_toggledSpecification = function(){
+window.ns3825_specificationShown  = ! window.ns3825_specificationShown;
+ window.ns3825_render();
+
+
+}
+
+window.ns3825_toggledImplementation = function(){
+window.ns3825_implementationShown  = ! window.ns3825_implementationShown;
+ window.ns3825_render();
+
+
+}
+
+window.ns3825_implementationNextState = function(){
+return  window.ns3825_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3825_specificationNextState = function(){
+return  window.ns3825_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3825_disintegrate = function(){
+window.ns3825_hackPrism (); 
+ var ns = document.querySelector(" #ns3825_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3825_render = function(){
+document.getElementById( window.ns3825_specificationIconId ) .className  =  window.ns3825_specificationNextState ();
+ document.getElementById( window.ns3825_implementationIconId ) .className =  window.ns3825_implementationNextState ();
+
+
+}
+
+window.ns3825_specificationShown=true;
+window.ns3825_implementationShown=true;
+window.ns3825_specificationIconId="ns3825_specification-next-state";
+window.ns3825_implementationIconId="ns3825_implementation-next-state";
+window.ns3825_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 010</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3826_toggledSpecification()" data-toggle="collapse" data-target="#ns3826_specification"><i id="ns3826_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3826_specification" class="collapse show" data-parent="#ns3826_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a bulbasaur collecting speed 5 leaf stones, speed 4 squirtles, and speed 1 charmanders.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3826_toggledImplementation()" data-toggle="collapse" data-target="#ns3826_implementation"><i id="ns3826_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3826_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3826_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-forest
+  bulbasaur
+  ((leaf-stone 5) (squirtle 4) (charmander 1)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//69.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3826_hackPrism = function(){
+if( window.ns3826_prismHacked ) return; 
+ window.ns3826_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3826_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3826_toggledSpecification = function(){
+window.ns3826_specificationShown  = ! window.ns3826_specificationShown;
+ window.ns3826_render();
+
+
+}
+
+window.ns3826_toggledImplementation = function(){
+window.ns3826_implementationShown  = ! window.ns3826_implementationShown;
+ window.ns3826_render();
+
+
+}
+
+window.ns3826_implementationNextState = function(){
+return  window.ns3826_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3826_specificationNextState = function(){
+return  window.ns3826_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3826_disintegrate = function(){
+window.ns3826_hackPrism (); 
+ var ns = document.querySelector(" #ns3826_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3826_render = function(){
+document.getElementById( window.ns3826_specificationIconId ) .className  =  window.ns3826_specificationNextState ();
+ document.getElementById( window.ns3826_implementationIconId ) .className =  window.ns3826_implementationNextState ();
+
+
+}
+
+window.ns3826_specificationShown=true;
+window.ns3826_implementationShown=true;
+window.ns3826_specificationIconId="ns3826_specification-next-state";
+window.ns3826_implementationIconId="ns3826_implementation-next-state";
+window.ns3826_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 000</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3827_toggledSpecification()" data-toggle="collapse" data-target="#ns3827_specification"><i id="ns3827_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3827_specification" class="collapse show" data-parent="#ns3827_accordion"><div class="card-body"><p class="card-text">Code a simple game with no customizations.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3827_toggledImplementation()" data-toggle="collapse" data-target="#ns3827_implementation"><i id="ns3827_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3827_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3827_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-collect
+
+(start-forest)</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//70.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3827_hackPrism = function(){
+if( window.ns3827_prismHacked ) return; 
+ window.ns3827_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3827_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3827_toggledSpecification = function(){
+window.ns3827_specificationShown  = ! window.ns3827_specificationShown;
+ window.ns3827_render();
+
+
+}
+
+window.ns3827_toggledImplementation = function(){
+window.ns3827_implementationShown  = ! window.ns3827_implementationShown;
+ window.ns3827_render();
+
+
+}
+
+window.ns3827_implementationNextState = function(){
+return  window.ns3827_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3827_specificationNextState = function(){
+return  window.ns3827_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3827_disintegrate = function(){
+window.ns3827_hackPrism (); 
+ var ns = document.querySelector(" #ns3827_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3827_render = function(){
+document.getElementById( window.ns3827_specificationIconId ) .className  =  window.ns3827_specificationNextState ();
+ document.getElementById( window.ns3827_implementationIconId ) .className =  window.ns3827_implementationNextState ();
+
+
+}
+
+window.ns3827_specificationShown=true;
+window.ns3827_implementationShown=true;
+window.ns3827_specificationIconId="ns3827_specification-next-state";
+window.ns3827_implementationIconId="ns3827_implementation-next-state";
+window.ns3827_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3828_toggledSpecification()" data-toggle="collapse" data-target="#ns3828_specification"><i id="ns3828_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3828_specification" class="collapse show" data-parent="#ns3828_accordion"><div class="card-body"><p class="card-text">Code a desert game where the cursor is a pikachu collecting fire stones, and is avoiding trainer girls.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3828_toggledImplementation()" data-toggle="collapse" data-target="#ns3828_implementation"><i id="ns3828_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3828_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3828_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-desert
+  pikachu
+  (fire-stone)
+  (trainer-girl))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//71.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3828_hackPrism = function(){
+if( window.ns3828_prismHacked ) return; 
+ window.ns3828_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3828_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3828_toggledSpecification = function(){
+window.ns3828_specificationShown  = ! window.ns3828_specificationShown;
+ window.ns3828_render();
+
+
+}
+
+window.ns3828_toggledImplementation = function(){
+window.ns3828_implementationShown  = ! window.ns3828_implementationShown;
+ window.ns3828_render();
+
+
+}
+
+window.ns3828_implementationNextState = function(){
+return  window.ns3828_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3828_specificationNextState = function(){
+return  window.ns3828_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3828_disintegrate = function(){
+window.ns3828_hackPrism (); 
+ var ns = document.querySelector(" #ns3828_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3828_render = function(){
+document.getElementById( window.ns3828_specificationIconId ) .className  =  window.ns3828_specificationNextState ();
+ document.getElementById( window.ns3828_implementationIconId ) .className =  window.ns3828_implementationNextState ();
+
+
+}
+
+window.ns3828_specificationShown=true;
+window.ns3828_implementationShown=true;
+window.ns3828_specificationIconId="ns3828_specification-next-state";
+window.ns3828_implementationIconId="ns3828_implementation-next-state";
+window.ns3828_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3829_toggledSpecification()" data-toggle="collapse" data-target="#ns3829_specification"><i id="ns3829_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3829_specification" class="collapse show" data-parent="#ns3829_accordion"><div class="card-body"><p class="card-text">Code a snow game where the cursor is a wartortle collecting thunder stones, and is avoiding mewtwos and trainer boys.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3829_toggledImplementation()" data-toggle="collapse" data-target="#ns3829_implementation"><i id="ns3829_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3829_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3829_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-snow
+  wartortle
+  (thunder-stone)
+  (mewtwo trainer-boy))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//72.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3829_hackPrism = function(){
+if( window.ns3829_prismHacked ) return; 
+ window.ns3829_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3829_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3829_toggledSpecification = function(){
+window.ns3829_specificationShown  = ! window.ns3829_specificationShown;
+ window.ns3829_render();
+
+
+}
+
+window.ns3829_toggledImplementation = function(){
+window.ns3829_implementationShown  = ! window.ns3829_implementationShown;
+ window.ns3829_render();
+
+
+}
+
+window.ns3829_implementationNextState = function(){
+return  window.ns3829_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3829_specificationNextState = function(){
+return  window.ns3829_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3829_disintegrate = function(){
+window.ns3829_hackPrism (); 
+ var ns = document.querySelector(" #ns3829_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3829_render = function(){
+document.getElementById( window.ns3829_specificationIconId ) .className  =  window.ns3829_specificationNextState ();
+ document.getElementById( window.ns3829_implementationIconId ) .className =  window.ns3829_implementationNextState ();
+
+
+}
+
+window.ns3829_specificationShown=true;
+window.ns3829_implementationShown=true;
+window.ns3829_specificationIconId="ns3829_specification-next-state";
+window.ns3829_implementationIconId="ns3829_implementation-next-state";
+window.ns3829_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3830_toggledSpecification()" data-toggle="collapse" data-target="#ns3830_specification"><i id="ns3830_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3830_specification" class="collapse show" data-parent="#ns3830_accordion"><div class="card-body"><p class="card-text">Code a desert game where the cursor is a charmeleon collecting leaf stones, and is avoiding speed 1 leaf stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3830_toggledImplementation()" data-toggle="collapse" data-target="#ns3830_implementation"><i id="ns3830_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3830_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3830_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-desert
+  charmeleon
+  (leaf-stone)
+  ((leaf-stone 1)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//73.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3830_hackPrism = function(){
+if( window.ns3830_prismHacked ) return; 
+ window.ns3830_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3830_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3830_toggledSpecification = function(){
+window.ns3830_specificationShown  = ! window.ns3830_specificationShown;
+ window.ns3830_render();
+
+
+}
+
+window.ns3830_toggledImplementation = function(){
+window.ns3830_implementationShown  = ! window.ns3830_implementationShown;
+ window.ns3830_render();
+
+
+}
+
+window.ns3830_implementationNextState = function(){
+return  window.ns3830_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3830_specificationNextState = function(){
+return  window.ns3830_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3830_disintegrate = function(){
+window.ns3830_hackPrism (); 
+ var ns = document.querySelector(" #ns3830_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3830_render = function(){
+document.getElementById( window.ns3830_specificationIconId ) .className  =  window.ns3830_specificationNextState ();
+ document.getElementById( window.ns3830_implementationIconId ) .className =  window.ns3830_implementationNextState ();
+
+
+}
+
+window.ns3830_specificationShown=true;
+window.ns3830_implementationShown=true;
+window.ns3830_specificationIconId="ns3830_specification-next-state";
+window.ns3830_implementationIconId="ns3830_implementation-next-state";
+window.ns3830_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3831_toggledSpecification()" data-toggle="collapse" data-target="#ns3831_specification"><i id="ns3831_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3831_specification" class="collapse show" data-parent="#ns3831_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a jessie collecting ivysaurs and speed 5 pikachus, and is avoiding thunder stones and speed 5 wartortles.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3831_toggledImplementation()" data-toggle="collapse" data-target="#ns3831_implementation"><i id="ns3831_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3831_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3831_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-forest
+  jessie
+  (ivysaur (pikachu 5))
+  (thunder-stone (wartortle 5)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//74.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3831_hackPrism = function(){
+if( window.ns3831_prismHacked ) return; 
+ window.ns3831_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3831_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3831_toggledSpecification = function(){
+window.ns3831_specificationShown  = ! window.ns3831_specificationShown;
+ window.ns3831_render();
+
+
+}
+
+window.ns3831_toggledImplementation = function(){
+window.ns3831_implementationShown  = ! window.ns3831_implementationShown;
+ window.ns3831_render();
+
+
+}
+
+window.ns3831_implementationNextState = function(){
+return  window.ns3831_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3831_specificationNextState = function(){
+return  window.ns3831_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3831_disintegrate = function(){
+window.ns3831_hackPrism (); 
+ var ns = document.querySelector(" #ns3831_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3831_render = function(){
+document.getElementById( window.ns3831_specificationIconId ) .className  =  window.ns3831_specificationNextState ();
+ document.getElementById( window.ns3831_implementationIconId ) .className =  window.ns3831_implementationNextState ();
+
+
+}
+
+window.ns3831_specificationShown=true;
+window.ns3831_implementationShown=true;
+window.ns3831_specificationIconId="ns3831_specification-next-state";
+window.ns3831_implementationIconId="ns3831_implementation-next-state";
+window.ns3831_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3832_toggledSpecification()" data-toggle="collapse" data-target="#ns3832_specification"><i id="ns3832_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3832_specification" class="collapse show" data-parent="#ns3832_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a trainer girl collecting trainer girls, and is avoiding speed 1 trainer girls.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3832_toggledImplementation()" data-toggle="collapse" data-target="#ns3832_implementation"><i id="ns3832_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3832_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3832_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-forest
+  trainer-girl
+  (trainer-girl)
+  ((trainer-girl 1)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//75.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3832_hackPrism = function(){
+if( window.ns3832_prismHacked ) return; 
+ window.ns3832_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3832_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3832_toggledSpecification = function(){
+window.ns3832_specificationShown  = ! window.ns3832_specificationShown;
+ window.ns3832_render();
+
+
+}
+
+window.ns3832_toggledImplementation = function(){
+window.ns3832_implementationShown  = ! window.ns3832_implementationShown;
+ window.ns3832_render();
+
+
+}
+
+window.ns3832_implementationNextState = function(){
+return  window.ns3832_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3832_specificationNextState = function(){
+return  window.ns3832_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3832_disintegrate = function(){
+window.ns3832_hackPrism (); 
+ var ns = document.querySelector(" #ns3832_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3832_render = function(){
+document.getElementById( window.ns3832_specificationIconId ) .className  =  window.ns3832_specificationNextState ();
+ document.getElementById( window.ns3832_implementationIconId ) .className =  window.ns3832_implementationNextState ();
+
+
+}
+
+window.ns3832_specificationShown=true;
+window.ns3832_implementationShown=true;
+window.ns3832_specificationIconId="ns3832_specification-next-state";
+window.ns3832_implementationIconId="ns3832_implementation-next-state";
+window.ns3832_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 006</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3833_toggledSpecification()" data-toggle="collapse" data-target="#ns3833_specification"><i id="ns3833_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3833_specification" class="collapse show" data-parent="#ns3833_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a red ivysaur collecting leaf stones and fire stones, and is avoiding jessies.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3833_toggledImplementation()" data-toggle="collapse" data-target="#ns3833_implementation"><i id="ns3833_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3833_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3833_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-forest
+  (ivysaur red)
+  (leaf-stone fire-stone)
+  (jessie))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//76.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3833_hackPrism = function(){
+if( window.ns3833_prismHacked ) return; 
+ window.ns3833_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3833_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3833_toggledSpecification = function(){
+window.ns3833_specificationShown  = ! window.ns3833_specificationShown;
+ window.ns3833_render();
+
+
+}
+
+window.ns3833_toggledImplementation = function(){
+window.ns3833_implementationShown  = ! window.ns3833_implementationShown;
+ window.ns3833_render();
+
+
+}
+
+window.ns3833_implementationNextState = function(){
+return  window.ns3833_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3833_specificationNextState = function(){
+return  window.ns3833_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3833_disintegrate = function(){
+window.ns3833_hackPrism (); 
+ var ns = document.querySelector(" #ns3833_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3833_render = function(){
+document.getElementById( window.ns3833_specificationIconId ) .className  =  window.ns3833_specificationNextState ();
+ document.getElementById( window.ns3833_implementationIconId ) .className =  window.ns3833_implementationNextState ();
+
+
+}
+
+window.ns3833_specificationShown=true;
+window.ns3833_implementationShown=true;
+window.ns3833_specificationIconId="ns3833_specification-next-state";
+window.ns3833_implementationIconId="ns3833_implementation-next-state";
+window.ns3833_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 007</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3834_toggledSpecification()" data-toggle="collapse" data-target="#ns3834_specification"><i id="ns3834_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3834_specification" class="collapse show" data-parent="#ns3834_accordion"><div class="card-body"><p class="card-text">Code a snow game where the cursor is a charmeleon collecting green thunder stones, and is avoiding mewtwos and trainer boys.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3834_toggledImplementation()" data-toggle="collapse" data-target="#ns3834_implementation"><i id="ns3834_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3834_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3834_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-snow
+  charmeleon
+  ((thunder-stone green))
+  (mewtwo trainer-boy))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//77.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3834_hackPrism = function(){
+if( window.ns3834_prismHacked ) return; 
+ window.ns3834_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3834_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3834_toggledSpecification = function(){
+window.ns3834_specificationShown  = ! window.ns3834_specificationShown;
+ window.ns3834_render();
+
+
+}
+
+window.ns3834_toggledImplementation = function(){
+window.ns3834_implementationShown  = ! window.ns3834_implementationShown;
+ window.ns3834_render();
+
+
+}
+
+window.ns3834_implementationNextState = function(){
+return  window.ns3834_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3834_specificationNextState = function(){
+return  window.ns3834_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3834_disintegrate = function(){
+window.ns3834_hackPrism (); 
+ var ns = document.querySelector(" #ns3834_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3834_render = function(){
+document.getElementById( window.ns3834_specificationIconId ) .className  =  window.ns3834_specificationNextState ();
+ document.getElementById( window.ns3834_implementationIconId ) .className =  window.ns3834_implementationNextState ();
+
+
+}
+
+window.ns3834_specificationShown=true;
+window.ns3834_implementationShown=true;
+window.ns3834_specificationIconId="ns3834_specification-next-state";
+window.ns3834_implementationIconId="ns3834_implementation-next-state";
+window.ns3834_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 008</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3835_toggledSpecification()" data-toggle="collapse" data-target="#ns3835_specification"><i id="ns3835_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3835_specification" class="collapse show" data-parent="#ns3835_accordion"><div class="card-body"><p class="card-text">Code a desert game where the cursor is a [choose-your-own-sprite] collecting thunder stones, orange trainer girls, and wartortles, and is avoiding fire stones, speed 1 mewtwos, and pikachus.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3835_toggledImplementation()" data-toggle="collapse" data-target="#ns3835_implementation"><i id="ns3835_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3835_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3835_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-desert
+  rand
+  (thunder-stone (trainer-girl orange) wartortle)
+  (fire-stone (mewtwo 1) pikachu))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//78.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3835_hackPrism = function(){
+if( window.ns3835_prismHacked ) return; 
+ window.ns3835_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3835_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3835_toggledSpecification = function(){
+window.ns3835_specificationShown  = ! window.ns3835_specificationShown;
+ window.ns3835_render();
+
+
+}
+
+window.ns3835_toggledImplementation = function(){
+window.ns3835_implementationShown  = ! window.ns3835_implementationShown;
+ window.ns3835_render();
+
+
+}
+
+window.ns3835_implementationNextState = function(){
+return  window.ns3835_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3835_specificationNextState = function(){
+return  window.ns3835_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3835_disintegrate = function(){
+window.ns3835_hackPrism (); 
+ var ns = document.querySelector(" #ns3835_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3835_render = function(){
+document.getElementById( window.ns3835_specificationIconId ) .className  =  window.ns3835_specificationNextState ();
+ document.getElementById( window.ns3835_implementationIconId ) .className =  window.ns3835_implementationNextState ();
+
+
+}
+
+window.ns3835_specificationShown=true;
+window.ns3835_implementationShown=true;
+window.ns3835_specificationIconId="ns3835_specification-next-state";
+window.ns3835_implementationIconId="ns3835_implementation-next-state";
+window.ns3835_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 009</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3836_toggledSpecification()" data-toggle="collapse" data-target="#ns3836_specification"><i id="ns3836_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3836_specification" class="collapse show" data-parent="#ns3836_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a jessie collecting yellow charmeleons and speed 5 [choose-your-own-sprite], and is avoiding speed 1 leaf stones and purple [choose-your-own-sprite].</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3836_toggledImplementation()" data-toggle="collapse" data-target="#ns3836_implementation"><i id="ns3836_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3836_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3836_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-forest
+  jessie
+  ((charmeleon yellow) (rand 5))
+  ((leaf-stone 1) (rand purple)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//79.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3836_hackPrism = function(){
+if( window.ns3836_prismHacked ) return; 
+ window.ns3836_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3836_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3836_toggledSpecification = function(){
+window.ns3836_specificationShown  = ! window.ns3836_specificationShown;
+ window.ns3836_render();
+
+
+}
+
+window.ns3836_toggledImplementation = function(){
+window.ns3836_implementationShown  = ! window.ns3836_implementationShown;
+ window.ns3836_render();
+
+
+}
+
+window.ns3836_implementationNextState = function(){
+return  window.ns3836_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3836_specificationNextState = function(){
+return  window.ns3836_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3836_disintegrate = function(){
+window.ns3836_hackPrism (); 
+ var ns = document.querySelector(" #ns3836_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3836_render = function(){
+document.getElementById( window.ns3836_specificationIconId ) .className  =  window.ns3836_specificationNextState ();
+ document.getElementById( window.ns3836_implementationIconId ) .className =  window.ns3836_implementationNextState ();
+
+
+}
+
+window.ns3836_specificationShown=true;
+window.ns3836_implementationShown=true;
+window.ns3836_specificationIconId="ns3836_specification-next-state";
+window.ns3836_implementationIconId="ns3836_implementation-next-state";
+window.ns3836_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 010</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3837_toggledSpecification()" data-toggle="collapse" data-target="#ns3837_specification"><i id="ns3837_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3837_specification" class="collapse show" data-parent="#ns3837_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a blue ivysaur collecting green ivysaurs, and is avoiding red ivysaurs.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3837_toggledImplementation()" data-toggle="collapse" data-target="#ns3837_implementation"><i id="ns3837_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3837_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3837_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-avoid
+
+(start-forest
+  (ivysaur blue)
+  ((ivysaur green))
+  ((ivysaur red)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//80.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3837_hackPrism = function(){
+if( window.ns3837_prismHacked ) return; 
+ window.ns3837_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3837_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3837_toggledSpecification = function(){
+window.ns3837_specificationShown  = ! window.ns3837_specificationShown;
+ window.ns3837_render();
+
+
+}
+
+window.ns3837_toggledImplementation = function(){
+window.ns3837_implementationShown  = ! window.ns3837_implementationShown;
+ window.ns3837_render();
+
+
+}
+
+window.ns3837_implementationNextState = function(){
+return  window.ns3837_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3837_specificationNextState = function(){
+return  window.ns3837_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3837_disintegrate = function(){
+window.ns3837_hackPrism (); 
+ var ns = document.querySelector(" #ns3837_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3837_render = function(){
+document.getElementById( window.ns3837_specificationIconId ) .className  =  window.ns3837_specificationNextState ();
+ document.getElementById( window.ns3837_implementationIconId ) .className =  window.ns3837_implementationNextState ();
+
+
+}
+
+window.ns3837_specificationShown=true;
+window.ns3837_implementationShown=true;
+window.ns3837_specificationIconId="ns3837_specification-next-state";
+window.ns3837_implementationIconId="ns3837_implementation-next-state";
+window.ns3837_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3838_toggledSpecification()" data-toggle="collapse" data-target="#ns3838_specification"><i id="ns3838_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3838_specification" class="collapse show" data-parent="#ns3838_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a charizard collecting fire stones, and is avoiding james, and can get special ice powers.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3838_toggledImplementation()" data-toggle="collapse" data-target="#ns3838_implementation"><i id="ns3838_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3838_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3838_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-forest
+  charizard
+  (fire-stone)
+  (james)
+  (ice-power))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//81.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3838_hackPrism = function(){
+if( window.ns3838_prismHacked ) return; 
+ window.ns3838_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3838_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3838_toggledSpecification = function(){
+window.ns3838_specificationShown  = ! window.ns3838_specificationShown;
+ window.ns3838_render();
+
+
+}
+
+window.ns3838_toggledImplementation = function(){
+window.ns3838_implementationShown  = ! window.ns3838_implementationShown;
+ window.ns3838_render();
+
+
+}
+
+window.ns3838_implementationNextState = function(){
+return  window.ns3838_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3838_specificationNextState = function(){
+return  window.ns3838_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3838_disintegrate = function(){
+window.ns3838_hackPrism (); 
+ var ns = document.querySelector(" #ns3838_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3838_render = function(){
+document.getElementById( window.ns3838_specificationIconId ) .className  =  window.ns3838_specificationNextState ();
+ document.getElementById( window.ns3838_implementationIconId ) .className =  window.ns3838_implementationNextState ();
+
+
+}
+
+window.ns3838_specificationShown=true;
+window.ns3838_implementationShown=true;
+window.ns3838_specificationIconId="ns3838_specification-next-state";
+window.ns3838_implementationIconId="ns3838_implementation-next-state";
+window.ns3838_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3839_toggledSpecification()" data-toggle="collapse" data-target="#ns3839_specification"><i id="ns3839_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3839_specification" class="collapse show" data-parent="#ns3839_accordion"><div class="card-body"><p class="card-text">Code a desert game where the cursor is a blastoise collecting fire stones and purple sun stones, and is avoiding red pokeballs, and can get special turtle powers.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3839_toggledImplementation()" data-toggle="collapse" data-target="#ns3839_implementation"><i id="ns3839_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3839_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3839_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-desert
+  blastoise
+  (fire-stone (sun-stone purple))
+  ((pokeball red))
+  (turtle-power))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//82.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3839_hackPrism = function(){
+if( window.ns3839_prismHacked ) return; 
+ window.ns3839_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3839_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3839_toggledSpecification = function(){
+window.ns3839_specificationShown  = ! window.ns3839_specificationShown;
+ window.ns3839_render();
+
+
+}
+
+window.ns3839_toggledImplementation = function(){
+window.ns3839_implementationShown  = ! window.ns3839_implementationShown;
+ window.ns3839_render();
+
+
+}
+
+window.ns3839_implementationNextState = function(){
+return  window.ns3839_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3839_specificationNextState = function(){
+return  window.ns3839_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3839_disintegrate = function(){
+window.ns3839_hackPrism (); 
+ var ns = document.querySelector(" #ns3839_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3839_render = function(){
+document.getElementById( window.ns3839_specificationIconId ) .className  =  window.ns3839_specificationNextState ();
+ document.getElementById( window.ns3839_implementationIconId ) .className =  window.ns3839_implementationNextState ();
+
+
+}
+
+window.ns3839_specificationShown=true;
+window.ns3839_implementationShown=true;
+window.ns3839_specificationIconId="ns3839_specification-next-state";
+window.ns3839_implementationIconId="ns3839_implementation-next-state";
+window.ns3839_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3840_toggledSpecification()" data-toggle="collapse" data-target="#ns3840_specification"><i id="ns3840_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3840_specification" class="collapse show" data-parent="#ns3840_accordion"><div class="card-body"><p class="card-text">Code a snow game where the cursor is a trainer girl collecting venasaurs and mewtwos, and is avoiding speed 3 red venasaurs and speed 1 orange mewtwos, and can get special light powers.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3840_toggledImplementation()" data-toggle="collapse" data-target="#ns3840_implementation"><i id="ns3840_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3840_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3840_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-snow
+  trainer-girl
+  (venasaur mewtwo)
+  ((venasaur 3 red) (mewtwo 1 orange))
+  (light-power))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//83.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3840_hackPrism = function(){
+if( window.ns3840_prismHacked ) return; 
+ window.ns3840_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3840_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3840_toggledSpecification = function(){
+window.ns3840_specificationShown  = ! window.ns3840_specificationShown;
+ window.ns3840_render();
+
+
+}
+
+window.ns3840_toggledImplementation = function(){
+window.ns3840_implementationShown  = ! window.ns3840_implementationShown;
+ window.ns3840_render();
+
+
+}
+
+window.ns3840_implementationNextState = function(){
+return  window.ns3840_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3840_specificationNextState = function(){
+return  window.ns3840_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3840_disintegrate = function(){
+window.ns3840_hackPrism (); 
+ var ns = document.querySelector(" #ns3840_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3840_render = function(){
+document.getElementById( window.ns3840_specificationIconId ) .className  =  window.ns3840_specificationNextState ();
+ document.getElementById( window.ns3840_implementationIconId ) .className =  window.ns3840_implementationNextState ();
+
+
+}
+
+window.ns3840_specificationShown=true;
+window.ns3840_implementationShown=true;
+window.ns3840_specificationIconId="ns3840_specification-next-state";
+window.ns3840_implementationIconId="ns3840_implementation-next-state";
+window.ns3840_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3841_toggledSpecification()" data-toggle="collapse" data-target="#ns3841_specification"><i id="ns3841_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3841_specification" class="collapse show" data-parent="#ns3841_accordion"><div class="card-body"><p class="card-text">Code a desert game where the cursor is a mewtwo collecting green james and blue fire stones, and is avoiding pokeballs, and can get special 200-point sun stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3841_toggledImplementation()" data-toggle="collapse" data-target="#ns3841_implementation"><i id="ns3841_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3841_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3841_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-desert
+  mewtwo
+  ((james green) (fire-stone blue))
+  (pokeball)
+  ((sun-stone 200)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//84.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3841_hackPrism = function(){
+if( window.ns3841_prismHacked ) return; 
+ window.ns3841_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3841_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3841_toggledSpecification = function(){
+window.ns3841_specificationShown  = ! window.ns3841_specificationShown;
+ window.ns3841_render();
+
+
+}
+
+window.ns3841_toggledImplementation = function(){
+window.ns3841_implementationShown  = ! window.ns3841_implementationShown;
+ window.ns3841_render();
+
+
+}
+
+window.ns3841_implementationNextState = function(){
+return  window.ns3841_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3841_specificationNextState = function(){
+return  window.ns3841_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3841_disintegrate = function(){
+window.ns3841_hackPrism (); 
+ var ns = document.querySelector(" #ns3841_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3841_render = function(){
+document.getElementById( window.ns3841_specificationIconId ) .className  =  window.ns3841_specificationNextState ();
+ document.getElementById( window.ns3841_implementationIconId ) .className =  window.ns3841_implementationNextState ();
+
+
+}
+
+window.ns3841_specificationShown=true;
+window.ns3841_implementationShown=true;
+window.ns3841_specificationIconId="ns3841_specification-next-state";
+window.ns3841_implementationIconId="ns3841_implementation-next-state";
+window.ns3841_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3842_toggledSpecification()" data-toggle="collapse" data-target="#ns3842_specification"><i id="ns3842_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3842_specification" class="collapse show" data-parent="#ns3842_accordion"><div class="card-body"><p class="card-text">Code a forest game where the cursor is a blastoise collecting red sun stones and speed 4 trainer girls, and is avoiding speed 1 yellow venasaurs and charizards, and can get special 200-point purple fire stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3842_toggledImplementation()" data-toggle="collapse" data-target="#ns3842_implementation"><i id="ns3842_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3842_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3842_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-forest
+  blastoise
+  ((sun-stone red) (trainer-girl 4))
+  ((venasaur 1 yellow) charizard)
+  ((fire-stone 200 purple)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//85.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3842_hackPrism = function(){
+if( window.ns3842_prismHacked ) return; 
+ window.ns3842_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3842_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3842_toggledSpecification = function(){
+window.ns3842_specificationShown  = ! window.ns3842_specificationShown;
+ window.ns3842_render();
+
+
+}
+
+window.ns3842_toggledImplementation = function(){
+window.ns3842_implementationShown  = ! window.ns3842_implementationShown;
+ window.ns3842_render();
+
+
+}
+
+window.ns3842_implementationNextState = function(){
+return  window.ns3842_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3842_specificationNextState = function(){
+return  window.ns3842_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3842_disintegrate = function(){
+window.ns3842_hackPrism (); 
+ var ns = document.querySelector(" #ns3842_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3842_render = function(){
+document.getElementById( window.ns3842_specificationIconId ) .className  =  window.ns3842_specificationNextState ();
+ document.getElementById( window.ns3842_implementationIconId ) .className =  window.ns3842_implementationNextState ();
+
+
+}
+
+window.ns3842_specificationShown=true;
+window.ns3842_implementationShown=true;
+window.ns3842_specificationIconId="ns3842_specification-next-state";
+window.ns3842_implementationIconId="ns3842_implementation-next-state";
+window.ns3842_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 006</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3843_toggledSpecification()" data-toggle="collapse" data-target="#ns3843_specification"><i id="ns3843_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3843_specification" class="collapse show" data-parent="#ns3843_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) where the cursor is a mewtwo collecting fire stones and sun stones, and is avoiding james; 2) where the cursor is a mewtwo collecting orange fire stones and speed 4 sun stones, and is avoiding speed 5 red james, and can get special ice powers.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3843_toggledImplementation()" data-toggle="collapse" data-target="#ns3843_implementation"><i id="ns3843_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3843_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3843_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-snow
+  mewtwo
+  (fire-stone sun-stone)
+  (james))
+
+(start-snow
+  mewtwo
+  ((fire-stone orange) (sun-stone 4))
+  ((james 5 red))
+  (ice-power))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//86.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3843_hackPrism = function(){
+if( window.ns3843_prismHacked ) return; 
+ window.ns3843_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3843_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3843_toggledSpecification = function(){
+window.ns3843_specificationShown  = ! window.ns3843_specificationShown;
+ window.ns3843_render();
+
+
+}
+
+window.ns3843_toggledImplementation = function(){
+window.ns3843_implementationShown  = ! window.ns3843_implementationShown;
+ window.ns3843_render();
+
+
+}
+
+window.ns3843_implementationNextState = function(){
+return  window.ns3843_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3843_specificationNextState = function(){
+return  window.ns3843_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3843_disintegrate = function(){
+window.ns3843_hackPrism (); 
+ var ns = document.querySelector(" #ns3843_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3843_render = function(){
+document.getElementById( window.ns3843_specificationIconId ) .className  =  window.ns3843_specificationNextState ();
+ document.getElementById( window.ns3843_implementationIconId ) .className =  window.ns3843_implementationNextState ();
+
+
+}
+
+window.ns3843_specificationShown=true;
+window.ns3843_implementationShown=true;
+window.ns3843_specificationIconId="ns3843_specification-next-state";
+window.ns3843_implementationIconId="ns3843_implementation-next-state";
+window.ns3843_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 007</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3844_toggledSpecification()" data-toggle="collapse" data-target="#ns3844_specification"><i id="ns3844_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3844_specification" class="collapse show" data-parent="#ns3844_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) where the cursor is a venasaur collecting fire stones, and is avoiding speed 1 trainer girls; 2) where the cursor is a venasaur collecting speed 3 green sun stones, and is avoiding speed 3 red blastoises, and can get special light powers; 3) where the cursor is a venasaur collecting speed 5 fire stones, and is avoiding speed 5 blastoises and speed 5 trainer girls, and can get special 300-point sun stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3844_toggledImplementation()" data-toggle="collapse" data-target="#ns3844_implementation"><i id="ns3844_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3844_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3844_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-forest
+  venasaur
+  (fire-stone)
+  ((trainer-girl 1)))
+
+(start-snow
+  venasaur
+  ((sun-stone 3 green))
+  ((blastoise 3 red))
+  (light-power))
+
+(start-desert
+  venasaur
+  ((fire-stone 5))
+  ((blastoise 5) (trainer-girl 5))
+  ((sun-stone 300)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//87.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3844_hackPrism = function(){
+if( window.ns3844_prismHacked ) return; 
+ window.ns3844_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3844_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3844_toggledSpecification = function(){
+window.ns3844_specificationShown  = ! window.ns3844_specificationShown;
+ window.ns3844_render();
+
+
+}
+
+window.ns3844_toggledImplementation = function(){
+window.ns3844_implementationShown  = ! window.ns3844_implementationShown;
+ window.ns3844_render();
+
+
+}
+
+window.ns3844_implementationNextState = function(){
+return  window.ns3844_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3844_specificationNextState = function(){
+return  window.ns3844_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3844_disintegrate = function(){
+window.ns3844_hackPrism (); 
+ var ns = document.querySelector(" #ns3844_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3844_render = function(){
+document.getElementById( window.ns3844_specificationIconId ) .className  =  window.ns3844_specificationNextState ();
+ document.getElementById( window.ns3844_implementationIconId ) .className =  window.ns3844_implementationNextState ();
+
+
+}
+
+window.ns3844_specificationShown=true;
+window.ns3844_implementationShown=true;
+window.ns3844_specificationIconId="ns3844_specification-next-state";
+window.ns3844_implementationIconId="ns3844_implementation-next-state";
+window.ns3844_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 008</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3845_toggledSpecification()" data-toggle="collapse" data-target="#ns3845_specification"><i id="ns3845_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3845_specification" class="collapse show" data-parent="#ns3845_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) where the cursor is a fire stone collecting venasaurs and charizards, and is avoiding pokeballs, and can get special ice powers; 2) where the cursor is a fire stone collecting speed 5 yellow venasaurs, and is avoiding speed 5 red james and speed 5 red trainer girls, and can get special turtle powers and 300-point charizards.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3845_toggledImplementation()" data-toggle="collapse" data-target="#ns3845_implementation"><i id="ns3845_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3845_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3845_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-desert
+  fire-stone
+  (venasaur charizard)
+  (pokeball)
+  (ice-power))
+
+(start-snow
+  fire-stone
+  ((venasaur 5 yellow))
+  ((james 5 red) (trainer-girl 5 red))
+  (turtle-power (charizard 300)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//88.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3845_hackPrism = function(){
+if( window.ns3845_prismHacked ) return; 
+ window.ns3845_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3845_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3845_toggledSpecification = function(){
+window.ns3845_specificationShown  = ! window.ns3845_specificationShown;
+ window.ns3845_render();
+
+
+}
+
+window.ns3845_toggledImplementation = function(){
+window.ns3845_implementationShown  = ! window.ns3845_implementationShown;
+ window.ns3845_render();
+
+
+}
+
+window.ns3845_implementationNextState = function(){
+return  window.ns3845_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3845_specificationNextState = function(){
+return  window.ns3845_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3845_disintegrate = function(){
+window.ns3845_hackPrism (); 
+ var ns = document.querySelector(" #ns3845_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3845_render = function(){
+document.getElementById( window.ns3845_specificationIconId ) .className  =  window.ns3845_specificationNextState ();
+ document.getElementById( window.ns3845_implementationIconId ) .className =  window.ns3845_implementationNextState ();
+
+
+}
+
+window.ns3845_specificationShown=true;
+window.ns3845_implementationShown=true;
+window.ns3845_specificationIconId="ns3845_specification-next-state";
+window.ns3845_implementationIconId="ns3845_implementation-next-state";
+window.ns3845_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 009</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3846_toggledSpecification()" data-toggle="collapse" data-target="#ns3846_specification"><i id="ns3846_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3846_specification" class="collapse show" data-parent="#ns3846_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) where the cursor is a venasaur collecting speed 1 blue fire stones, and is avoiding trainer girls, and can get special light powers; 2) where the cursor is a charizard collecting speed 3 purple fire stones, and is avoiding speed 3 james and speed 3 trainer girls, and can get special turtle powers and 5-point light powers; 3) where the cursor is an orange blastoise collecting speed 5 fire stones, and is avoiding speed 5 james, speed 5 pokeballs, and speed 5 trainer girls, and can get special ice powers, light powers, and 500-point sun stones.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3846_toggledImplementation()" data-toggle="collapse" data-target="#ns3846_implementation"><i id="ns3846_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3846_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3846_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-pokemon-special
+
+(start-forest
+  venasaur
+  ((fire-stone 1 blue))
+  (trainer-girl)
+  (light-power))
+
+(start-forest
+  charizard
+  ((fire-stone 3 purple))
+  ((james 3) (trainer-girl 3))
+  (turtle-power (light-power 5)))
+
+(start-forest
+  (blastoise orange)
+  ((fire-stone 5))
+  ((james 5) (pokeball 5) (trainer-girl 5))
+  (ice-power light-power (sun-stone 500)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//89.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3846_hackPrism = function(){
+if( window.ns3846_prismHacked ) return; 
+ window.ns3846_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3846_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3846_toggledSpecification = function(){
+window.ns3846_specificationShown  = ! window.ns3846_specificationShown;
+ window.ns3846_render();
+
+
+}
+
+window.ns3846_toggledImplementation = function(){
+window.ns3846_implementationShown  = ! window.ns3846_implementationShown;
+ window.ns3846_render();
+
+
+}
+
+window.ns3846_implementationNextState = function(){
+return  window.ns3846_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3846_specificationNextState = function(){
+return  window.ns3846_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3846_disintegrate = function(){
+window.ns3846_hackPrism (); 
+ var ns = document.querySelector(" #ns3846_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3846_render = function(){
+document.getElementById( window.ns3846_specificationIconId ) .className  =  window.ns3846_specificationNextState ();
+ document.getElementById( window.ns3846_implementationIconId ) .className =  window.ns3846_implementationNextState ();
+
+
+}
+
+window.ns3846_specificationShown=true;
+window.ns3846_implementationShown=true;
+window.ns3846_specificationIconId="ns3846_specification-next-state";
+window.ns3846_implementationIconId="ns3846_implementation-next-state";
+window.ns3846_prismHacked=false;
+
+//]]>
+</script></div><div class="tab-pane fade p-3" id="documentation" class="p-3"><iframe src="/mc-languages/clicker-pokemon-doc/clicker-pokemon-doc.html" frameborder="0" scrolling="no" onload="var t = this;setInterval(function(){resizeIframe(t)},1000);" style="width:100%; border: none;"></iframe></div></div></div><script src="/mc-languages/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script></body></html>

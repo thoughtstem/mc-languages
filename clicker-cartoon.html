@@ -1,0 +1,2704 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><script>
+//<![CDATA[
+function preloadSupported() {
+  var relList = document.createElement('link').relList;
+  return !!(relList && relList.supports && relList.supports('preload'));
+}
+//]]>
+</script><script async="" src="/mc-languages/js/modernizr-custom.js"></script><link rel="stylesheet" type="text/css" href="/mc-languages/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-brands.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-solid.min.css" /><script>
+//<![CDATA[
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+//]]>
+</script><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script></head><body><script src="/mc-languages/js/jquery-3.4.1.min.js"></script><script async="" src="/mc-languages/js/moment.min.js"></script><div class="container"><h2>#lang clicker-cartoon</h2><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header">About this Language</div><div class="card-body"><p>Use this <b>Ratchet-enabled</b> language to create your own clicker game!</p><ul><li>Customize your avatar!</li><li>Add collectables to click for points!</li><li>Add avoidables that will chase you!</li><li>Add special items for extra fun!</li></ul><p><b>TIP:</b> This is a language collection that actually includes 3 language levels -- be sure to check the lang line for a given section before attempting to write the code in Ratchet.</p><p>Never used Ratchet or need a reminder? Check out this video: <a href="https://youtu.be/4xUgNpaSY5g"><b>How to Code in Ratchet</b></a></p></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header">To Install</div><div class="card-body"><p>Package Source: <b>https://github.com/thoughtstem/TS-K2-Languages.git?path=clicker-cartoon</b></p><p>Need a reminder how to install a package? Check out <a href="https://youtu.be/nGaB3t__y4s"><b>this video tutorial.</b></a></p></div></div></div></div><br /><ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#translations">Translations</a></li><li class="nav-item"><a class="nav-link" data-toggle="tab" href="#documentation">Documentation</a></li></ul><div class="tab-content"><div class="tab-pane fade show active p-3" id="translations" class="p-3"><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 000</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3785_toggledSpecification()" data-toggle="collapse" data-target="#ns3785_specification"><i id="ns3785_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3785_specification" class="collapse show" data-parent="#ns3785_accordion"><div class="card-body"><p class="card-text">Code a simple game with no customizations.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3785_toggledImplementation()" data-toggle="collapse" data-target="#ns3785_implementation"><i id="ns3785_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3785_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3785_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-fantasy)</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//28.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3785_hackPrism = function(){
+if( window.ns3785_prismHacked ) return; 
+ window.ns3785_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3785_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3785_toggledSpecification = function(){
+window.ns3785_specificationShown  = ! window.ns3785_specificationShown;
+ window.ns3785_render();
+
+
+}
+
+window.ns3785_toggledImplementation = function(){
+window.ns3785_implementationShown  = ! window.ns3785_implementationShown;
+ window.ns3785_render();
+
+
+}
+
+window.ns3785_implementationNextState = function(){
+return  window.ns3785_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3785_specificationNextState = function(){
+return  window.ns3785_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3785_disintegrate = function(){
+window.ns3785_hackPrism (); 
+ var ns = document.querySelector(" #ns3785_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3785_render = function(){
+document.getElementById( window.ns3785_specificationIconId ) .className  =  window.ns3785_specificationNextState ();
+ document.getElementById( window.ns3785_implementationIconId ) .className =  window.ns3785_implementationNextState ();
+
+
+}
+
+window.ns3785_specificationShown=true;
+window.ns3785_implementationShown=true;
+window.ns3785_specificationIconId="ns3785_specification-next-state";
+window.ns3785_implementationIconId="ns3785_implementation-next-state";
+window.ns3785_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3786_toggledSpecification()" data-toggle="collapse" data-target="#ns3786_specification"><i id="ns3786_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3786_specification" class="collapse show" data-parent="#ns3786_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a knight.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3786_toggledImplementation()" data-toggle="collapse" data-target="#ns3786_implementation"><i id="ns3786_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3786_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3786_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-fantasy knight)</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//29.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3786_hackPrism = function(){
+if( window.ns3786_prismHacked ) return; 
+ window.ns3786_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3786_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3786_toggledSpecification = function(){
+window.ns3786_specificationShown  = ! window.ns3786_specificationShown;
+ window.ns3786_render();
+
+
+}
+
+window.ns3786_toggledImplementation = function(){
+window.ns3786_implementationShown  = ! window.ns3786_implementationShown;
+ window.ns3786_render();
+
+
+}
+
+window.ns3786_implementationNextState = function(){
+return  window.ns3786_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3786_specificationNextState = function(){
+return  window.ns3786_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3786_disintegrate = function(){
+window.ns3786_hackPrism (); 
+ var ns = document.querySelector(" #ns3786_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3786_render = function(){
+document.getElementById( window.ns3786_specificationIconId ) .className  =  window.ns3786_specificationNextState ();
+ document.getElementById( window.ns3786_implementationIconId ) .className =  window.ns3786_implementationNextState ();
+
+
+}
+
+window.ns3786_specificationShown=true;
+window.ns3786_implementationShown=true;
+window.ns3786_specificationIconId="ns3786_specification-next-state";
+window.ns3786_implementationIconId="ns3786_implementation-next-state";
+window.ns3786_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3787_toggledSpecification()" data-toggle="collapse" data-target="#ns3787_specification"><i id="ns3787_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3787_specification" class="collapse show" data-parent="#ns3787_accordion"><div class="card-body"><p class="card-text">Code a clouds game where the cursor is a pilot collecting coins.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3787_toggledImplementation()" data-toggle="collapse" data-target="#ns3787_implementation"><i id="ns3787_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3787_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3787_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-clouds pilot (coin))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//30.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3787_hackPrism = function(){
+if( window.ns3787_prismHacked ) return; 
+ window.ns3787_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3787_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3787_toggledSpecification = function(){
+window.ns3787_specificationShown  = ! window.ns3787_specificationShown;
+ window.ns3787_render();
+
+
+}
+
+window.ns3787_toggledImplementation = function(){
+window.ns3787_implementationShown  = ! window.ns3787_implementationShown;
+ window.ns3787_render();
+
+
+}
+
+window.ns3787_implementationNextState = function(){
+return  window.ns3787_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3787_specificationNextState = function(){
+return  window.ns3787_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3787_disintegrate = function(){
+window.ns3787_hackPrism (); 
+ var ns = document.querySelector(" #ns3787_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3787_render = function(){
+document.getElementById( window.ns3787_specificationIconId ) .className  =  window.ns3787_specificationNextState ();
+ document.getElementById( window.ns3787_implementationIconId ) .className =  window.ns3787_implementationNextState ();
+
+
+}
+
+window.ns3787_specificationShown=true;
+window.ns3787_implementationShown=true;
+window.ns3787_specificationIconId="ns3787_specification-next-state";
+window.ns3787_implementationIconId="ns3787_implementation-next-state";
+window.ns3787_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3788_toggledSpecification()" data-toggle="collapse" data-target="#ns3788_specification"><i id="ns3788_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3788_specification" class="collapse show" data-parent="#ns3788_accordion"><div class="card-body"><p class="card-text">Code a clouds game where the cursor is a bird collecting coins and fruits.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3788_toggledImplementation()" data-toggle="collapse" data-target="#ns3788_implementation"><i id="ns3788_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3788_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3788_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-clouds bird (coin fruit))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//31.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3788_hackPrism = function(){
+if( window.ns3788_prismHacked ) return; 
+ window.ns3788_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3788_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3788_toggledSpecification = function(){
+window.ns3788_specificationShown  = ! window.ns3788_specificationShown;
+ window.ns3788_render();
+
+
+}
+
+window.ns3788_toggledImplementation = function(){
+window.ns3788_implementationShown  = ! window.ns3788_implementationShown;
+ window.ns3788_render();
+
+
+}
+
+window.ns3788_implementationNextState = function(){
+return  window.ns3788_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3788_specificationNextState = function(){
+return  window.ns3788_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3788_disintegrate = function(){
+window.ns3788_hackPrism (); 
+ var ns = document.querySelector(" #ns3788_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3788_render = function(){
+document.getElementById( window.ns3788_specificationIconId ) .className  =  window.ns3788_specificationNextState ();
+ document.getElementById( window.ns3788_implementationIconId ) .className =  window.ns3788_implementationNextState ();
+
+
+}
+
+window.ns3788_specificationShown=true;
+window.ns3788_implementationShown=true;
+window.ns3788_specificationIconId="ns3788_specification-next-state";
+window.ns3788_implementationIconId="ns3788_implementation-next-state";
+window.ns3788_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3789_toggledSpecification()" data-toggle="collapse" data-target="#ns3789_specification"><i id="ns3789_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3789_specification" class="collapse show" data-parent="#ns3789_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a dragon collecting mushrooms and [choose-your-own-sprite].</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3789_toggledImplementation()" data-toggle="collapse" data-target="#ns3789_implementation"><i id="ns3789_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3789_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3789_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-fantasy dragon (mushroom rand))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//32.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3789_hackPrism = function(){
+if( window.ns3789_prismHacked ) return; 
+ window.ns3789_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3789_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3789_toggledSpecification = function(){
+window.ns3789_specificationShown  = ! window.ns3789_specificationShown;
+ window.ns3789_render();
+
+
+}
+
+window.ns3789_toggledImplementation = function(){
+window.ns3789_implementationShown  = ! window.ns3789_implementationShown;
+ window.ns3789_render();
+
+
+}
+
+window.ns3789_implementationNextState = function(){
+return  window.ns3789_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3789_specificationNextState = function(){
+return  window.ns3789_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3789_disintegrate = function(){
+window.ns3789_hackPrism (); 
+ var ns = document.querySelector(" #ns3789_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3789_render = function(){
+document.getElementById( window.ns3789_specificationIconId ) .className  =  window.ns3789_specificationNextState ();
+ document.getElementById( window.ns3789_implementationIconId ) .className =  window.ns3789_implementationNextState ();
+
+
+}
+
+window.ns3789_specificationShown=true;
+window.ns3789_implementationShown=true;
+window.ns3789_specificationIconId="ns3789_specification-next-state";
+window.ns3789_implementationIconId="ns3789_implementation-next-state";
+window.ns3789_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3790_toggledSpecification()" data-toggle="collapse" data-target="#ns3790_specification"><i id="ns3790_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3790_specification" class="collapse show" data-parent="#ns3790_accordion"><div class="card-body"><p class="card-text">Code a clouds game where the cursor is a [choose-your-own-sprite] collecting speed 4 fruits.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3790_toggledImplementation()" data-toggle="collapse" data-target="#ns3790_implementation"><i id="ns3790_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3790_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3790_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-clouds rand ((fruit 4)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//33.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3790_hackPrism = function(){
+if( window.ns3790_prismHacked ) return; 
+ window.ns3790_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3790_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3790_toggledSpecification = function(){
+window.ns3790_specificationShown  = ! window.ns3790_specificationShown;
+ window.ns3790_render();
+
+
+}
+
+window.ns3790_toggledImplementation = function(){
+window.ns3790_implementationShown  = ! window.ns3790_implementationShown;
+ window.ns3790_render();
+
+
+}
+
+window.ns3790_implementationNextState = function(){
+return  window.ns3790_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3790_specificationNextState = function(){
+return  window.ns3790_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3790_disintegrate = function(){
+window.ns3790_hackPrism (); 
+ var ns = document.querySelector(" #ns3790_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3790_render = function(){
+document.getElementById( window.ns3790_specificationIconId ) .className  =  window.ns3790_specificationNextState ();
+ document.getElementById( window.ns3790_implementationIconId ) .className =  window.ns3790_implementationNextState ();
+
+
+}
+
+window.ns3790_specificationShown=true;
+window.ns3790_implementationShown=true;
+window.ns3790_specificationIconId="ns3790_specification-next-state";
+window.ns3790_implementationIconId="ns3790_implementation-next-state";
+window.ns3790_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 006</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3791_toggledSpecification()" data-toggle="collapse" data-target="#ns3791_specification"><i id="ns3791_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3791_specification" class="collapse show" data-parent="#ns3791_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a mushroom collecting knights, dragons, and speed 1 pilots.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3791_toggledImplementation()" data-toggle="collapse" data-target="#ns3791_implementation"><i id="ns3791_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3791_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3791_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-fantasy
+  mushroom
+  (knight dragon (pilot 1)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//34.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3791_hackPrism = function(){
+if( window.ns3791_prismHacked ) return; 
+ window.ns3791_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3791_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3791_toggledSpecification = function(){
+window.ns3791_specificationShown  = ! window.ns3791_specificationShown;
+ window.ns3791_render();
+
+
+}
+
+window.ns3791_toggledImplementation = function(){
+window.ns3791_implementationShown  = ! window.ns3791_implementationShown;
+ window.ns3791_render();
+
+
+}
+
+window.ns3791_implementationNextState = function(){
+return  window.ns3791_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3791_specificationNextState = function(){
+return  window.ns3791_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3791_disintegrate = function(){
+window.ns3791_hackPrism (); 
+ var ns = document.querySelector(" #ns3791_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3791_render = function(){
+document.getElementById( window.ns3791_specificationIconId ) .className  =  window.ns3791_specificationNextState ();
+ document.getElementById( window.ns3791_implementationIconId ) .className =  window.ns3791_implementationNextState ();
+
+
+}
+
+window.ns3791_specificationShown=true;
+window.ns3791_implementationShown=true;
+window.ns3791_specificationIconId="ns3791_specification-next-state";
+window.ns3791_implementationIconId="ns3791_implementation-next-state";
+window.ns3791_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 007</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3792_toggledSpecification()" data-toggle="collapse" data-target="#ns3792_specification"><i id="ns3792_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3792_specification" class="collapse show" data-parent="#ns3792_accordion"><div class="card-body"><p class="card-text">Code a clouds game where the cursor is a [choose-your-own-sprite] collecting speed 1 fruits and speed 5 coins.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3792_toggledImplementation()" data-toggle="collapse" data-target="#ns3792_implementation"><i id="ns3792_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3792_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3792_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-clouds rand ((fruit 1) (coin 5)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//35.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3792_hackPrism = function(){
+if( window.ns3792_prismHacked ) return; 
+ window.ns3792_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3792_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3792_toggledSpecification = function(){
+window.ns3792_specificationShown  = ! window.ns3792_specificationShown;
+ window.ns3792_render();
+
+
+}
+
+window.ns3792_toggledImplementation = function(){
+window.ns3792_implementationShown  = ! window.ns3792_implementationShown;
+ window.ns3792_render();
+
+
+}
+
+window.ns3792_implementationNextState = function(){
+return  window.ns3792_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3792_specificationNextState = function(){
+return  window.ns3792_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3792_disintegrate = function(){
+window.ns3792_hackPrism (); 
+ var ns = document.querySelector(" #ns3792_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3792_render = function(){
+document.getElementById( window.ns3792_specificationIconId ) .className  =  window.ns3792_specificationNextState ();
+ document.getElementById( window.ns3792_implementationIconId ) .className =  window.ns3792_implementationNextState ();
+
+
+}
+
+window.ns3792_specificationShown=true;
+window.ns3792_implementationShown=true;
+window.ns3792_specificationIconId="ns3792_specification-next-state";
+window.ns3792_implementationIconId="ns3792_implementation-next-state";
+window.ns3792_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 008</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3793_toggledSpecification()" data-toggle="collapse" data-target="#ns3793_specification"><i id="ns3793_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3793_specification" class="collapse show" data-parent="#ns3793_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a bird collecting birds, birds, and birds.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3793_toggledImplementation()" data-toggle="collapse" data-target="#ns3793_implementation"><i id="ns3793_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3793_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3793_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-fantasy bird (bird bird bird))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//36.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3793_hackPrism = function(){
+if( window.ns3793_prismHacked ) return; 
+ window.ns3793_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3793_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3793_toggledSpecification = function(){
+window.ns3793_specificationShown  = ! window.ns3793_specificationShown;
+ window.ns3793_render();
+
+
+}
+
+window.ns3793_toggledImplementation = function(){
+window.ns3793_implementationShown  = ! window.ns3793_implementationShown;
+ window.ns3793_render();
+
+
+}
+
+window.ns3793_implementationNextState = function(){
+return  window.ns3793_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3793_specificationNextState = function(){
+return  window.ns3793_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3793_disintegrate = function(){
+window.ns3793_hackPrism (); 
+ var ns = document.querySelector(" #ns3793_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3793_render = function(){
+document.getElementById( window.ns3793_specificationIconId ) .className  =  window.ns3793_specificationNextState ();
+ document.getElementById( window.ns3793_implementationIconId ) .className =  window.ns3793_implementationNextState ();
+
+
+}
+
+window.ns3793_specificationShown=true;
+window.ns3793_implementationShown=true;
+window.ns3793_specificationIconId="ns3793_specification-next-state";
+window.ns3793_implementationIconId="ns3793_implementation-next-state";
+window.ns3793_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 009</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3794_toggledSpecification()" data-toggle="collapse" data-target="#ns3794_specification"><i id="ns3794_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3794_specification" class="collapse show" data-parent="#ns3794_accordion"><div class="card-body"><p class="card-text">Code a clouds game where the cursor is a fruit collecting [choose-your-own-sprite] and speed 5 [choose-your-own-sprite].</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3794_toggledImplementation()" data-toggle="collapse" data-target="#ns3794_implementation"><i id="ns3794_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3794_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3794_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-clouds fruit (rand (rand 5)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//37.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3794_hackPrism = function(){
+if( window.ns3794_prismHacked ) return; 
+ window.ns3794_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3794_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3794_toggledSpecification = function(){
+window.ns3794_specificationShown  = ! window.ns3794_specificationShown;
+ window.ns3794_render();
+
+
+}
+
+window.ns3794_toggledImplementation = function(){
+window.ns3794_implementationShown  = ! window.ns3794_implementationShown;
+ window.ns3794_render();
+
+
+}
+
+window.ns3794_implementationNextState = function(){
+return  window.ns3794_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3794_specificationNextState = function(){
+return  window.ns3794_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3794_disintegrate = function(){
+window.ns3794_hackPrism (); 
+ var ns = document.querySelector(" #ns3794_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3794_render = function(){
+document.getElementById( window.ns3794_specificationIconId ) .className  =  window.ns3794_specificationNextState ();
+ document.getElementById( window.ns3794_implementationIconId ) .className =  window.ns3794_implementationNextState ();
+
+
+}
+
+window.ns3794_specificationShown=true;
+window.ns3794_implementationShown=true;
+window.ns3794_specificationIconId="ns3794_specification-next-state";
+window.ns3794_implementationIconId="ns3794_implementation-next-state";
+window.ns3794_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Collect 010</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3795_toggledSpecification()" data-toggle="collapse" data-target="#ns3795_specification"><i id="ns3795_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3795_specification" class="collapse show" data-parent="#ns3795_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a knight collecting speed 5 mushrooms, speed 4 pilots, and speed 1 dragons.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3795_toggledImplementation()" data-toggle="collapse" data-target="#ns3795_implementation"><i id="ns3795_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3795_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3795_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-fantasy
+  knight
+  ((mushroom 5) (pilot 4) (dragon 1)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//38.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3795_hackPrism = function(){
+if( window.ns3795_prismHacked ) return; 
+ window.ns3795_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3795_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3795_toggledSpecification = function(){
+window.ns3795_specificationShown  = ! window.ns3795_specificationShown;
+ window.ns3795_render();
+
+
+}
+
+window.ns3795_toggledImplementation = function(){
+window.ns3795_implementationShown  = ! window.ns3795_implementationShown;
+ window.ns3795_render();
+
+
+}
+
+window.ns3795_implementationNextState = function(){
+return  window.ns3795_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3795_specificationNextState = function(){
+return  window.ns3795_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3795_disintegrate = function(){
+window.ns3795_hackPrism (); 
+ var ns = document.querySelector(" #ns3795_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3795_render = function(){
+document.getElementById( window.ns3795_specificationIconId ) .className  =  window.ns3795_specificationNextState ();
+ document.getElementById( window.ns3795_implementationIconId ) .className =  window.ns3795_implementationNextState ();
+
+
+}
+
+window.ns3795_specificationShown=true;
+window.ns3795_implementationShown=true;
+window.ns3795_specificationIconId="ns3795_specification-next-state";
+window.ns3795_implementationIconId="ns3795_implementation-next-state";
+window.ns3795_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 000</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3796_toggledSpecification()" data-toggle="collapse" data-target="#ns3796_specification"><i id="ns3796_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3796_specification" class="collapse show" data-parent="#ns3796_accordion"><div class="card-body"><p class="card-text">Code a simple game with no customizations.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3796_toggledImplementation()" data-toggle="collapse" data-target="#ns3796_implementation"><i id="ns3796_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3796_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3796_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-collect
+
+(start-fantasy)</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//39.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3796_hackPrism = function(){
+if( window.ns3796_prismHacked ) return; 
+ window.ns3796_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3796_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3796_toggledSpecification = function(){
+window.ns3796_specificationShown  = ! window.ns3796_specificationShown;
+ window.ns3796_render();
+
+
+}
+
+window.ns3796_toggledImplementation = function(){
+window.ns3796_implementationShown  = ! window.ns3796_implementationShown;
+ window.ns3796_render();
+
+
+}
+
+window.ns3796_implementationNextState = function(){
+return  window.ns3796_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3796_specificationNextState = function(){
+return  window.ns3796_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3796_disintegrate = function(){
+window.ns3796_hackPrism (); 
+ var ns = document.querySelector(" #ns3796_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3796_render = function(){
+document.getElementById( window.ns3796_specificationIconId ) .className  =  window.ns3796_specificationNextState ();
+ document.getElementById( window.ns3796_implementationIconId ) .className =  window.ns3796_implementationNextState ();
+
+
+}
+
+window.ns3796_specificationShown=true;
+window.ns3796_implementationShown=true;
+window.ns3796_specificationIconId="ns3796_specification-next-state";
+window.ns3796_implementationIconId="ns3796_implementation-next-state";
+window.ns3796_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3797_toggledSpecification()" data-toggle="collapse" data-target="#ns3797_specification"><i id="ns3797_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3797_specification" class="collapse show" data-parent="#ns3797_accordion"><div class="card-body"><p class="card-text">Code a space game where the cursor is a ufo collecting cows, and is avoiding meteors.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3797_toggledImplementation()" data-toggle="collapse" data-target="#ns3797_implementation"><i id="ns3797_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3797_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3797_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-space ufo (cow) (meteor))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//40.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3797_hackPrism = function(){
+if( window.ns3797_prismHacked ) return; 
+ window.ns3797_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3797_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3797_toggledSpecification = function(){
+window.ns3797_specificationShown  = ! window.ns3797_specificationShown;
+ window.ns3797_render();
+
+
+}
+
+window.ns3797_toggledImplementation = function(){
+window.ns3797_implementationShown  = ! window.ns3797_implementationShown;
+ window.ns3797_render();
+
+
+}
+
+window.ns3797_implementationNextState = function(){
+return  window.ns3797_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3797_specificationNextState = function(){
+return  window.ns3797_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3797_disintegrate = function(){
+window.ns3797_hackPrism (); 
+ var ns = document.querySelector(" #ns3797_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3797_render = function(){
+document.getElementById( window.ns3797_specificationIconId ) .className  =  window.ns3797_specificationNextState ();
+ document.getElementById( window.ns3797_implementationIconId ) .className =  window.ns3797_implementationNextState ();
+
+
+}
+
+window.ns3797_specificationShown=true;
+window.ns3797_implementationShown=true;
+window.ns3797_specificationIconId="ns3797_specification-next-state";
+window.ns3797_implementationIconId="ns3797_implementation-next-state";
+window.ns3797_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3798_toggledSpecification()" data-toggle="collapse" data-target="#ns3798_specification"><i id="ns3798_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3798_specification" class="collapse show" data-parent="#ns3798_accordion"><div class="card-body"><p class="card-text">Code a clouds game where the cursor is a pilot collecting aliens, and is avoiding zombies and humans.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3798_toggledImplementation()" data-toggle="collapse" data-target="#ns3798_implementation"><i id="ns3798_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3798_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3798_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-clouds pilot (alien) (zombie human))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//41.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3798_hackPrism = function(){
+if( window.ns3798_prismHacked ) return; 
+ window.ns3798_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3798_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3798_toggledSpecification = function(){
+window.ns3798_specificationShown  = ! window.ns3798_specificationShown;
+ window.ns3798_render();
+
+
+}
+
+window.ns3798_toggledImplementation = function(){
+window.ns3798_implementationShown  = ! window.ns3798_implementationShown;
+ window.ns3798_render();
+
+
+}
+
+window.ns3798_implementationNextState = function(){
+return  window.ns3798_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3798_specificationNextState = function(){
+return  window.ns3798_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3798_disintegrate = function(){
+window.ns3798_hackPrism (); 
+ var ns = document.querySelector(" #ns3798_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3798_render = function(){
+document.getElementById( window.ns3798_specificationIconId ) .className  =  window.ns3798_specificationNextState ();
+ document.getElementById( window.ns3798_implementationIconId ) .className =  window.ns3798_implementationNextState ();
+
+
+}
+
+window.ns3798_specificationShown=true;
+window.ns3798_implementationShown=true;
+window.ns3798_specificationIconId="ns3798_specification-next-state";
+window.ns3798_implementationIconId="ns3798_implementation-next-state";
+window.ns3798_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3799_toggledSpecification()" data-toggle="collapse" data-target="#ns3799_specification"><i id="ns3799_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3799_specification" class="collapse show" data-parent="#ns3799_accordion"><div class="card-body"><p class="card-text">Code a space game where the cursor is a dragon collecting fruits, and is avoiding speed 1 fruits.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3799_toggledImplementation()" data-toggle="collapse" data-target="#ns3799_implementation"><i id="ns3799_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3799_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3799_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-space dragon (fruit) ((fruit 1)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//42.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3799_hackPrism = function(){
+if( window.ns3799_prismHacked ) return; 
+ window.ns3799_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3799_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3799_toggledSpecification = function(){
+window.ns3799_specificationShown  = ! window.ns3799_specificationShown;
+ window.ns3799_render();
+
+
+}
+
+window.ns3799_toggledImplementation = function(){
+window.ns3799_implementationShown  = ! window.ns3799_implementationShown;
+ window.ns3799_render();
+
+
+}
+
+window.ns3799_implementationNextState = function(){
+return  window.ns3799_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3799_specificationNextState = function(){
+return  window.ns3799_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3799_disintegrate = function(){
+window.ns3799_hackPrism (); 
+ var ns = document.querySelector(" #ns3799_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3799_render = function(){
+document.getElementById( window.ns3799_specificationIconId ) .className  =  window.ns3799_specificationNextState ();
+ document.getElementById( window.ns3799_implementationIconId ) .className =  window.ns3799_implementationNextState ();
+
+
+}
+
+window.ns3799_specificationShown=true;
+window.ns3799_implementationShown=true;
+window.ns3799_specificationIconId="ns3799_specification-next-state";
+window.ns3799_implementationIconId="ns3799_implementation-next-state";
+window.ns3799_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3800_toggledSpecification()" data-toggle="collapse" data-target="#ns3800_specification"><i id="ns3800_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3800_specification" class="collapse show" data-parent="#ns3800_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a goblin collecting knights and speed 5 ufos, and is avoiding aliens and speed 5 pilots.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3800_toggledImplementation()" data-toggle="collapse" data-target="#ns3800_implementation"><i id="ns3800_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3800_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3800_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-fantasy
+  goblin
+  (knight (ufo 5))
+  (alien (pilot 5)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//43.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3800_hackPrism = function(){
+if( window.ns3800_prismHacked ) return; 
+ window.ns3800_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3800_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3800_toggledSpecification = function(){
+window.ns3800_specificationShown  = ! window.ns3800_specificationShown;
+ window.ns3800_render();
+
+
+}
+
+window.ns3800_toggledImplementation = function(){
+window.ns3800_implementationShown  = ! window.ns3800_implementationShown;
+ window.ns3800_render();
+
+
+}
+
+window.ns3800_implementationNextState = function(){
+return  window.ns3800_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3800_specificationNextState = function(){
+return  window.ns3800_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3800_disintegrate = function(){
+window.ns3800_hackPrism (); 
+ var ns = document.querySelector(" #ns3800_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3800_render = function(){
+document.getElementById( window.ns3800_specificationIconId ) .className  =  window.ns3800_specificationNextState ();
+ document.getElementById( window.ns3800_implementationIconId ) .className =  window.ns3800_implementationNextState ();
+
+
+}
+
+window.ns3800_specificationShown=true;
+window.ns3800_implementationShown=true;
+window.ns3800_specificationIconId="ns3800_specification-next-state";
+window.ns3800_implementationIconId="ns3800_implementation-next-state";
+window.ns3800_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3801_toggledSpecification()" data-toggle="collapse" data-target="#ns3801_specification"><i id="ns3801_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3801_specification" class="collapse show" data-parent="#ns3801_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a meteor collecting meteors, and is avoiding speed 1 meteors.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3801_toggledImplementation()" data-toggle="collapse" data-target="#ns3801_implementation"><i id="ns3801_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3801_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3801_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-fantasy meteor (meteor) ((meteor 1)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//44.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3801_hackPrism = function(){
+if( window.ns3801_prismHacked ) return; 
+ window.ns3801_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3801_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3801_toggledSpecification = function(){
+window.ns3801_specificationShown  = ! window.ns3801_specificationShown;
+ window.ns3801_render();
+
+
+}
+
+window.ns3801_toggledImplementation = function(){
+window.ns3801_implementationShown  = ! window.ns3801_implementationShown;
+ window.ns3801_render();
+
+
+}
+
+window.ns3801_implementationNextState = function(){
+return  window.ns3801_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3801_specificationNextState = function(){
+return  window.ns3801_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3801_disintegrate = function(){
+window.ns3801_hackPrism (); 
+ var ns = document.querySelector(" #ns3801_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3801_render = function(){
+document.getElementById( window.ns3801_specificationIconId ) .className  =  window.ns3801_specificationNextState ();
+ document.getElementById( window.ns3801_implementationIconId ) .className =  window.ns3801_implementationNextState ();
+
+
+}
+
+window.ns3801_specificationShown=true;
+window.ns3801_implementationShown=true;
+window.ns3801_specificationIconId="ns3801_specification-next-state";
+window.ns3801_implementationIconId="ns3801_implementation-next-state";
+window.ns3801_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 006</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3802_toggledSpecification()" data-toggle="collapse" data-target="#ns3802_specification"><i id="ns3802_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3802_specification" class="collapse show" data-parent="#ns3802_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a red knight collecting fruits and cows, and is avoiding goblins.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3802_toggledImplementation()" data-toggle="collapse" data-target="#ns3802_implementation"><i id="ns3802_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3802_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3802_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-fantasy (knight red) (fruit cow) (goblin))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//45.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3802_hackPrism = function(){
+if( window.ns3802_prismHacked ) return; 
+ window.ns3802_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3802_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3802_toggledSpecification = function(){
+window.ns3802_specificationShown  = ! window.ns3802_specificationShown;
+ window.ns3802_render();
+
+
+}
+
+window.ns3802_toggledImplementation = function(){
+window.ns3802_implementationShown  = ! window.ns3802_implementationShown;
+ window.ns3802_render();
+
+
+}
+
+window.ns3802_implementationNextState = function(){
+return  window.ns3802_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3802_specificationNextState = function(){
+return  window.ns3802_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3802_disintegrate = function(){
+window.ns3802_hackPrism (); 
+ var ns = document.querySelector(" #ns3802_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3802_render = function(){
+document.getElementById( window.ns3802_specificationIconId ) .className  =  window.ns3802_specificationNextState ();
+ document.getElementById( window.ns3802_implementationIconId ) .className =  window.ns3802_implementationNextState ();
+
+
+}
+
+window.ns3802_specificationShown=true;
+window.ns3802_implementationShown=true;
+window.ns3802_specificationIconId="ns3802_specification-next-state";
+window.ns3802_implementationIconId="ns3802_implementation-next-state";
+window.ns3802_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 007</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3803_toggledSpecification()" data-toggle="collapse" data-target="#ns3803_specification"><i id="ns3803_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3803_specification" class="collapse show" data-parent="#ns3803_accordion"><div class="card-body"><p class="card-text">Code a clouds game where the cursor is a dragon collecting green aliens, and is avoiding zombies and humans.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3803_toggledImplementation()" data-toggle="collapse" data-target="#ns3803_implementation"><i id="ns3803_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3803_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3803_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-clouds
+  dragon
+  ((alien green))
+  (zombie human))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//46.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3803_hackPrism = function(){
+if( window.ns3803_prismHacked ) return; 
+ window.ns3803_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3803_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3803_toggledSpecification = function(){
+window.ns3803_specificationShown  = ! window.ns3803_specificationShown;
+ window.ns3803_render();
+
+
+}
+
+window.ns3803_toggledImplementation = function(){
+window.ns3803_implementationShown  = ! window.ns3803_implementationShown;
+ window.ns3803_render();
+
+
+}
+
+window.ns3803_implementationNextState = function(){
+return  window.ns3803_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3803_specificationNextState = function(){
+return  window.ns3803_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3803_disintegrate = function(){
+window.ns3803_hackPrism (); 
+ var ns = document.querySelector(" #ns3803_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3803_render = function(){
+document.getElementById( window.ns3803_specificationIconId ) .className  =  window.ns3803_specificationNextState ();
+ document.getElementById( window.ns3803_implementationIconId ) .className =  window.ns3803_implementationNextState ();
+
+
+}
+
+window.ns3803_specificationShown=true;
+window.ns3803_implementationShown=true;
+window.ns3803_specificationIconId="ns3803_specification-next-state";
+window.ns3803_implementationIconId="ns3803_implementation-next-state";
+window.ns3803_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 008</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3804_toggledSpecification()" data-toggle="collapse" data-target="#ns3804_specification"><i id="ns3804_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3804_specification" class="collapse show" data-parent="#ns3804_accordion"><div class="card-body"><p class="card-text">Code a space game where the cursor is a [choose-your-own-sprite] collecting aliens, orange meteors, and pilots, and is avoiding cows, speed 1 zombies, and ufos.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3804_toggledImplementation()" data-toggle="collapse" data-target="#ns3804_implementation"><i id="ns3804_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3804_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3804_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-space
+  rand
+  (alien (meteor orange) pilot)
+  (cow (zombie 1) ufo))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//47.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3804_hackPrism = function(){
+if( window.ns3804_prismHacked ) return; 
+ window.ns3804_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3804_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3804_toggledSpecification = function(){
+window.ns3804_specificationShown  = ! window.ns3804_specificationShown;
+ window.ns3804_render();
+
+
+}
+
+window.ns3804_toggledImplementation = function(){
+window.ns3804_implementationShown  = ! window.ns3804_implementationShown;
+ window.ns3804_render();
+
+
+}
+
+window.ns3804_implementationNextState = function(){
+return  window.ns3804_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3804_specificationNextState = function(){
+return  window.ns3804_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3804_disintegrate = function(){
+window.ns3804_hackPrism (); 
+ var ns = document.querySelector(" #ns3804_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3804_render = function(){
+document.getElementById( window.ns3804_specificationIconId ) .className  =  window.ns3804_specificationNextState ();
+ document.getElementById( window.ns3804_implementationIconId ) .className =  window.ns3804_implementationNextState ();
+
+
+}
+
+window.ns3804_specificationShown=true;
+window.ns3804_implementationShown=true;
+window.ns3804_specificationIconId="ns3804_specification-next-state";
+window.ns3804_implementationIconId="ns3804_implementation-next-state";
+window.ns3804_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 009</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3805_toggledSpecification()" data-toggle="collapse" data-target="#ns3805_specification"><i id="ns3805_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3805_specification" class="collapse show" data-parent="#ns3805_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a goblin collecting yellow dragons and speed 5 [choose-your-own-sprite], and is avoiding speed 1 fruits and purple [choose-your-own-sprite].</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3805_toggledImplementation()" data-toggle="collapse" data-target="#ns3805_implementation"><i id="ns3805_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3805_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3805_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-fantasy
+  goblin
+  ((dragon yellow) (rand 5))
+  ((fruit 1) (rand purple)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//48.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3805_hackPrism = function(){
+if( window.ns3805_prismHacked ) return; 
+ window.ns3805_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3805_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3805_toggledSpecification = function(){
+window.ns3805_specificationShown  = ! window.ns3805_specificationShown;
+ window.ns3805_render();
+
+
+}
+
+window.ns3805_toggledImplementation = function(){
+window.ns3805_implementationShown  = ! window.ns3805_implementationShown;
+ window.ns3805_render();
+
+
+}
+
+window.ns3805_implementationNextState = function(){
+return  window.ns3805_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3805_specificationNextState = function(){
+return  window.ns3805_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3805_disintegrate = function(){
+window.ns3805_hackPrism (); 
+ var ns = document.querySelector(" #ns3805_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3805_render = function(){
+document.getElementById( window.ns3805_specificationIconId ) .className  =  window.ns3805_specificationNextState ();
+ document.getElementById( window.ns3805_implementationIconId ) .className =  window.ns3805_implementationNextState ();
+
+
+}
+
+window.ns3805_specificationShown=true;
+window.ns3805_implementationShown=true;
+window.ns3805_specificationIconId="ns3805_specification-next-state";
+window.ns3805_implementationIconId="ns3805_implementation-next-state";
+window.ns3805_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Avoid 010</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3806_toggledSpecification()" data-toggle="collapse" data-target="#ns3806_specification"><i id="ns3806_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3806_specification" class="collapse show" data-parent="#ns3806_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a blue knight collecting green knights, and is avoiding red knights.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3806_toggledImplementation()" data-toggle="collapse" data-target="#ns3806_implementation"><i id="ns3806_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3806_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3806_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-avoid
+
+(start-fantasy
+  (knight blue)
+  ((knight green))
+  ((knight red)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//49.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3806_hackPrism = function(){
+if( window.ns3806_prismHacked ) return; 
+ window.ns3806_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3806_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3806_toggledSpecification = function(){
+window.ns3806_specificationShown  = ! window.ns3806_specificationShown;
+ window.ns3806_render();
+
+
+}
+
+window.ns3806_toggledImplementation = function(){
+window.ns3806_implementationShown  = ! window.ns3806_implementationShown;
+ window.ns3806_render();
+
+
+}
+
+window.ns3806_implementationNextState = function(){
+return  window.ns3806_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3806_specificationNextState = function(){
+return  window.ns3806_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3806_disintegrate = function(){
+window.ns3806_hackPrism (); 
+ var ns = document.querySelector(" #ns3806_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3806_render = function(){
+document.getElementById( window.ns3806_specificationIconId ) .className  =  window.ns3806_specificationNextState ();
+ document.getElementById( window.ns3806_implementationIconId ) .className =  window.ns3806_implementationNextState ();
+
+
+}
+
+window.ns3806_specificationShown=true;
+window.ns3806_implementationShown=true;
+window.ns3806_specificationIconId="ns3806_specification-next-state";
+window.ns3806_implementationIconId="ns3806_implementation-next-state";
+window.ns3806_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 001</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3807_toggledSpecification()" data-toggle="collapse" data-target="#ns3807_specification"><i id="ns3807_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3807_specification" class="collapse show" data-parent="#ns3807_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a dragon collecting coins, and is avoiding ninjas, and can get special ice powers.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3807_toggledImplementation()" data-toggle="collapse" data-target="#ns3807_implementation"><i id="ns3807_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3807_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3807_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-fantasy dragon (coin) (ninja) (ice-power))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//50.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3807_hackPrism = function(){
+if( window.ns3807_prismHacked ) return; 
+ window.ns3807_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3807_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3807_toggledSpecification = function(){
+window.ns3807_specificationShown  = ! window.ns3807_specificationShown;
+ window.ns3807_render();
+
+
+}
+
+window.ns3807_toggledImplementation = function(){
+window.ns3807_implementationShown  = ! window.ns3807_implementationShown;
+ window.ns3807_render();
+
+
+}
+
+window.ns3807_implementationNextState = function(){
+return  window.ns3807_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3807_specificationNextState = function(){
+return  window.ns3807_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3807_disintegrate = function(){
+window.ns3807_hackPrism (); 
+ var ns = document.querySelector(" #ns3807_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3807_render = function(){
+document.getElementById( window.ns3807_specificationIconId ) .className  =  window.ns3807_specificationNextState ();
+ document.getElementById( window.ns3807_implementationIconId ) .className =  window.ns3807_implementationNextState ();
+
+
+}
+
+window.ns3807_specificationShown=true;
+window.ns3807_implementationShown=true;
+window.ns3807_specificationIconId="ns3807_specification-next-state";
+window.ns3807_implementationIconId="ns3807_implementation-next-state";
+window.ns3807_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 002</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3808_toggledSpecification()" data-toggle="collapse" data-target="#ns3808_specification"><i id="ns3808_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3808_specification" class="collapse show" data-parent="#ns3808_accordion"><div class="card-body"><p class="card-text">Code a space game where the cursor is a spaceship collecting coins and purple gems, and is avoiding red meteors, and can get special turtle powers.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3808_toggledImplementation()" data-toggle="collapse" data-target="#ns3808_implementation"><i id="ns3808_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3808_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3808_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-space
+  spaceship
+  (coin (gem purple))
+  ((meteor red))
+  (turtle-power))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//51.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3808_hackPrism = function(){
+if( window.ns3808_prismHacked ) return; 
+ window.ns3808_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3808_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3808_toggledSpecification = function(){
+window.ns3808_specificationShown  = ! window.ns3808_specificationShown;
+ window.ns3808_render();
+
+
+}
+
+window.ns3808_toggledImplementation = function(){
+window.ns3808_implementationShown  = ! window.ns3808_implementationShown;
+ window.ns3808_render();
+
+
+}
+
+window.ns3808_implementationNextState = function(){
+return  window.ns3808_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3808_specificationNextState = function(){
+return  window.ns3808_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3808_disintegrate = function(){
+window.ns3808_hackPrism (); 
+ var ns = document.querySelector(" #ns3808_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3808_render = function(){
+document.getElementById( window.ns3808_specificationIconId ) .className  =  window.ns3808_specificationNextState ();
+ document.getElementById( window.ns3808_implementationIconId ) .className =  window.ns3808_implementationNextState ();
+
+
+}
+
+window.ns3808_specificationShown=true;
+window.ns3808_implementationShown=true;
+window.ns3808_specificationIconId="ns3808_specification-next-state";
+window.ns3808_implementationIconId="ns3808_implementation-next-state";
+window.ns3808_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 003</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3809_toggledSpecification()" data-toggle="collapse" data-target="#ns3809_specification"><i id="ns3809_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3809_specification" class="collapse show" data-parent="#ns3809_accordion"><div class="card-body"><p class="card-text">Code a clouds game where the cursor is a zombie collecting knights and aliens, and is avoiding speed 3 red knights and speed 1 orange aliens, and can get special light powers.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3809_toggledImplementation()" data-toggle="collapse" data-target="#ns3809_implementation"><i id="ns3809_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3809_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3809_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-clouds
+  zombie
+  (knight alien)
+  ((knight 3 red) (alien 1 orange))
+  (light-power))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//52.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3809_hackPrism = function(){
+if( window.ns3809_prismHacked ) return; 
+ window.ns3809_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3809_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3809_toggledSpecification = function(){
+window.ns3809_specificationShown  = ! window.ns3809_specificationShown;
+ window.ns3809_render();
+
+
+}
+
+window.ns3809_toggledImplementation = function(){
+window.ns3809_implementationShown  = ! window.ns3809_implementationShown;
+ window.ns3809_render();
+
+
+}
+
+window.ns3809_implementationNextState = function(){
+return  window.ns3809_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3809_specificationNextState = function(){
+return  window.ns3809_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3809_disintegrate = function(){
+window.ns3809_hackPrism (); 
+ var ns = document.querySelector(" #ns3809_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3809_render = function(){
+document.getElementById( window.ns3809_specificationIconId ) .className  =  window.ns3809_specificationNextState ();
+ document.getElementById( window.ns3809_implementationIconId ) .className =  window.ns3809_implementationNextState ();
+
+
+}
+
+window.ns3809_specificationShown=true;
+window.ns3809_implementationShown=true;
+window.ns3809_specificationIconId="ns3809_specification-next-state";
+window.ns3809_implementationIconId="ns3809_implementation-next-state";
+window.ns3809_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 004</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3810_toggledSpecification()" data-toggle="collapse" data-target="#ns3810_specification"><i id="ns3810_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3810_specification" class="collapse show" data-parent="#ns3810_accordion"><div class="card-body"><p class="card-text">Code a space game where the cursor is an alien collecting green ninjas and blue coins, and is avoiding meteors, and can get special 200-point gems.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3810_toggledImplementation()" data-toggle="collapse" data-target="#ns3810_implementation"><i id="ns3810_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3810_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3810_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-space
+  alien
+  ((ninja green) (coin blue))
+  (meteor)
+  ((gem 200)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//53.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3810_hackPrism = function(){
+if( window.ns3810_prismHacked ) return; 
+ window.ns3810_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3810_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3810_toggledSpecification = function(){
+window.ns3810_specificationShown  = ! window.ns3810_specificationShown;
+ window.ns3810_render();
+
+
+}
+
+window.ns3810_toggledImplementation = function(){
+window.ns3810_implementationShown  = ! window.ns3810_implementationShown;
+ window.ns3810_render();
+
+
+}
+
+window.ns3810_implementationNextState = function(){
+return  window.ns3810_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3810_specificationNextState = function(){
+return  window.ns3810_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3810_disintegrate = function(){
+window.ns3810_hackPrism (); 
+ var ns = document.querySelector(" #ns3810_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3810_render = function(){
+document.getElementById( window.ns3810_specificationIconId ) .className  =  window.ns3810_specificationNextState ();
+ document.getElementById( window.ns3810_implementationIconId ) .className =  window.ns3810_implementationNextState ();
+
+
+}
+
+window.ns3810_specificationShown=true;
+window.ns3810_implementationShown=true;
+window.ns3810_specificationIconId="ns3810_specification-next-state";
+window.ns3810_implementationIconId="ns3810_implementation-next-state";
+window.ns3810_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 005</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3811_toggledSpecification()" data-toggle="collapse" data-target="#ns3811_specification"><i id="ns3811_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3811_specification" class="collapse show" data-parent="#ns3811_accordion"><div class="card-body"><p class="card-text">Code a fantasy game where the cursor is a spaceship collecting red gems and speed 4 zombies, and is avoiding speed 1 yellow knights and dragons, and can get special 200-point purple coins.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3811_toggledImplementation()" data-toggle="collapse" data-target="#ns3811_implementation"><i id="ns3811_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3811_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3811_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-fantasy
+  spaceship
+  ((gem red) (zombie 4))
+  ((knight 1 yellow) dragon)
+  ((coin 200 purple)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//54.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3811_hackPrism = function(){
+if( window.ns3811_prismHacked ) return; 
+ window.ns3811_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3811_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3811_toggledSpecification = function(){
+window.ns3811_specificationShown  = ! window.ns3811_specificationShown;
+ window.ns3811_render();
+
+
+}
+
+window.ns3811_toggledImplementation = function(){
+window.ns3811_implementationShown  = ! window.ns3811_implementationShown;
+ window.ns3811_render();
+
+
+}
+
+window.ns3811_implementationNextState = function(){
+return  window.ns3811_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3811_specificationNextState = function(){
+return  window.ns3811_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3811_disintegrate = function(){
+window.ns3811_hackPrism (); 
+ var ns = document.querySelector(" #ns3811_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3811_render = function(){
+document.getElementById( window.ns3811_specificationIconId ) .className  =  window.ns3811_specificationNextState ();
+ document.getElementById( window.ns3811_implementationIconId ) .className =  window.ns3811_implementationNextState ();
+
+
+}
+
+window.ns3811_specificationShown=true;
+window.ns3811_implementationShown=true;
+window.ns3811_specificationIconId="ns3811_specification-next-state";
+window.ns3811_implementationIconId="ns3811_implementation-next-state";
+window.ns3811_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 006</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3812_toggledSpecification()" data-toggle="collapse" data-target="#ns3812_specification"><i id="ns3812_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3812_specification" class="collapse show" data-parent="#ns3812_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) where the cursor is an alien collecting coins and gems, and is avoiding ninjas; 2) where the cursor is an alien collecting orange coins and speed 4 gems, and is avoiding speed 5 red ninjas, and can get special ice powers.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3812_toggledImplementation()" data-toggle="collapse" data-target="#ns3812_implementation"><i id="ns3812_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3812_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3812_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-clouds alien (coin gem) (ninja))
+
+(start-clouds
+  alien
+  ((coin orange) (gem 4))
+  ((ninja 5 red))
+  (ice-power))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//55.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3812_hackPrism = function(){
+if( window.ns3812_prismHacked ) return; 
+ window.ns3812_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3812_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3812_toggledSpecification = function(){
+window.ns3812_specificationShown  = ! window.ns3812_specificationShown;
+ window.ns3812_render();
+
+
+}
+
+window.ns3812_toggledImplementation = function(){
+window.ns3812_implementationShown  = ! window.ns3812_implementationShown;
+ window.ns3812_render();
+
+
+}
+
+window.ns3812_implementationNextState = function(){
+return  window.ns3812_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3812_specificationNextState = function(){
+return  window.ns3812_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3812_disintegrate = function(){
+window.ns3812_hackPrism (); 
+ var ns = document.querySelector(" #ns3812_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3812_render = function(){
+document.getElementById( window.ns3812_specificationIconId ) .className  =  window.ns3812_specificationNextState ();
+ document.getElementById( window.ns3812_implementationIconId ) .className =  window.ns3812_implementationNextState ();
+
+
+}
+
+window.ns3812_specificationShown=true;
+window.ns3812_implementationShown=true;
+window.ns3812_specificationIconId="ns3812_specification-next-state";
+window.ns3812_implementationIconId="ns3812_implementation-next-state";
+window.ns3812_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 007</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3813_toggledSpecification()" data-toggle="collapse" data-target="#ns3813_specification"><i id="ns3813_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3813_specification" class="collapse show" data-parent="#ns3813_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) where the cursor is a knight collecting coins, and is avoiding speed 1 zombies; 2) where the cursor is a knight collecting speed 3 green gems, and is avoiding speed 3 red spaceships, and can get special light powers; 3) where the cursor is a knight collecting speed 5 coins, and is avoiding speed 5 spaceships and speed 5 zombies, and can get special 300-point gems.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3813_toggledImplementation()" data-toggle="collapse" data-target="#ns3813_implementation"><i id="ns3813_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3813_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3813_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-fantasy knight (coin) ((zombie 1)))
+
+(start-clouds
+  knight
+  ((gem 3 green))
+  ((spaceship 3 red))
+  (light-power))
+
+(start-space
+  knight
+  ((coin 5))
+  ((spaceship 5) (zombie 5))
+  ((gem 300)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//56.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3813_hackPrism = function(){
+if( window.ns3813_prismHacked ) return; 
+ window.ns3813_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3813_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3813_toggledSpecification = function(){
+window.ns3813_specificationShown  = ! window.ns3813_specificationShown;
+ window.ns3813_render();
+
+
+}
+
+window.ns3813_toggledImplementation = function(){
+window.ns3813_implementationShown  = ! window.ns3813_implementationShown;
+ window.ns3813_render();
+
+
+}
+
+window.ns3813_implementationNextState = function(){
+return  window.ns3813_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3813_specificationNextState = function(){
+return  window.ns3813_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3813_disintegrate = function(){
+window.ns3813_hackPrism (); 
+ var ns = document.querySelector(" #ns3813_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3813_render = function(){
+document.getElementById( window.ns3813_specificationIconId ) .className  =  window.ns3813_specificationNextState ();
+ document.getElementById( window.ns3813_implementationIconId ) .className =  window.ns3813_implementationNextState ();
+
+
+}
+
+window.ns3813_specificationShown=true;
+window.ns3813_implementationShown=true;
+window.ns3813_specificationIconId="ns3813_specification-next-state";
+window.ns3813_implementationIconId="ns3813_implementation-next-state";
+window.ns3813_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 008</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3814_toggledSpecification()" data-toggle="collapse" data-target="#ns3814_specification"><i id="ns3814_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3814_specification" class="collapse show" data-parent="#ns3814_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) where the cursor is a coin collecting knights and dragons, and is avoiding meteors, and can get special ice powers; 2) where the cursor is a coin collecting speed 5 yellow knights, and is avoiding speed 5 red ninjas and speed 5 red zombies, and can get special turtle powers and 300-point dragons.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3814_toggledImplementation()" data-toggle="collapse" data-target="#ns3814_implementation"><i id="ns3814_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3814_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3814_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-space
+  coin
+  (knight dragon)
+  (meteor)
+  (ice-power))
+
+(start-clouds
+  coin
+  ((knight 5 yellow))
+  ((ninja 5 red) (zombie 5 red))
+  (turtle-power (dragon 300)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//57.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3814_hackPrism = function(){
+if( window.ns3814_prismHacked ) return; 
+ window.ns3814_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3814_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3814_toggledSpecification = function(){
+window.ns3814_specificationShown  = ! window.ns3814_specificationShown;
+ window.ns3814_render();
+
+
+}
+
+window.ns3814_toggledImplementation = function(){
+window.ns3814_implementationShown  = ! window.ns3814_implementationShown;
+ window.ns3814_render();
+
+
+}
+
+window.ns3814_implementationNextState = function(){
+return  window.ns3814_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3814_specificationNextState = function(){
+return  window.ns3814_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3814_disintegrate = function(){
+window.ns3814_hackPrism (); 
+ var ns = document.querySelector(" #ns3814_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3814_render = function(){
+document.getElementById( window.ns3814_specificationIconId ) .className  =  window.ns3814_specificationNextState ();
+ document.getElementById( window.ns3814_implementationIconId ) .className =  window.ns3814_implementationNextState ();
+
+
+}
+
+window.ns3814_specificationShown=true;
+window.ns3814_implementationShown=true;
+window.ns3814_specificationIconId="ns3814_specification-next-state";
+window.ns3814_implementationIconId="ns3814_implementation-next-state";
+window.ns3814_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Clicker Special 009</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3815_toggledSpecification()" data-toggle="collapse" data-target="#ns3815_specification"><i id="ns3815_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3815_specification" class="collapse show" data-parent="#ns3815_accordion"><div class="card-body"><p class="card-text">Code a game with multiple levels: 1) where the cursor is a knight collecting speed 1 blue coins, and is avoiding zombies, and can get special light powers; 2) where the cursor is a dragon collecting speed 3 purple coins, and is avoiding speed 3 ninjas and speed 3 zombies, and can get special turtle powers and 5-point light powers; 3) where the cursor is an orange spaceship collecting speed 5 coins, and is avoiding speed 5 ninjas, speed 5 meteors, and speed 5 zombies, and can get special ice powers, light powers, and 500-point gems.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3815_toggledImplementation()" data-toggle="collapse" data-target="#ns3815_implementation"><i id="ns3815_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3815_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3815_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">#lang clicker-cartoon-special
+
+(start-fantasy
+  knight
+  ((coin 1 blue))
+  (zombie)
+  (light-power))
+
+(start-fantasy
+  dragon
+  ((coin 3 purple))
+  ((ninja 3) (zombie 3))
+  (turtle-power (light-power 5)))
+
+(start-fantasy
+  (spaceship orange)
+  ((coin 5))
+  ((ninja 5) (meteor 5) (zombie 5))
+  (ice-power light-power (gem 500)))</code></pre><h5>In Ratchet:</h5><img src="/mc-languages//58.png" /></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3815_hackPrism = function(){
+if( window.ns3815_prismHacked ) return; 
+ window.ns3815_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3815_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3815_toggledSpecification = function(){
+window.ns3815_specificationShown  = ! window.ns3815_specificationShown;
+ window.ns3815_render();
+
+
+}
+
+window.ns3815_toggledImplementation = function(){
+window.ns3815_implementationShown  = ! window.ns3815_implementationShown;
+ window.ns3815_render();
+
+
+}
+
+window.ns3815_implementationNextState = function(){
+return  window.ns3815_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3815_specificationNextState = function(){
+return  window.ns3815_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3815_disintegrate = function(){
+window.ns3815_hackPrism (); 
+ var ns = document.querySelector(" #ns3815_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3815_render = function(){
+document.getElementById( window.ns3815_specificationIconId ) .className  =  window.ns3815_specificationNextState ();
+ document.getElementById( window.ns3815_implementationIconId ) .className =  window.ns3815_implementationNextState ();
+
+
+}
+
+window.ns3815_specificationShown=true;
+window.ns3815_implementationShown=true;
+window.ns3815_specificationIconId="ns3815_specification-next-state";
+window.ns3815_implementationIconId="ns3815_implementation-next-state";
+window.ns3815_prismHacked=false;
+
+//]]>
+</script></div><div class="tab-pane fade p-3" id="documentation" class="p-3"><iframe src="/mc-languages/clicker-cartoon-doc/clicker-cartoon-doc.html" frameborder="0" scrolling="no" onload="var t = this;setInterval(function(){resizeIframe(t)},1000);" style="width:100%; border: none;"></iframe></div></div></div><script src="/mc-languages/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script></body></html>

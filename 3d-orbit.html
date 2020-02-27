@@ -1,0 +1,2409 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><script>
+//<![CDATA[
+function preloadSupported() {
+  var relList = document.createElement('link').relList;
+  return !!(relList && relList.supports && relList.supports('preload'));
+}
+//]]>
+</script><script async="" src="/mc-languages/js/modernizr-custom.js"></script><link rel="stylesheet" type="text/css" href="/mc-languages/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-brands.min.css" /><link rel="stylesheet" type="text/css" href="/mc-languages/css/fontawesome-solid.min.css" /><script>
+//<![CDATA[
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+//]]>
+</script><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script></head><body><script src="/mc-languages/js/jquery-3.4.1.min.js"></script><script async="" src="/mc-languages/js/moment.min.js"></script><div class="container"><h2>#lang 3d-orbit</h2><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header">About this Language</div><div class="card-body"><p>Use this language to create 3D space scenes to explore!</p><ul><li>Customize stars and planets with textures, rings, and more.</li><li>Create soloar systems with orbiting planets, moons and asteroids!</li><li>Add 3D models into your space scene!</li><li>Let your imagination run wild!</li></ul></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header">To Install</div><div class="card-body"><p>Package Source: <b>https://github.com/thoughtstem/TS-VR-Languages.git?path=3d-orbit</b></p><p>Need a reminder how to install a package? Check out <a href="https://youtu.be/nGaB3t__y4s"><b>this video tutorial.</b></a></p></div></div></div></div><br /><ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#translations">Translations</a></li><li class="nav-item"><a class="nav-link" data-toggle="tab" href="#documentation">Documentation</a></li></ul><div class="tab-content"><div class="tab-pane fade show active p-3" id="translations" class="p-3"><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3568_toggledSpecification()" data-toggle="collapse" data-target="#ns3568_specification"><i id="ns3568_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3568_specification" class="collapse show" data-parent="#ns3568_accordion"><div class="card-body"><p class="card-text">Code a basic orbit scene.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3568_toggledImplementation()" data-toggle="collapse" data-target="#ns3568_implementation"><i id="ns3568_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3568_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3568_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(orbit-scene)</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3568_hackPrism = function(){
+if( window.ns3568_prismHacked ) return; 
+ window.ns3568_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3568_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3568_toggledSpecification = function(){
+window.ns3568_specificationShown  = ! window.ns3568_specificationShown;
+ window.ns3568_render();
+
+
+}
+
+window.ns3568_toggledImplementation = function(){
+window.ns3568_implementationShown  = ! window.ns3568_implementationShown;
+ window.ns3568_render();
+
+
+}
+
+window.ns3568_implementationNextState = function(){
+return  window.ns3568_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3568_specificationNextState = function(){
+return  window.ns3568_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3568_disintegrate = function(){
+window.ns3568_hackPrism (); 
+ var ns = document.querySelector(" #ns3568_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3568_render = function(){
+document.getElementById( window.ns3568_specificationIconId ) .className  =  window.ns3568_specificationNextState ();
+ document.getElementById( window.ns3568_implementationIconId ) .className =  window.ns3568_implementationNextState ();
+
+
+}
+
+window.ns3568_specificationShown=true;
+window.ns3568_implementationShown=true;
+window.ns3568_specificationIconId="ns3568_specification-next-state";
+window.ns3568_implementationIconId="ns3568_implementation-next-state";
+window.ns3568_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Hello World 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3569_toggledSpecification()" data-toggle="collapse" data-target="#ns3569_specification"><i id="ns3569_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3569_specification" class="collapse show" data-parent="#ns3569_accordion"><div class="card-body"><p class="card-text">Code a basic orbit scene.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3569_toggledImplementation()" data-toggle="collapse" data-target="#ns3569_implementation"><i id="ns3569_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3569_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3569_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(orbit-scene)</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3569_hackPrism = function(){
+if( window.ns3569_prismHacked ) return; 
+ window.ns3569_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3569_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3569_toggledSpecification = function(){
+window.ns3569_specificationShown  = ! window.ns3569_specificationShown;
+ window.ns3569_render();
+
+
+}
+
+window.ns3569_toggledImplementation = function(){
+window.ns3569_implementationShown  = ! window.ns3569_implementationShown;
+ window.ns3569_render();
+
+
+}
+
+window.ns3569_implementationNextState = function(){
+return  window.ns3569_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3569_specificationNextState = function(){
+return  window.ns3569_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3569_disintegrate = function(){
+window.ns3569_hackPrism (); 
+ var ns = document.querySelector(" #ns3569_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3569_render = function(){
+document.getElementById( window.ns3569_specificationIconId ) .className  =  window.ns3569_specificationNextState ();
+ document.getElementById( window.ns3569_implementationIconId ) .className =  window.ns3569_implementationNextState ();
+
+
+}
+
+window.ns3569_specificationShown=true;
+window.ns3569_implementationShown=true;
+window.ns3569_specificationIconId="ns3569_specification-next-state";
+window.ns3569_implementationIconId="ns3569_implementation-next-state";
+window.ns3569_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Moon And Ring 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3570_toggledSpecification()" data-toggle="collapse" data-target="#ns3570_specification"><i id="ns3570_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3570_specification" class="collapse show" data-parent="#ns3570_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and a planet with a moon.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3570_toggledImplementation()" data-toggle="collapse" data-target="#ns3570_implementation"><i id="ns3570_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3570_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3570_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define planet-with-moon
+ (basic-planet
+  #:moons-list (list
+                (basic-moon))))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list (list
+                        planet-with-moon)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3570_hackPrism = function(){
+if( window.ns3570_prismHacked ) return; 
+ window.ns3570_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3570_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3570_toggledSpecification = function(){
+window.ns3570_specificationShown  = ! window.ns3570_specificationShown;
+ window.ns3570_render();
+
+
+}
+
+window.ns3570_toggledImplementation = function(){
+window.ns3570_implementationShown  = ! window.ns3570_implementationShown;
+ window.ns3570_render();
+
+
+}
+
+window.ns3570_implementationNextState = function(){
+return  window.ns3570_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3570_specificationNextState = function(){
+return  window.ns3570_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3570_disintegrate = function(){
+window.ns3570_hackPrism (); 
+ var ns = document.querySelector(" #ns3570_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3570_render = function(){
+document.getElementById( window.ns3570_specificationIconId ) .className  =  window.ns3570_specificationNextState ();
+ document.getElementById( window.ns3570_implementationIconId ) .className =  window.ns3570_implementationNextState ();
+
+
+}
+
+window.ns3570_specificationShown=true;
+window.ns3570_implementationShown=true;
+window.ns3570_specificationIconId="ns3570_specification-next-state";
+window.ns3570_implementationIconId="ns3570_implementation-next-state";
+window.ns3570_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Moon And Ring 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3571_toggledSpecification()" data-toggle="collapse" data-target="#ns3571_specification"><i id="ns3571_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3571_specification" class="collapse show" data-parent="#ns3571_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with two moons, a planet, and a star. The moons and the planet should have a visible orbit path.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3571_toggledImplementation()" data-toggle="collapse" data-target="#ns3571_implementation"><i id="ns3571_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3571_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3571_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-moons
+ (list (basic-moon)
+       (basic-moon)))
+
+(define the-planet
+ (basic-planet
+  #:show-orbits? #t
+  #:moons-list my-moons))
+
+(orbit-scene
+#:star (basic-star
+        #:show-orbits? #t
+        #:planets-list (list
+                        the-planet)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3571_hackPrism = function(){
+if( window.ns3571_prismHacked ) return; 
+ window.ns3571_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3571_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3571_toggledSpecification = function(){
+window.ns3571_specificationShown  = ! window.ns3571_specificationShown;
+ window.ns3571_render();
+
+
+}
+
+window.ns3571_toggledImplementation = function(){
+window.ns3571_implementationShown  = ! window.ns3571_implementationShown;
+ window.ns3571_render();
+
+
+}
+
+window.ns3571_implementationNextState = function(){
+return  window.ns3571_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3571_specificationNextState = function(){
+return  window.ns3571_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3571_disintegrate = function(){
+window.ns3571_hackPrism (); 
+ var ns = document.querySelector(" #ns3571_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3571_render = function(){
+document.getElementById( window.ns3571_specificationIconId ) .className  =  window.ns3571_specificationNextState ();
+ document.getElementById( window.ns3571_implementationIconId ) .className =  window.ns3571_implementationNextState ();
+
+
+}
+
+window.ns3571_specificationShown=true;
+window.ns3571_implementationShown=true;
+window.ns3571_specificationIconId="ns3571_specification-next-state";
+window.ns3571_implementationIconId="ns3571_implementation-next-state";
+window.ns3571_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Moon And Ring 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3572_toggledSpecification()" data-toggle="collapse" data-target="#ns3572_specification"><i id="ns3572_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3572_specification" class="collapse show" data-parent="#ns3572_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and a planet with two moons. Show the orbit paths for the moons and planet.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3572_toggledImplementation()" data-toggle="collapse" data-target="#ns3572_implementation"><i id="ns3572_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3572_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3572_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-moons
+ (list (basic-moon
+        #:texture sun-tex
+        #:scale 2)
+       (basic-moon
+        #:label &quot;This moon grows!&quot;
+        #:on-mouse-enter (do-many
+                          (scale 2))
+        #:on-mouse-leave (do-many
+                          (scale 1)))))
+
+(orbit-scene
+#:star (basic-star
+        #:animations-list '()
+        #:planets-list (list
+                        (basic-planet
+                         #:moons-list my-moons))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3572_hackPrism = function(){
+if( window.ns3572_prismHacked ) return; 
+ window.ns3572_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3572_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3572_toggledSpecification = function(){
+window.ns3572_specificationShown  = ! window.ns3572_specificationShown;
+ window.ns3572_render();
+
+
+}
+
+window.ns3572_toggledImplementation = function(){
+window.ns3572_implementationShown  = ! window.ns3572_implementationShown;
+ window.ns3572_render();
+
+
+}
+
+window.ns3572_implementationNextState = function(){
+return  window.ns3572_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3572_specificationNextState = function(){
+return  window.ns3572_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3572_disintegrate = function(){
+window.ns3572_hackPrism (); 
+ var ns = document.querySelector(" #ns3572_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3572_render = function(){
+document.getElementById( window.ns3572_specificationIconId ) .className  =  window.ns3572_specificationNextState ();
+ document.getElementById( window.ns3572_implementationIconId ) .className =  window.ns3572_implementationNextState ();
+
+
+}
+
+window.ns3572_specificationShown=true;
+window.ns3572_implementationShown=true;
+window.ns3572_specificationIconId="ns3572_specification-next-state";
+window.ns3572_implementationIconId="ns3572_implementation-next-state";
+window.ns3572_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Moon And Ring 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3573_toggledSpecification()" data-toggle="collapse" data-target="#ns3573_specification"><i id="ns3573_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3573_specification" class="collapse show" data-parent="#ns3573_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and a ringed planet.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3573_toggledImplementation()" data-toggle="collapse" data-target="#ns3573_implementation"><i id="ns3573_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3573_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3573_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define planet-with-ring
+ (basic-planet
+  #:rings-list (list
+                (basic-ring))))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list (list
+                        planet-with-ring)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3573_hackPrism = function(){
+if( window.ns3573_prismHacked ) return; 
+ window.ns3573_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3573_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3573_toggledSpecification = function(){
+window.ns3573_specificationShown  = ! window.ns3573_specificationShown;
+ window.ns3573_render();
+
+
+}
+
+window.ns3573_toggledImplementation = function(){
+window.ns3573_implementationShown  = ! window.ns3573_implementationShown;
+ window.ns3573_render();
+
+
+}
+
+window.ns3573_implementationNextState = function(){
+return  window.ns3573_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3573_specificationNextState = function(){
+return  window.ns3573_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3573_disintegrate = function(){
+window.ns3573_hackPrism (); 
+ var ns = document.querySelector(" #ns3573_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3573_render = function(){
+document.getElementById( window.ns3573_specificationIconId ) .className  =  window.ns3573_specificationNextState ();
+ document.getElementById( window.ns3573_implementationIconId ) .className =  window.ns3573_implementationNextState ();
+
+
+}
+
+window.ns3573_specificationShown=true;
+window.ns3573_implementationShown=true;
+window.ns3573_specificationIconId="ns3573_specification-next-state";
+window.ns3573_implementationIconId="ns3573_implementation-next-state";
+window.ns3573_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Moon And Ring 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3574_toggledSpecification()" data-toggle="collapse" data-target="#ns3574_specification"><i id="ns3574_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3574_specification" class="collapse show" data-parent="#ns3574_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and a planet with two rings. Customize the color and opacity of one ring and the texture and tilt of the other ring.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3574_toggledImplementation()" data-toggle="collapse" data-target="#ns3574_implementation"><i id="ns3574_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3574_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3574_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-rings
+ (list
+  (basic-ring
+   #:color 'red
+   #:opacity 0.8)
+  (basic-ring
+   #:texture saturnring-tex
+   #:tilt (tilt 90 0 90))))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list (list
+                        (basic-planet
+                         #:rings-list my-rings))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3574_hackPrism = function(){
+if( window.ns3574_prismHacked ) return; 
+ window.ns3574_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3574_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3574_toggledSpecification = function(){
+window.ns3574_specificationShown  = ! window.ns3574_specificationShown;
+ window.ns3574_render();
+
+
+}
+
+window.ns3574_toggledImplementation = function(){
+window.ns3574_implementationShown  = ! window.ns3574_implementationShown;
+ window.ns3574_render();
+
+
+}
+
+window.ns3574_implementationNextState = function(){
+return  window.ns3574_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3574_specificationNextState = function(){
+return  window.ns3574_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3574_disintegrate = function(){
+window.ns3574_hackPrism (); 
+ var ns = document.querySelector(" #ns3574_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3574_render = function(){
+document.getElementById( window.ns3574_specificationIconId ) .className  =  window.ns3574_specificationNextState ();
+ document.getElementById( window.ns3574_implementationIconId ) .className =  window.ns3574_implementationNextState ();
+
+
+}
+
+window.ns3574_specificationShown=true;
+window.ns3574_implementationShown=true;
+window.ns3574_specificationIconId="ns3574_specification-next-state";
+window.ns3574_implementationIconId="ns3574_implementation-next-state";
+window.ns3574_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Orbit 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3575_toggledSpecification()" data-toggle="collapse" data-target="#ns3575_specification"><i id="ns3575_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3575_specification" class="collapse show" data-parent="#ns3575_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star in the center and where you fly faster.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3575_toggledImplementation()" data-toggle="collapse" data-target="#ns3575_implementation"><i id="ns3575_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3575_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3575_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(orbit-scene
+#:fly-speed 1000
+#:star (basic-star))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3575_hackPrism = function(){
+if( window.ns3575_prismHacked ) return; 
+ window.ns3575_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3575_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3575_toggledSpecification = function(){
+window.ns3575_specificationShown  = ! window.ns3575_specificationShown;
+ window.ns3575_render();
+
+
+}
+
+window.ns3575_toggledImplementation = function(){
+window.ns3575_implementationShown  = ! window.ns3575_implementationShown;
+ window.ns3575_render();
+
+
+}
+
+window.ns3575_implementationNextState = function(){
+return  window.ns3575_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3575_specificationNextState = function(){
+return  window.ns3575_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3575_disintegrate = function(){
+window.ns3575_hackPrism (); 
+ var ns = document.querySelector(" #ns3575_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3575_render = function(){
+document.getElementById( window.ns3575_specificationIconId ) .className  =  window.ns3575_specificationNextState ();
+ document.getElementById( window.ns3575_implementationIconId ) .className =  window.ns3575_implementationNextState ();
+
+
+}
+
+window.ns3575_specificationShown=true;
+window.ns3575_implementationShown=true;
+window.ns3575_specificationIconId="ns3575_specification-next-state";
+window.ns3575_implementationIconId="ns3575_implementation-next-state";
+window.ns3575_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Orbit 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3576_toggledSpecification()" data-toggle="collapse" data-target="#ns3576_specification"><i id="ns3576_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3576_specification" class="collapse show" data-parent="#ns3576_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and different-colored universe and stars.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3576_toggledImplementation()" data-toggle="collapse" data-target="#ns3576_implementation"><i id="ns3576_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3576_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3576_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-universe
+ (basic-universe
+  #:universe-color 'blue
+  #:star-color 'orange))
+
+(orbit-scene
+#:universe my-universe
+#:star (basic-star))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3576_hackPrism = function(){
+if( window.ns3576_prismHacked ) return; 
+ window.ns3576_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3576_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3576_toggledSpecification = function(){
+window.ns3576_specificationShown  = ! window.ns3576_specificationShown;
+ window.ns3576_render();
+
+
+}
+
+window.ns3576_toggledImplementation = function(){
+window.ns3576_implementationShown  = ! window.ns3576_implementationShown;
+ window.ns3576_render();
+
+
+}
+
+window.ns3576_implementationNextState = function(){
+return  window.ns3576_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3576_specificationNextState = function(){
+return  window.ns3576_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3576_disintegrate = function(){
+window.ns3576_hackPrism (); 
+ var ns = document.querySelector(" #ns3576_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3576_render = function(){
+document.getElementById( window.ns3576_specificationIconId ) .className  =  window.ns3576_specificationNextState ();
+ document.getElementById( window.ns3576_implementationIconId ) .className =  window.ns3576_implementationNextState ();
+
+
+}
+
+window.ns3576_specificationShown=true;
+window.ns3576_implementationShown=true;
+window.ns3576_specificationIconId="ns3576_specification-next-state";
+window.ns3576_implementationIconId="ns3576_implementation-next-state";
+window.ns3576_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Orbit 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3577_toggledSpecification()" data-toggle="collapse" data-target="#ns3577_specification"><i id="ns3577_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3577_specification" class="collapse show" data-parent="#ns3577_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and large dragon stars.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3577_toggledImplementation()" data-toggle="collapse" data-target="#ns3577_implementation"><i id="ns3577_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3577_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3577_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define dragon-universe
+ (basic-universe
+  #:star-size 4
+  #:star-texture dragon-image))
+
+(orbit-scene
+#:universe dragon-universe
+#:star (basic-star))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3577_hackPrism = function(){
+if( window.ns3577_prismHacked ) return; 
+ window.ns3577_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3577_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3577_toggledSpecification = function(){
+window.ns3577_specificationShown  = ! window.ns3577_specificationShown;
+ window.ns3577_render();
+
+
+}
+
+window.ns3577_toggledImplementation = function(){
+window.ns3577_implementationShown  = ! window.ns3577_implementationShown;
+ window.ns3577_render();
+
+
+}
+
+window.ns3577_implementationNextState = function(){
+return  window.ns3577_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3577_specificationNextState = function(){
+return  window.ns3577_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3577_disintegrate = function(){
+window.ns3577_hackPrism (); 
+ var ns = document.querySelector(" #ns3577_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3577_render = function(){
+document.getElementById( window.ns3577_specificationIconId ) .className  =  window.ns3577_specificationNextState ();
+ document.getElementById( window.ns3577_implementationIconId ) .className =  window.ns3577_implementationNextState ();
+
+
+}
+
+window.ns3577_specificationShown=true;
+window.ns3577_implementationShown=true;
+window.ns3577_specificationIconId="ns3577_specification-next-state";
+window.ns3577_implementationIconId="ns3577_implementation-next-state";
+window.ns3577_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Orbit 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3578_toggledSpecification()" data-toggle="collapse" data-target="#ns3578_specification"><i id="ns3578_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3578_specification" class="collapse show" data-parent="#ns3578_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a large star center. Move your starting position back.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3578_toggledImplementation()" data-toggle="collapse" data-target="#ns3578_implementation"><i id="ns3578_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3578_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3578_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(orbit-scene
+#:start-position (position 0 0 100)
+#:star (basic-star
+        #:radius 20))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3578_hackPrism = function(){
+if( window.ns3578_prismHacked ) return; 
+ window.ns3578_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3578_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3578_toggledSpecification = function(){
+window.ns3578_specificationShown  = ! window.ns3578_specificationShown;
+ window.ns3578_render();
+
+
+}
+
+window.ns3578_toggledImplementation = function(){
+window.ns3578_implementationShown  = ! window.ns3578_implementationShown;
+ window.ns3578_render();
+
+
+}
+
+window.ns3578_implementationNextState = function(){
+return  window.ns3578_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3578_specificationNextState = function(){
+return  window.ns3578_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3578_disintegrate = function(){
+window.ns3578_hackPrism (); 
+ var ns = document.querySelector(" #ns3578_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3578_render = function(){
+document.getElementById( window.ns3578_specificationIconId ) .className  =  window.ns3578_specificationNextState ();
+ document.getElementById( window.ns3578_implementationIconId ) .className =  window.ns3578_implementationNextState ();
+
+
+}
+
+window.ns3578_specificationShown=true;
+window.ns3578_implementationShown=true;
+window.ns3578_specificationIconId="ns3578_specification-next-state";
+window.ns3578_implementationIconId="ns3578_implementation-next-state";
+window.ns3578_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Space Objects 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3579_toggledSpecification()" data-toggle="collapse" data-target="#ns3579_specification"><i id="ns3579_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3579_specification" class="collapse show" data-parent="#ns3579_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center. Add three asteroids and customize each.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3579_toggledImplementation()" data-toggle="collapse" data-target="#ns3579_implementation"><i id="ns3579_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3579_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3579_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define asteroids-list
+ (list (basic-asteroid
+        #:color 'red)
+       (basic-asteroid
+        #:opacity 0.7)
+       (basic-asteroid
+        #:label &quot;Big Rock&quot;)))
+
+(orbit-scene
+#:star (basic-star)
+#:objects-list asteroids-list)</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3579_hackPrism = function(){
+if( window.ns3579_prismHacked ) return; 
+ window.ns3579_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3579_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3579_toggledSpecification = function(){
+window.ns3579_specificationShown  = ! window.ns3579_specificationShown;
+ window.ns3579_render();
+
+
+}
+
+window.ns3579_toggledImplementation = function(){
+window.ns3579_implementationShown  = ! window.ns3579_implementationShown;
+ window.ns3579_render();
+
+
+}
+
+window.ns3579_implementationNextState = function(){
+return  window.ns3579_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3579_specificationNextState = function(){
+return  window.ns3579_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3579_disintegrate = function(){
+window.ns3579_hackPrism (); 
+ var ns = document.querySelector(" #ns3579_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3579_render = function(){
+document.getElementById( window.ns3579_specificationIconId ) .className  =  window.ns3579_specificationNextState ();
+ document.getElementById( window.ns3579_implementationIconId ) .className =  window.ns3579_implementationNextState ();
+
+
+}
+
+window.ns3579_specificationShown=true;
+window.ns3579_implementationShown=true;
+window.ns3579_specificationIconId="ns3579_specification-next-state";
+window.ns3579_implementationIconId="ns3579_implementation-next-state";
+window.ns3579_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Space Objects 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3580_toggledSpecification()" data-toggle="collapse" data-target="#ns3580_specification"><i id="ns3580_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3580_specification" class="collapse show" data-parent="#ns3580_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and three orbiting asteroids. Customize each asteroid.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3580_toggledImplementation()" data-toggle="collapse" data-target="#ns3580_implementation"><i id="ns3580_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3580_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3580_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define asteroids-list
+ (list
+  (basic-asteroid
+   #:texture mars-tex)
+  (basic-asteroid
+   #:radius 0.5)
+  (basic-asteroid
+   #:on-mouse-click (do-many
+                     (opacity 0)))))
+
+(orbit-scene
+#:star (basic-star
+        #:objects-list asteroids-list))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3580_hackPrism = function(){
+if( window.ns3580_prismHacked ) return; 
+ window.ns3580_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3580_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3580_toggledSpecification = function(){
+window.ns3580_specificationShown  = ! window.ns3580_specificationShown;
+ window.ns3580_render();
+
+
+}
+
+window.ns3580_toggledImplementation = function(){
+window.ns3580_implementationShown  = ! window.ns3580_implementationShown;
+ window.ns3580_render();
+
+
+}
+
+window.ns3580_implementationNextState = function(){
+return  window.ns3580_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3580_specificationNextState = function(){
+return  window.ns3580_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3580_disintegrate = function(){
+window.ns3580_hackPrism (); 
+ var ns = document.querySelector(" #ns3580_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3580_render = function(){
+document.getElementById( window.ns3580_specificationIconId ) .className  =  window.ns3580_specificationNextState ();
+ document.getElementById( window.ns3580_implementationIconId ) .className =  window.ns3580_implementationNextState ();
+
+
+}
+
+window.ns3580_specificationShown=true;
+window.ns3580_implementationShown=true;
+window.ns3580_specificationIconId="ns3580_specification-next-state";
+window.ns3580_implementationIconId="ns3580_implementation-next-state";
+window.ns3580_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Space Objects 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3581_toggledSpecification()" data-toggle="collapse" data-target="#ns3581_specification"><i id="ns3581_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3581_specification" class="collapse show" data-parent="#ns3581_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and a planet. Give the planet three orbiting objects: a moon, an asteroid, and an astronaut.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3581_toggledImplementation()" data-toggle="collapse" data-target="#ns3581_implementation"><i id="ns3581_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3581_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3581_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-planet
+ (basic-planet
+  #:objects-list (list
+                  (basic-moon)
+                  (basic-asteroid)
+                  astronaut)))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list (list
+                        my-planet)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3581_hackPrism = function(){
+if( window.ns3581_prismHacked ) return; 
+ window.ns3581_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3581_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3581_toggledSpecification = function(){
+window.ns3581_specificationShown  = ! window.ns3581_specificationShown;
+ window.ns3581_render();
+
+
+}
+
+window.ns3581_toggledImplementation = function(){
+window.ns3581_implementationShown  = ! window.ns3581_implementationShown;
+ window.ns3581_render();
+
+
+}
+
+window.ns3581_implementationNextState = function(){
+return  window.ns3581_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3581_specificationNextState = function(){
+return  window.ns3581_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3581_disintegrate = function(){
+window.ns3581_hackPrism (); 
+ var ns = document.querySelector(" #ns3581_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3581_render = function(){
+document.getElementById( window.ns3581_specificationIconId ) .className  =  window.ns3581_specificationNextState ();
+ document.getElementById( window.ns3581_implementationIconId ) .className =  window.ns3581_implementationNextState ();
+
+
+}
+
+window.ns3581_specificationShown=true;
+window.ns3581_implementationShown=true;
+window.ns3581_specificationIconId="ns3581_specification-next-state";
+window.ns3581_implementationIconId="ns3581_implementation-next-state";
+window.ns3581_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Space Objects 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3582_toggledSpecification()" data-toggle="collapse" data-target="#ns3582_specification"><i id="ns3582_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3582_specification" class="collapse show" data-parent="#ns3582_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center and a planet. Give the planet a small satellite.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3582_toggledImplementation()" data-toggle="collapse" data-target="#ns3582_implementation"><i id="ns3582_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3582_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3582_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-planet
+ (basic-planet
+  #:objects-list (list
+                  (scale-object 0.5 satellite-1))))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list (list
+                        my-planet)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3582_hackPrism = function(){
+if( window.ns3582_prismHacked ) return; 
+ window.ns3582_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3582_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3582_toggledSpecification = function(){
+window.ns3582_specificationShown  = ! window.ns3582_specificationShown;
+ window.ns3582_render();
+
+
+}
+
+window.ns3582_toggledImplementation = function(){
+window.ns3582_implementationShown  = ! window.ns3582_implementationShown;
+ window.ns3582_render();
+
+
+}
+
+window.ns3582_implementationNextState = function(){
+return  window.ns3582_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3582_specificationNextState = function(){
+return  window.ns3582_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3582_disintegrate = function(){
+window.ns3582_hackPrism (); 
+ var ns = document.querySelector(" #ns3582_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3582_render = function(){
+document.getElementById( window.ns3582_specificationIconId ) .className  =  window.ns3582_specificationNextState ();
+ document.getElementById( window.ns3582_implementationIconId ) .className =  window.ns3582_implementationNextState ();
+
+
+}
+
+window.ns3582_specificationShown=true;
+window.ns3582_implementationShown=true;
+window.ns3582_specificationIconId="ns3582_specification-next-state";
+window.ns3582_implementationIconId="ns3582_implementation-next-state";
+window.ns3582_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Space Objects 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3583_toggledSpecification()" data-toggle="collapse" data-target="#ns3583_specification"><i id="ns3583_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3583_specification" class="collapse show" data-parent="#ns3583_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center which has an orbiting planet, which has an orbiting moon, which has an orbiting flying saucer.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3583_toggledImplementation()" data-toggle="collapse" data-target="#ns3583_implementation"><i id="ns3583_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3583_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3583_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-moon
+ (basic-moon
+  #:objects-list (list
+                 flying-saucer-1)))
+
+(define my-planet
+ (basic-planet
+  #:moons-list (list my-moon)))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list (list my-planet)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3583_hackPrism = function(){
+if( window.ns3583_prismHacked ) return; 
+ window.ns3583_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3583_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3583_toggledSpecification = function(){
+window.ns3583_specificationShown  = ! window.ns3583_specificationShown;
+ window.ns3583_render();
+
+
+}
+
+window.ns3583_toggledImplementation = function(){
+window.ns3583_implementationShown  = ! window.ns3583_implementationShown;
+ window.ns3583_render();
+
+
+}
+
+window.ns3583_implementationNextState = function(){
+return  window.ns3583_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3583_specificationNextState = function(){
+return  window.ns3583_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3583_disintegrate = function(){
+window.ns3583_hackPrism (); 
+ var ns = document.querySelector(" #ns3583_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3583_render = function(){
+document.getElementById( window.ns3583_specificationIconId ) .className  =  window.ns3583_specificationNextState ();
+ document.getElementById( window.ns3583_implementationIconId ) .className =  window.ns3583_implementationNextState ();
+
+
+}
+
+window.ns3583_specificationShown=true;
+window.ns3583_implementationShown=true;
+window.ns3583_specificationIconId="ns3583_specification-next-state";
+window.ns3583_implementationIconId="ns3583_implementation-next-state";
+window.ns3583_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star And Planet 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3584_toggledSpecification()" data-toggle="collapse" data-target="#ns3584_specification"><i id="ns3584_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3584_specification" class="collapse show" data-parent="#ns3584_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a planet rotating around a star center.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3584_toggledImplementation()" data-toggle="collapse" data-target="#ns3584_implementation"><i id="ns3584_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3584_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3584_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(orbit-scene
+#:star (basic-star
+        #:planets-list (list
+                        (basic-planet))))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3584_hackPrism = function(){
+if( window.ns3584_prismHacked ) return; 
+ window.ns3584_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3584_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3584_toggledSpecification = function(){
+window.ns3584_specificationShown  = ! window.ns3584_specificationShown;
+ window.ns3584_render();
+
+
+}
+
+window.ns3584_toggledImplementation = function(){
+window.ns3584_implementationShown  = ! window.ns3584_implementationShown;
+ window.ns3584_render();
+
+
+}
+
+window.ns3584_implementationNextState = function(){
+return  window.ns3584_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3584_specificationNextState = function(){
+return  window.ns3584_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3584_disintegrate = function(){
+window.ns3584_hackPrism (); 
+ var ns = document.querySelector(" #ns3584_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3584_render = function(){
+document.getElementById( window.ns3584_specificationIconId ) .className  =  window.ns3584_specificationNextState ();
+ document.getElementById( window.ns3584_implementationIconId ) .className =  window.ns3584_implementationNextState ();
+
+
+}
+
+window.ns3584_specificationShown=true;
+window.ns3584_implementationShown=true;
+window.ns3584_specificationIconId="ns3584_specification-next-state";
+window.ns3584_implementationIconId="ns3584_implementation-next-state";
+window.ns3584_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star And Planet 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3585_toggledSpecification()" data-toggle="collapse" data-target="#ns3585_specification"><i id="ns3585_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3585_specification" class="collapse show" data-parent="#ns3585_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a planet rotating around a star center. Customize the radius, opacity, and color of the planet and star.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3585_toggledImplementation()" data-toggle="collapse" data-target="#ns3585_implementation"><i id="ns3585_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3585_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3585_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-planet
+ (basic-planet
+  #:radius 5
+  #:opacity 0.8
+  #:color 'blue))
+
+(define my-star
+ (basic-star
+  #:radius 5
+  #:opacity 0.8
+  #:color 'yellow
+  #:planets-list (list
+                  my-planet)))
+
+(orbit-scene
+#:star my-star)</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3585_hackPrism = function(){
+if( window.ns3585_prismHacked ) return; 
+ window.ns3585_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3585_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3585_toggledSpecification = function(){
+window.ns3585_specificationShown  = ! window.ns3585_specificationShown;
+ window.ns3585_render();
+
+
+}
+
+window.ns3585_toggledImplementation = function(){
+window.ns3585_implementationShown  = ! window.ns3585_implementationShown;
+ window.ns3585_render();
+
+
+}
+
+window.ns3585_implementationNextState = function(){
+return  window.ns3585_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3585_specificationNextState = function(){
+return  window.ns3585_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3585_disintegrate = function(){
+window.ns3585_hackPrism (); 
+ var ns = document.querySelector(" #ns3585_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3585_render = function(){
+document.getElementById( window.ns3585_specificationIconId ) .className  =  window.ns3585_specificationNextState ();
+ document.getElementById( window.ns3585_implementationIconId ) .className =  window.ns3585_implementationNextState ();
+
+
+}
+
+window.ns3585_specificationShown=true;
+window.ns3585_implementationShown=true;
+window.ns3585_specificationIconId="ns3585_specification-next-state";
+window.ns3585_implementationIconId="ns3585_implementation-next-state";
+window.ns3585_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star And Planet 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3586_toggledSpecification()" data-toggle="collapse" data-target="#ns3586_specification"><i id="ns3586_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3586_specification" class="collapse show" data-parent="#ns3586_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a star center. Change the star's opacity when clicked. Add a planet whose texture changes when you look directly at it.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3586_toggledImplementation()" data-toggle="collapse" data-target="#ns3586_implementation"><i id="ns3586_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3586_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3586_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define changing-planet
+ (basic-planet
+  #:texture jupiter-tex
+  #:on-mouse-enter (do-many
+                    (texture mars-tex))
+  #:on-mouse-leave (do-many
+                    (texture jupiter-tex))))
+
+(orbit-scene
+#:star (basic-star
+        #:texture sun-tex
+        #:on-mouse-click (do-many
+                          (opacity 0.1))
+        #:planets-list (list
+                        changing-planet)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3586_hackPrism = function(){
+if( window.ns3586_prismHacked ) return; 
+ window.ns3586_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3586_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3586_toggledSpecification = function(){
+window.ns3586_specificationShown  = ! window.ns3586_specificationShown;
+ window.ns3586_render();
+
+
+}
+
+window.ns3586_toggledImplementation = function(){
+window.ns3586_implementationShown  = ! window.ns3586_implementationShown;
+ window.ns3586_render();
+
+
+}
+
+window.ns3586_implementationNextState = function(){
+return  window.ns3586_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3586_specificationNextState = function(){
+return  window.ns3586_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3586_disintegrate = function(){
+window.ns3586_hackPrism (); 
+ var ns = document.querySelector(" #ns3586_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3586_render = function(){
+document.getElementById( window.ns3586_specificationIconId ) .className  =  window.ns3586_specificationNextState ();
+ document.getElementById( window.ns3586_implementationIconId ) .className =  window.ns3586_implementationNextState ();
+
+
+}
+
+window.ns3586_specificationShown=true;
+window.ns3586_implementationShown=true;
+window.ns3586_specificationIconId="ns3586_specification-next-state";
+window.ns3586_implementationIconId="ns3586_implementation-next-state";
+window.ns3586_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star And Planet 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3587_toggledSpecification()" data-toggle="collapse" data-target="#ns3587_specification"><i id="ns3587_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3587_specification" class="collapse show" data-parent="#ns3587_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a non-moving Sun center. Add an Earth planet which rotates on the y-axis. Add a custom label to both.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3587_toggledImplementation()" data-toggle="collapse" data-target="#ns3587_implementation"><i id="ns3587_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3587_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3587_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-planet
+ (basic-planet
+  #:label &quot;Earth&quot;
+  #:label-color 'blue
+  #:texture earth-tex
+  #:animations-list (list
+                     (y-rotation))))
+
+(orbit-scene
+#:star (basic-star
+        #:animations-list '()
+        #:label &quot;Sol&quot;
+        #:label-color 'orange
+        #:texture sun-tex
+        #:planets-list (list
+                        my-planet)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3587_hackPrism = function(){
+if( window.ns3587_prismHacked ) return; 
+ window.ns3587_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3587_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3587_toggledSpecification = function(){
+window.ns3587_specificationShown  = ! window.ns3587_specificationShown;
+ window.ns3587_render();
+
+
+}
+
+window.ns3587_toggledImplementation = function(){
+window.ns3587_implementationShown  = ! window.ns3587_implementationShown;
+ window.ns3587_render();
+
+
+}
+
+window.ns3587_implementationNextState = function(){
+return  window.ns3587_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3587_specificationNextState = function(){
+return  window.ns3587_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3587_disintegrate = function(){
+window.ns3587_hackPrism (); 
+ var ns = document.querySelector(" #ns3587_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3587_render = function(){
+document.getElementById( window.ns3587_specificationIconId ) .className  =  window.ns3587_specificationNextState ();
+ document.getElementById( window.ns3587_implementationIconId ) .className =  window.ns3587_implementationNextState ();
+
+
+}
+
+window.ns3587_specificationShown=true;
+window.ns3587_implementationShown=true;
+window.ns3587_specificationIconId="ns3587_specification-next-state";
+window.ns3587_implementationIconId="ns3587_implementation-next-state";
+window.ns3587_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star And Planet 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3588_toggledSpecification()" data-toggle="collapse" data-target="#ns3588_specification"><i id="ns3588_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3588_specification" class="collapse show" data-parent="#ns3588_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with Earth and Sun to scale. Customize Earth's position and show the orbit path.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3588_toggledImplementation()" data-toggle="collapse" data-target="#ns3588_implementation"><i id="ns3588_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3588_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3588_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define the-earth
+ (planet-earth
+  #:position (position 230 0 0)))
+
+(orbit-scene
+#:star (star-sun
+        #:show-orbits? #t
+        #:planets-list (list
+                        the-earth)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3588_hackPrism = function(){
+if( window.ns3588_prismHacked ) return; 
+ window.ns3588_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3588_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3588_toggledSpecification = function(){
+window.ns3588_specificationShown  = ! window.ns3588_specificationShown;
+ window.ns3588_render();
+
+
+}
+
+window.ns3588_toggledImplementation = function(){
+window.ns3588_implementationShown  = ! window.ns3588_implementationShown;
+ window.ns3588_render();
+
+
+}
+
+window.ns3588_implementationNextState = function(){
+return  window.ns3588_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3588_specificationNextState = function(){
+return  window.ns3588_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3588_disintegrate = function(){
+window.ns3588_hackPrism (); 
+ var ns = document.querySelector(" #ns3588_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3588_render = function(){
+document.getElementById( window.ns3588_specificationIconId ) .className  =  window.ns3588_specificationNextState ();
+ document.getElementById( window.ns3588_implementationIconId ) .className =  window.ns3588_implementationNextState ();
+
+
+}
+
+window.ns3588_specificationShown=true;
+window.ns3588_implementationShown=true;
+window.ns3588_specificationIconId="ns3588_specification-next-state";
+window.ns3588_implementationIconId="ns3588_implementation-next-state";
+window.ns3588_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star System 1</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3589_toggledSpecification()" data-toggle="collapse" data-target="#ns3589_specification"><i id="ns3589_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3589_specification" class="collapse show" data-parent="#ns3589_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with the Sun and our first 3 planets. Use the appropriate textures, add labels, and give Earth a moon.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3589_toggledImplementation()" data-toggle="collapse" data-target="#ns3589_implementation"><i id="ns3589_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3589_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3589_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define the-moon
+ (basic-moon
+  #:texture moon-tex
+  #:label &quot;Luna&quot;))
+
+(define my-planets
+ (list
+  (basic-planet #:texture mercury-tex
+                #:label &quot;Mercury&quot;)
+  (basic-planet #:texture venus-tex
+                #:label &quot;Venus&quot;)
+  (basic-planet #:texture earth-tex
+                #:label &quot;Earth&quot;
+                #:moons-list (list the-moon))))
+
+(orbit-scene
+#:star (basic-star
+        #:texture sun-tex
+        #:label &quot;Sol&quot;
+        #:planets-list my-planets))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3589_hackPrism = function(){
+if( window.ns3589_prismHacked ) return; 
+ window.ns3589_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3589_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3589_toggledSpecification = function(){
+window.ns3589_specificationShown  = ! window.ns3589_specificationShown;
+ window.ns3589_render();
+
+
+}
+
+window.ns3589_toggledImplementation = function(){
+window.ns3589_implementationShown  = ! window.ns3589_implementationShown;
+ window.ns3589_render();
+
+
+}
+
+window.ns3589_implementationNextState = function(){
+return  window.ns3589_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3589_specificationNextState = function(){
+return  window.ns3589_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3589_disintegrate = function(){
+window.ns3589_hackPrism (); 
+ var ns = document.querySelector(" #ns3589_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3589_render = function(){
+document.getElementById( window.ns3589_specificationIconId ) .className  =  window.ns3589_specificationNextState ();
+ document.getElementById( window.ns3589_implementationIconId ) .className =  window.ns3589_implementationNextState ();
+
+
+}
+
+window.ns3589_specificationShown=true;
+window.ns3589_implementationShown=true;
+window.ns3589_specificationIconId="ns3589_specification-next-state";
+window.ns3589_implementationIconId="ns3589_implementation-next-state";
+window.ns3589_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star System 2</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3590_toggledSpecification()" data-toggle="collapse" data-target="#ns3590_specification"><i id="ns3590_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3590_specification" class="collapse show" data-parent="#ns3590_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with the Sun, Jupiter, and Saturn. Use the appropriate textures, add labels, and give Saturn a ring.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3590_toggledImplementation()" data-toggle="collapse" data-target="#ns3590_implementation"><i id="ns3590_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3590_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3590_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define the-ring
+ (basic-ring #:tilt (tilt 90 0 0)
+             #:texture saturnring-tex
+             #:radius 2
+             #:thickness 0.5))
+
+(define my-planets
+ (list
+  (basic-planet #:texture jupiter-tex
+                #:label &quot;Jupiter&quot;)
+  (basic-planet #:texture saturn-tex
+                #:label &quot;Saturn&quot;
+                #:rings-list (list the-ring))))
+
+(orbit-scene
+#:star (basic-star
+        #:texture sun-tex
+        #:label &quot;Sol&quot;
+        #:planets-list my-planets))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3590_hackPrism = function(){
+if( window.ns3590_prismHacked ) return; 
+ window.ns3590_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3590_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3590_toggledSpecification = function(){
+window.ns3590_specificationShown  = ! window.ns3590_specificationShown;
+ window.ns3590_render();
+
+
+}
+
+window.ns3590_toggledImplementation = function(){
+window.ns3590_implementationShown  = ! window.ns3590_implementationShown;
+ window.ns3590_render();
+
+
+}
+
+window.ns3590_implementationNextState = function(){
+return  window.ns3590_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3590_specificationNextState = function(){
+return  window.ns3590_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3590_disintegrate = function(){
+window.ns3590_hackPrism (); 
+ var ns = document.querySelector(" #ns3590_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3590_render = function(){
+document.getElementById( window.ns3590_specificationIconId ) .className  =  window.ns3590_specificationNextState ();
+ document.getElementById( window.ns3590_implementationIconId ) .className =  window.ns3590_implementationNextState ();
+
+
+}
+
+window.ns3590_specificationShown=true;
+window.ns3590_implementationShown=true;
+window.ns3590_specificationIconId="ns3590_specification-next-state";
+window.ns3590_implementationIconId="ns3590_implementation-next-state";
+window.ns3590_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star System 3</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3591_toggledSpecification()" data-toggle="collapse" data-target="#ns3591_specification"><i id="ns3591_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3591_specification" class="collapse show" data-parent="#ns3591_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a unique star system. Add at least 2 custom planets with custom textures and names.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3591_toggledImplementation()" data-toggle="collapse" data-target="#ns3591_implementation"><i id="ns3591_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3591_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3591_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-planets
+ (list (basic-planet
+        #:texture brick-tex
+        #:label &quot;Brick World&quot;)
+       (basic-planet
+        #:texture steel-tex
+        #:label &quot;Steel World&quot;)))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list my-planets))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3591_hackPrism = function(){
+if( window.ns3591_prismHacked ) return; 
+ window.ns3591_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3591_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3591_toggledSpecification = function(){
+window.ns3591_specificationShown  = ! window.ns3591_specificationShown;
+ window.ns3591_render();
+
+
+}
+
+window.ns3591_toggledImplementation = function(){
+window.ns3591_implementationShown  = ! window.ns3591_implementationShown;
+ window.ns3591_render();
+
+
+}
+
+window.ns3591_implementationNextState = function(){
+return  window.ns3591_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3591_specificationNextState = function(){
+return  window.ns3591_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3591_disintegrate = function(){
+window.ns3591_hackPrism (); 
+ var ns = document.querySelector(" #ns3591_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3591_render = function(){
+document.getElementById( window.ns3591_specificationIconId ) .className  =  window.ns3591_specificationNextState ();
+ document.getElementById( window.ns3591_implementationIconId ) .className =  window.ns3591_implementationNextState ();
+
+
+}
+
+window.ns3591_specificationShown=true;
+window.ns3591_implementationShown=true;
+window.ns3591_specificationIconId="ns3591_specification-next-state";
+window.ns3591_implementationIconId="ns3591_implementation-next-state";
+window.ns3591_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star System 4</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3592_toggledSpecification()" data-toggle="collapse" data-target="#ns3592_specification"><i id="ns3592_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3592_specification" class="collapse show" data-parent="#ns3592_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a unique star system. Add at least 2 custom planets with moons and/or rings.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3592_toggledImplementation()" data-toggle="collapse" data-target="#ns3592_implementation"><i id="ns3592_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3592_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3592_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define moon-planet
+ (basic-planet
+  #:moons-list (list
+                (basic-moon
+                 #:texture black-tex))))
+
+(define ring-planet
+ (basic-planet
+  #:rings-list (list
+                (basic-ring
+                 #:texture pink-tex))))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list (list
+                        moon-planet
+                        ring-planet)))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3592_hackPrism = function(){
+if( window.ns3592_prismHacked ) return; 
+ window.ns3592_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3592_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3592_toggledSpecification = function(){
+window.ns3592_specificationShown  = ! window.ns3592_specificationShown;
+ window.ns3592_render();
+
+
+}
+
+window.ns3592_toggledImplementation = function(){
+window.ns3592_implementationShown  = ! window.ns3592_implementationShown;
+ window.ns3592_render();
+
+
+}
+
+window.ns3592_implementationNextState = function(){
+return  window.ns3592_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3592_specificationNextState = function(){
+return  window.ns3592_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3592_disintegrate = function(){
+window.ns3592_hackPrism (); 
+ var ns = document.querySelector(" #ns3592_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3592_render = function(){
+document.getElementById( window.ns3592_specificationIconId ) .className  =  window.ns3592_specificationNextState ();
+ document.getElementById( window.ns3592_implementationIconId ) .className =  window.ns3592_implementationNextState ();
+
+
+}
+
+window.ns3592_specificationShown=true;
+window.ns3592_implementationShown=true;
+window.ns3592_specificationIconId="ns3592_specification-next-state";
+window.ns3592_implementationIconId="ns3592_implementation-next-state";
+window.ns3592_prismHacked=false;
+
+//]]>
+</script><div class="card mb-1" class="mb-1"><div class="card-header bg-info text-white" class="bg-info text-white"><b>Star System 5</b></div><div class="card-body"><p class="card-text"><div class="row"><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3593_toggledSpecification()" data-toggle="collapse" data-target="#ns3593_specification"><i id="ns3593_specification-next-state" class="fa fa-eye-slash"></i> Specification</button></div><div id="ns3593_specification" class="collapse show" data-parent="#ns3593_accordion"><div class="card-body"><p class="card-text">Code an orbit scene with a unique star system. Add at least 2 custom planets and 3 space objects.</p></div></div></div></div><div class="col-lg-6 col-sm-6 col-xs-12 my-3 px-3"><div class="card"><div class="card-header"><button type="button" class="btn btn-link" onClick="window.ns3593_toggledImplementation()" data-toggle="collapse" data-target="#ns3593_implementation"><i id="ns3593_implementation-next-state" class="fa fa-eye-slash"></i> Implementation</button></div><div id="ns3593_implementation" class="collapse show"><div class="card-body"><div class="button-group"><button type="button" class="btn btn-danger" onClick="window.ns3593_disintegrate()" data-toggle="tooltip" data-placement="top" title="Remove random word"><i class="fas fa-crosshairs"></i></button></div><p class="card-text"><pre><code class="lang-scheme">(define my-planet
+ (basic-planet
+  #:texture purple-tex))
+
+(orbit-scene
+#:star (basic-star
+        #:planets-list (list my-planet
+                             my-planet))
+#:objects-list (list international-space-station
+                     space-shuttle
+                     asteroids))</code></pre></p></div></div></div></div></div></p></div></div><script>
+//<![CDATA[
+window.ns3593_hackPrism = function(){
+if( window.ns3593_prismHacked ) return; 
+ window.ns3593_prismHacked  = true; 
+
+ var ns = Array.from(document.querySelector(" #ns3593_implementation  pre code").childNodes).filter((x)=>{return x.nodeType == 3}) 
+
+ ns.map((n)=>{ 
+    var s = n.wholeText 
+    //Probably buggy... 
+    var ss = s.split(" ").map((s)=>"<span class='token'>" + s + "</span>") 
+    $(n).replaceWith(ss.join(" ")) 
+ });
+
+
+}
+
+window.ns3593_toggledSpecification = function(){
+window.ns3593_specificationShown  = ! window.ns3593_specificationShown;
+ window.ns3593_render();
+
+
+}
+
+window.ns3593_toggledImplementation = function(){
+window.ns3593_implementationShown  = ! window.ns3593_implementationShown;
+ window.ns3593_render();
+
+
+}
+
+window.ns3593_implementationNextState = function(){
+return  window.ns3593_implementationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3593_specificationNextState = function(){
+return  window.ns3593_specificationShown  ? "fa fa-eye-slash" : "fa fa-eye";
+
+
+}
+
+window.ns3593_disintegrate = function(){
+window.ns3593_hackPrism (); 
+ var ns = document.querySelector(" #ns3593_implementation  pre code").childNodes; 
+ var maybeHide = Array.from(ns).filter( 
+     (x) => 
+       (!x.className 
+        || 
+        x.className && !x.className.match(/punctuation/)) 
+       && 
+       (!x.style || 
+        (x.style && x.style.opacity != "0")) 
+       && 
+       x.innerHTML 
+       && 
+       !x.innerHTML.match(/^\s+$/) 
+ ); 
+
+ var toHide = maybeHide[Math.floor(Math.random() * maybeHide.length)] 
+ if(toHide) 
+    $(toHide).animate({opacity: 0});
+
+
+}
+
+window.ns3593_render = function(){
+document.getElementById( window.ns3593_specificationIconId ) .className  =  window.ns3593_specificationNextState ();
+ document.getElementById( window.ns3593_implementationIconId ) .className =  window.ns3593_implementationNextState ();
+
+
+}
+
+window.ns3593_specificationShown=true;
+window.ns3593_implementationShown=true;
+window.ns3593_specificationIconId="ns3593_specification-next-state";
+window.ns3593_implementationIconId="ns3593_implementation-next-state";
+window.ns3593_prismHacked=false;
+
+//]]>
+</script></div><div class="tab-pane fade p-3" id="documentation" class="p-3"><iframe src="/mc-languages/3d-orbit-doc/3d-orbit-doc.html" frameborder="0" scrolling="no" onload="var t = this;setInterval(function(){resizeIframe(t)},1000);" style="width:100%; border: none;"></iframe></div></div></div><script src="/mc-languages/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script></body></html>
